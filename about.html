@@ -154,8 +154,8 @@
     @media (max-width: 520px) {
       body { font-size: 16px; }
       .site-header, main, footer { width: calc(100% - 24px); }
-      .site-header { align-items: flex-start; gap: 12px; }
-      .site-nav { gap: 0; }
+      .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .site-nav { justify-content: space-between; width: 100%; gap: 0; }
       .site-nav a { padding: 7px; font-size: .82rem; }
       .hero { padding: 32px 24px; }
       .story { padding: 30px 24px; }
@@ -181,6 +181,7 @@
     <span class="brand"><span class="brand-mark" aria-hidden="true">&nbsp;</span>Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="about.html" aria-current="page">About</a>
+      <a href="recommended-gimbals.html">Gimbals</a>
       <a href="support.html">Support</a>
       <a href="privacy-policy.html">Privacy</a>
     </nav>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn why a phone gimbal helps sports video and why Sideline Save recommends the DJI Osmo Mobile 8.">
+  <meta name="theme-color" content="#123d2d">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Recommended Gimbals — Sideline Save</title>
+  <style>
+    :root {
+      --forest: #123d2d;
+      --forest-dark: #09281d;
+      --forest-soft: #e5efe9;
+      --paper: #fffdf8;
+      --cream: #f7f2e8;
+      --ink: #17211c;
+      --muted: #5b6760;
+      --line: #d8ded9;
+      --red: #d92f39;
+      --red-dark: #a51e28;
+      --orange: #e5792b;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 12% 4%, rgba(229, 121, 43, .11), transparent 24rem), var(--cream);
+      color: var(--ink);
+      font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--red-dark); text-underline-offset: .18em; }
+    a:hover { color: var(--red); }
+    a:focus-visible { border-radius: 5px; outline: 3px solid rgba(217, 47, 57, .35); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 10;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--forest-dark);
+      font-weight: 750;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .site-header, main, footer { width: min(calc(100% - 40px), 1120px); margin-inline: auto; }
+    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0 16px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--forest-dark); font-weight: 780; }
+    .brand-mark {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border: 3px solid var(--forest);
+      border-radius: 50%;
+      background: var(--paper);
+      box-shadow: inset 0 0 0 5px var(--paper);
+    }
+    .brand-mark::after { position: absolute; inset: 6px; border-radius: 50%; background: var(--red); content: ""; }
+    .site-nav { display: flex; gap: 8px; }
+    .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
+    .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    main { margin-bottom: 72px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(270px, .75fr);
+      gap: clamp(34px, 7vw, 80px);
+      align-items: center;
+      padding: clamp(40px, 7vw, 78px);
+      border: 1px solid rgba(18, 61, 45, .12);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(9, 40, 29, .11);
+    }
+    .hero::after {
+      position: absolute;
+      top: -105px;
+      right: -95px;
+      width: 280px;
+      height: 280px;
+      border: 54px solid rgba(18, 61, 45, .055);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .hero-copy, .gimbal-stage { position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 20px; color: var(--red-dark); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1, h2, h3 { color: var(--forest-dark); font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; letter-spacing: -.025em; line-height: 1.16; }
+    h1 { max-width: 700px; margin: 0; font-size: clamp(2.65rem, 7vw, 5.25rem); font-weight: 820; }
+    h2 { margin: 0 0 18px; font-size: clamp(1.7rem, 3.5vw, 2.55rem); }
+    h3 { margin: 0 0 9px; font-size: 1.13rem; }
+    .lede { max-width: 700px; margin: 24px 0 0; color: #35433c; font-size: clamp(1.08rem, 2vw, 1.28rem); }
+
+    .gimbal-stage { display: grid; min-height: 310px; place-items: center; border-radius: 22px; background: var(--forest); box-shadow: 0 16px 40px rgba(9, 40, 29, .22); }
+    .gimbal {
+      position: relative;
+      width: 156px;
+      height: 250px;
+      transform: rotate(-4deg);
+    }
+    .phone { position: absolute; top: 12px; left: 5px; width: 118px; height: 58px; border: 5px solid var(--paper); border-radius: 12px; background: #1e2e27; box-shadow: 0 8px 24px rgba(0, 0, 0, .22); }
+    .phone::after { position: absolute; top: 5px; left: 7px; width: 11px; height: 11px; border: 3px solid var(--paper); border-radius: 50%; content: ""; }
+    .arm { position: absolute; top: 57px; left: 97px; width: 19px; height: 95px; border-radius: 10px; background: var(--paper); transform: rotate(13deg); transform-origin: top; }
+    .motor { position: absolute; top: 50px; left: 91px; width: 32px; height: 32px; border: 7px solid var(--paper); border-radius: 50%; background: var(--orange); }
+    .handle { position: absolute; top: 134px; left: 85px; width: 43px; height: 110px; border-radius: 16px 16px 22px 22px; background: var(--paper); }
+    .handle::before { position: absolute; top: 20px; left: 14px; width: 15px; height: 15px; border-radius: 50%; background: var(--red); content: ""; }
+    .handle::after { position: absolute; top: 46px; left: 16px; width: 11px; height: 28px; border-radius: 6px; background: var(--forest); content: ""; }
+
+    .benefits { padding: 62px 0 16px; }
+    .section-heading { max-width: 720px; margin-bottom: 28px; }
+    .section-heading p { margin: 0; color: var(--muted); }
+    .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .benefit-card { padding: 27px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 18px; background: var(--paper); }
+    .benefit-number { display: grid; width: 38px; height: 38px; margin-bottom: 18px; place-items: center; border-radius: 50%; background: var(--forest-soft); color: var(--forest-dark); font-size: .84rem; font-weight: 850; }
+    .benefit-card p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.55; }
+
+    .recommendation {
+      display: grid;
+      grid-template-columns: minmax(250px, .7fr) minmax(0, 1.3fr);
+      gap: clamp(30px, 6vw, 72px);
+      margin-top: 46px;
+      padding: clamp(34px, 6vw, 66px);
+      border: 1px solid rgba(18, 61, 45, .12);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 16px 48px rgba(9, 40, 29, .07);
+    }
+    .pick-label { display: inline-flex; margin-bottom: 18px; padding: 7px 11px; border-radius: 999px; background: #fff0e3; color: #8a4514; font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .product-name { margin-bottom: 16px; font-size: clamp(2rem, 4vw, 3.25rem); }
+    .product-summary { margin: 0; color: var(--muted); }
+    .feature-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+    .feature-list li { position: relative; padding: 17px 18px 17px 48px; border-radius: 14px; background: var(--forest-soft); color: #294c3d; font-size: .94rem; }
+    .feature-list li::before { position: absolute; top: 18px; left: 18px; color: var(--forest); font-weight: 900; content: "✓"; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 999px; font-weight: 800; text-decoration: none; }
+    .button-primary { background: var(--red); color: white; }
+    .button-primary:hover { background: #eb3a44; color: white; }
+    .button-secondary { border: 1px solid var(--line); background: var(--paper); color: var(--forest-dark); }
+    .fine-print { margin: 18px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
+
+    .tips { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: clamp(28px, 6vw, 68px); padding: 64px 0 16px; }
+    .tips > p { margin: 0; color: var(--muted); }
+    .tip-list { margin: 0; padding: 0; list-style: none; }
+    .tip-list li { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .tip-list li:first-child { padding-top: 0; }
+    .tip-list strong { display: block; margin-bottom: 4px; color: var(--forest-dark); }
+    .tip-list span { color: var(--muted); font-size: .92rem; }
+
+    .safety-note { margin-top: 40px; padding: 28px; border-left: 5px solid var(--orange); border-radius: 0 18px 18px 0; background: #fff7ed; }
+    .safety-note h2 { margin-bottom: 9px; font-size: 1.3rem; }
+    .safety-note p { margin: 0; color: #5c493a; }
+    footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
+
+    @media (max-width: 820px) {
+      .hero, .recommendation, .tips { grid-template-columns: 1fr; }
+      .gimbal-stage { max-width: 480px; width: 100%; }
+      .benefit-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      body { font-size: 16px; }
+      .site-header, main, footer { width: calc(100% - 24px); }
+      .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .site-nav { justify-content: space-between; width: 100%; gap: 0; }
+      .site-nav a { padding: 7px; font-size: .82rem; }
+      .hero { padding: 32px 24px; }
+      .recommendation { padding: 30px 24px; }
+      .hero, .recommendation { border-radius: 20px; }
+      .gimbal-stage { min-height: 280px; }
+      .actions { align-items: stretch; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: white; color: black; font-size: 11pt; }
+      .site-header, .skip-link, .gimbal-stage, .actions { display: none; }
+      main { width: 100%; margin: 0; }
+      .hero, .recommendation { display: block; padding: 0; border: 0; box-shadow: none; }
+      .hero::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to recommended gimbals</a>
+  <header class="site-header" aria-label="Sideline Save">
+    <span class="brand"><span class="brand-mark" aria-hidden="true">&nbsp;</span>Sideline Save</span>
+    <nav class="site-nav" aria-label="Website">
+      <a href="about.html">About</a>
+      <a href="recommended-gimbals.html" aria-current="page">Gimbals</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="gimbals-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Recommended gear</p>
+        <h1 id="gimbals-title">Keep the action smooth—even when the play isn’t.</h1>
+        <p class="lede">A phone gimbal uses small motors to steady your iPhone while you follow a player across the field or court. The result is calmer, easier-to-watch sports video with fewer distracting bumps and tilted horizons.</p>
+      </div>
+      <div class="gimbal-stage" aria-hidden="true">
+        <div class="gimbal"><span class="phone">&nbsp;</span><span class="arm">&nbsp;</span><span class="motor">&nbsp;</span><span class="handle">&nbsp;</span></div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-labelledby="benefits-title">
+      <div class="section-heading">
+        <h2 id="benefits-title">Why use a gimbal for sports?</h2>
+        <p>Sports make you pan, stop, reframe, and move quickly. A gimbal helps those movements feel intentional instead of shaky.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card"><span class="benefit-number" aria-hidden="true">01</span><h3>Smoother tracking</h3><p>Motorized stabilization reduces small hand movements while you follow a runner, drive, or fast transition.</p></article>
+        <article class="benefit-card"><span class="benefit-number" aria-hidden="true">02</span><h3>More level framing</h3><p>The gimbal helps keep the horizon steady when you turn, shift your stance, or move along the sideline.</p></article>
+        <article class="benefit-card"><span class="benefit-number" aria-hidden="true">03</span><h3>Easier-to-watch clips</h3><p>Controlled pans and fewer sudden jolts keep attention on the play, especially when highlights are viewed on a larger screen.</p></article>
+      </div>
+    </section>
+
+    <section class="recommendation" aria-labelledby="pick-title">
+      <div>
+        <span class="pick-label">Sideline Save pick</span>
+        <h2 class="product-name" id="pick-title">DJI Osmo Mobile 8</h2>
+        <p class="product-summary">A compact three-axis smartphone gimbal with the range and iPhone integration that make it a strong match for recording sports.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://a.co/d/0gkxQjn8" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+          <a class="button button-secondary" href="https://www.dji.com/osmo-mobile-8/faq" target="_blank" rel="noopener noreferrer">Check DJI compatibility</a>
+        </div>
+        <p class="fine-print">Retail pricing and availability can change. Confirm that your iPhone and case fit DJI’s current compatibility requirements before purchasing. DJI and Osmo are trademarks of DJI.</p>
+      </div>
+      <ul class="feature-list" aria-label="Why Sideline Save recommends the DJI Osmo Mobile 8">
+        <li><strong>Three-axis stabilization</strong> for smoother handheld movement and panning.</li>
+        <li><strong>Unlimited 360° pan rotation</strong> for following action across a wide playing area.</li>
+        <li><strong>Built-in tripod and extension rod</strong> for flexible setup and framing away from the sideline.</li>
+        <li><strong>Apple DockKit support</strong> for system tracking in compatible iPhone apps. Sideline Save includes experimental DockKit Gimbal Tracking.</li>
+        <li><strong>About 10 hours of rated operating time</strong> in DJI’s stationary, balanced test; tracking, lighting, and phone charging reduce it.</li>
+      </ul>
+    </section>
+
+    <section class="tips" aria-labelledby="tips-title">
+      <div>
+        <h2 id="tips-title">Better results on game day.</h2>
+        <p>A gimbal helps, but good sports video still starts with positioning and deliberate camera movement.</p>
+      </div>
+      <ul class="tip-list">
+        <li><strong>Balance before powering on.</strong><span>Center the phone in the clamp and make sure it is secure before the game starts.</span></li>
+        <li><strong>Start wider than you think.</strong><span>A little extra space around the player makes fast movement easier to follow without losing the play.</span></li>
+        <li><strong>Pan with the action, not every fake.</strong><span>Use smooth body turns and let the gimbal soften your movement instead of chasing every small change.</span></li>
+        <li><strong>Practice the controls first.</strong><span>Learn the follow mode, recenter action, and phone mounting at home so game time stays focused on the sport.</span></li>
+        <li><strong>Charge both devices.</strong><span>Long events use the phone and gimbal batteries. Bring a battery pack if you expect a full day at the field.</span></li>
+      </ul>
+    </section>
+
+    <aside class="safety-note" aria-labelledby="safety-title">
+      <h2 id="safety-title">Stay behind the line.</h2>
+      <p>Never step into the playing area or block players, officials, or spectators to get a shot. Watch your surroundings, follow venue rules, and treat the highlight as less important than everyone’s safety.</p>
+    </aside>
+  </main>
+
+  <footer><p>&copy; 2026 Chase Seibert. Sideline Save.</p></footer>
+</body>
+</html>
