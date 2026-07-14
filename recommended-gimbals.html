@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn why a phone gimbal helps sports video and why Sideline Save recommends the DJI Osmo Mobile 8.">
+  <meta name="description" content="Learn why a phone gimbal helps sports video and compare three Sideline Save recommendations led by the DJI Osmo Mobile 8.">
   <meta name="theme-color" content="#123d2d">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <title>Recommended Gimbals — Sideline Save</title>
@@ -145,6 +145,19 @@
     .button-secondary { border: 1px solid var(--line); background: var(--paper); color: var(--forest-dark); }
     .fine-print { margin: 18px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
 
+    .alternatives { padding: 64px 0 4px; }
+    .alternative-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .alternative-card { display: flex; min-height: 100%; padding: 30px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 20px; background: var(--paper); flex-direction: column; }
+    .alternative-rank { display: inline-flex; align-self: flex-start; margin-bottom: 18px; padding: 7px 11px; border-radius: 999px; background: var(--forest-soft); color: var(--forest-dark); font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .alternative-card h3 { font-size: 1.45rem; }
+    .alternative-card > p { margin: 0; color: var(--muted); font-size: .93rem; }
+    .alternative-features { margin: 22px 0 26px; padding: 0; color: #35433c; font-size: .9rem; list-style: none; }
+    .alternative-features li { position: relative; padding-left: 22px; }
+    .alternative-features li + li { margin-top: 10px; }
+    .alternative-features li::before { position: absolute; left: 0; color: var(--orange); font-weight: 900; content: "•"; }
+    .alternative-card .button { align-self: flex-start; margin-top: auto; }
+    .alternatives-note { margin: 18px 0 0; color: var(--muted); font-size: .78rem; }
+
     .tips { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: clamp(28px, 6vw, 68px); padding: 64px 0 16px; }
     .tips > p { margin: 0; color: var(--muted); }
     .tip-list { margin: 0; padding: 0; list-style: none; }
@@ -163,6 +176,7 @@
       .gimbal-stage { max-width: 480px; width: 100%; }
       .benefit-grid { grid-template-columns: 1fr; }
     }
+    @media (max-width: 680px) { .alternative-grid { grid-template-columns: 1fr; } }
     @media (max-width: 520px) {
       body { font-size: 16px; }
       .site-header, main, footer { width: calc(100% - 24px); }
@@ -239,6 +253,40 @@
         <li><strong>Apple DockKit support</strong> for system tracking in compatible iPhone apps. Sideline Save includes experimental DockKit Gimbal Tracking.</li>
         <li><strong>About 10 hours of rated operating time</strong> in DJI’s stationary, balanced test; tracking, lighting, and phone charging reduce it.</li>
       </ul>
+    </section>
+
+    <section class="alternatives" aria-labelledby="alternatives-title">
+      <div class="section-heading">
+        <h2 id="alternatives-title">Two more worth considering.</h2>
+        <p>The Osmo Mobile 8 remains our first pick. These are strong alternatives when you want a different ecosystem or more advanced remote framing.</p>
+      </div>
+      <div class="alternative-grid">
+        <article class="alternative-card">
+          <span class="alternative-rank">2 · Best alternative</span>
+          <h3>Insta360 Flow 2 Pro</h3>
+          <p>A compact all-in-one option for iPhone users who want continuous panning and native tracking from another established gimbal system.</p>
+          <ul class="alternative-features">
+            <li>Three-axis stabilization and continuous 360° pan rotation</li>
+            <li>Native Apple DockKit tracking in compatible iPhone apps</li>
+            <li>Built-in tripod and 210 mm extension stick</li>
+            <li>Rated for up to 10 hours in Insta360’s balanced, stationary test</li>
+          </ul>
+          <a class="button button-secondary" href="https://store.insta360.com/product/flow-2-pro" target="_blank" rel="noopener noreferrer">See the Flow 2 Pro</a>
+        </article>
+        <article class="alternative-card">
+          <span class="alternative-rank">3 · Premium remote option</span>
+          <h3>DJI Osmo Mobile 8P</h3>
+          <p>A step-up choice for people who want to frame and control shots away from the handle using DJI’s detachable Osmo FrameTap remote screen.</p>
+          <ul class="alternative-features">
+            <li>Detachable remote with a mirrored camera view for framing</li>
+            <li>Three-axis stabilization and unlimited 360° panning</li>
+            <li>Native Apple DockKit tracking in compatible iPhone apps</li>
+            <li>Built-in tripod and extension rod</li>
+          </ul>
+          <a class="button button-secondary" href="https://www.dji.com/osmo-mobile-8p" target="_blank" rel="noopener noreferrer">See the Osmo Mobile 8P</a>
+        </article>
+      </div>
+      <p class="alternatives-note">Products are listed in Sideline Save recommendation order. Features, compatibility, bundles, pricing, and availability can change; confirm current details with the manufacturer before purchasing.</p>
     </section>
 
     <section class="tips" aria-labelledby="tips-title">
