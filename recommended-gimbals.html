@@ -59,7 +59,7 @@
       flex: 0 0 auto;
       object-fit: cover;
     }
-    .site-nav { display: flex; gap: 8px; }
+    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
     main { margin-bottom: 72px; }
@@ -179,7 +179,7 @@
       body { font-size: 16px; }
       .site-header, main, footer { width: calc(100% - 24px); }
       .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
-      .site-nav { justify-content: space-between; width: 100%; gap: 0; }
+      .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
       .site-nav a { padding: 7px; font-size: .82rem; }
       .hero { padding: 32px 24px; }
       .recommendation { padding: 30px 24px; }
@@ -203,6 +203,7 @@
     <span class="brand"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="about.html">About</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" aria-label="Join the TestFlight waitlist (opens in a new tab)">Waitlist</a>
       <a href="support.html">Support</a>
       <a href="privacy-policy.html">Privacy</a>
       <a href="recommended-gimbals.html" aria-current="page">Gimbals</a>
