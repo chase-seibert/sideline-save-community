@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get help with recording, saving, organizing, and recovering sports highlights in Sideline Save for iPhone.">
+  <meta name="theme-color" content="#123d2d">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Support — Sideline Save</title>
+  <style>
+    :root {
+      --forest: #123d2d;
+      --forest-dark: #09281d;
+      --forest-soft: #e5efe9;
+      --paper: #fffdf8;
+      --cream: #f7f2e8;
+      --ink: #17211c;
+      --muted: #5b6760;
+      --line: #d8ded9;
+      --red: #d92f39;
+      --red-dark: #a51e28;
+      --yellow: #f7c948;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 12% 4%, rgba(217, 47, 57, .08), transparent 24rem), var(--cream);
+      color: var(--ink);
+      font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: var(--red-dark); text-underline-offset: .18em; }
+    a:hover { color: var(--red); }
+    a:focus-visible, summary:focus-visible {
+      border-radius: 5px;
+      outline: 3px solid rgba(217, 47, 57, .35);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 10;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--forest-dark);
+      font-weight: 750;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .site-header, main, footer { width: min(calc(100% - 40px), 1120px); margin-inline: auto; }
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px 0 16px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--forest-dark); font-weight: 780; }
+    .brand-mark {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border: 3px solid var(--forest);
+      border-radius: 50%;
+      background: var(--paper);
+      box-shadow: inset 0 0 0 5px var(--paper);
+    }
+    .brand-mark::after { position: absolute; inset: 6px; border-radius: 50%; background: var(--red); content: ""; }
+    .site-nav { display: flex; gap: 8px; }
+    .site-nav a {
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--forest-dark);
+      font-size: .86rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    main { margin-bottom: 72px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+      gap: clamp(32px, 7vw, 76px);
+      align-items: center;
+      padding: clamp(36px, 7vw, 76px);
+      border: 1px solid rgba(18, 61, 45, .12);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(9, 40, 29, .11);
+    }
+    .hero::after {
+      position: absolute;
+      top: -105px;
+      right: -95px;
+      width: 280px;
+      height: 280px;
+      border: 54px solid rgba(18, 61, 45, .055);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .hero-copy, .contact-panel { position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 20px; color: var(--red-dark); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1, h2, h3 { color: var(--forest-dark); font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; letter-spacing: -.025em; line-height: 1.16; }
+    h1 { max-width: 680px; margin: 0; font-size: clamp(2.45rem, 7vw, 5.25rem); font-weight: 820; }
+    h2 { margin: 0 0 18px; font-size: clamp(1.55rem, 3vw, 2.1rem); }
+    h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    .lede { max-width: 690px; margin: 24px 0 0; color: #35433c; font-size: clamp(1.08rem, 2vw, 1.28rem); }
+    .contact-panel {
+      padding: 26px;
+      border-radius: 20px;
+      background: var(--forest);
+      color: white;
+      box-shadow: 0 14px 36px rgba(9, 40, 29, .18);
+    }
+    .contact-panel strong { display: block; margin-bottom: 8px; font-size: 1.12rem; }
+    .contact-panel p { margin: 0 0 20px; color: rgba(255, 255, 255, .82); font-size: .93rem; }
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--red);
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .primary-button:hover { background: #eb3a44; color: white; }
+
+    .quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0 36px; }
+    .quick-card {
+      min-height: 100%;
+      padding: 25px;
+      border: 1px solid rgba(18, 61, 45, .12);
+      border-radius: 18px;
+      background: rgba(255, 253, 248, .9);
+    }
+    .quick-icon {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 18px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--forest-soft);
+      color: var(--forest-dark);
+      font-size: 1.02rem;
+      font-weight: 850;
+    }
+    .quick-card strong { display: block; margin-bottom: 6px; color: var(--forest-dark); font-size: 1.05rem; }
+    .quick-card p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.55; }
+
+    .support-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, .55fr);
+      gap: clamp(26px, 5vw, 64px);
+      align-items: start;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid rgba(18, 61, 45, .12);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 16px 48px rgba(9, 40, 29, .07);
+    }
+    .section-intro { margin: -6px 0 25px; color: var(--muted); }
+    .faq-list { border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary {
+      position: relative;
+      padding: 22px 42px 22px 0;
+      color: var(--forest-dark);
+      cursor: pointer;
+      font-weight: 760;
+      line-height: 1.35;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      position: absolute;
+      top: 22px;
+      right: 4px;
+      width: 24px;
+      height: 24px;
+      color: var(--red-dark);
+      content: "+";
+      font-size: 1.45rem;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: center;
+    }
+    details[open] summary::after { content: "−"; }
+    .answer { padding: 0 40px 23px 0; color: #35433c; }
+    .answer p { margin: 0; }
+    .answer p + p, .answer ul { margin-top: 12px; }
+    .answer ul { margin-bottom: 0; padding-left: 1.25em; }
+    .answer li + li { margin-top: 7px; }
+
+    .side-stack { display: grid; gap: 18px; }
+    .side-card { padding: 24px; border-radius: 18px; background: var(--forest-soft); }
+    .side-card p { margin: 0; color: #35433c; font-size: .92rem; }
+    .side-card ul { margin: 14px 0 0; padding-left: 1.2em; color: #35433c; font-size: .91rem; }
+    .side-card li + li { margin-top: 8px; }
+    .privacy-card { background: #fff4f1; }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      color: var(--forest-dark);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .status::before { width: 9px; height: 9px; border-radius: 50%; background: #2d8b57; content: ""; box-shadow: 0 0 0 4px rgba(45,139,87,.13); }
+    footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
+
+    @media (max-width: 860px) {
+      .hero, .support-layout { grid-template-columns: 1fr; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .contact-panel { max-width: 470px; }
+    }
+    @media (max-width: 520px) {
+      body { font-size: 16px; }
+      .site-header, main, footer { width: calc(100% - 24px); }
+      .site-header { align-items: flex-start; }
+      .site-nav { gap: 0; }
+      .site-nav a { padding: 7px 9px; }
+      .hero { padding: 30px 24px; }
+      .support-layout { padding: 28px 22px; }
+      .hero, .support-layout { border-radius: 20px; }
+      .answer { padding-right: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: white; color: black; font-size: 11pt; }
+      .site-header, .skip-link, .quick-grid, .contact-panel { display: none; }
+      main { width: 100%; margin: 0; }
+      .hero, .support-layout { display: block; padding: 0; border: 0; box-shadow: none; }
+      .hero::after { display: none; }
+      details { break-inside: avoid; }
+      details .answer { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to support</a>
+  <header class="site-header" aria-label="Sideline Save">
+    <span class="brand"><span class="brand-mark" aria-hidden="true">&nbsp;</span>Sideline Save</span>
+    <nav class="site-nav" aria-label="Website">
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="support-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Sideline Save Support</p>
+        <h1 id="support-title">Let’s get you back to the game.</h1>
+        <p class="lede">Find quick answers for recording, saving, organizing, and recovering sports highlights on your iPhone.</p>
+      </div>
+      <aside class="contact-panel" aria-label="Contact support">
+        <strong>Still need a hand?</strong>
+        <p>Email the developer with what happened. You’ll get help from a real person.</p>
+        <a class="primary-button" href="mailto:chase.seibert@gmail.com?subject=Sideline%20Save%20Support">Email support</a>
+      </aside>
+    </section>
+
+    <section class="quick-grid" aria-label="Quick support facts">
+      <div class="quick-card"><span class="quick-icon" aria-hidden="true">01</span><strong>Your clips live in Photos</strong><p>Look in Recents, the main Sideline Save album, and the album for the selected sport.</p></div>
+      <div class="quick-card"><span class="quick-icon" aria-hidden="true">02</span><strong>Limited Photos access works</strong><p>Camera and Photos are required to save. Microphone is optional if you prefer silent video.</p></div>
+      <div class="quick-card"><span class="quick-icon" aria-hidden="true">03</span><strong>Recent buffers may be recoverable</strong><p>Open Settings &gt; Recover Buffers within about five minutes if an available highlight was not saved.</p></div>
+    </section>
+
+    <div class="support-layout">
+      <section aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <p class="section-intro">The fastest fixes for common sideline moments.</p>
+
+        <div class="faq-list">
+          <details open>
+            <summary>Where did my saved video go?</summary>
+            <div class="answer">
+              <p>Saved clips are stored in the Apple Photos library—not inside a separate Sideline Save cloud account. Open Photos and check Recents or the <strong>Sideline Save</strong> album. Baseball, Basketball, Soccer, and Football clips are also added to a matching <strong>Sideline Save – Sport</strong> album when Photos allows the album update.</p>
+              <p>You can also open Saved Videos from the thumbnail in the lower-right corner of the Sideline Save camera screen.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do I allow Camera or Photos access?</summary>
+            <div class="answer">
+              <p>Open the iOS Settings app, search for Sideline Save, and review Camera, Microphone, Motion, and Photos access. Camera and Photos are required to capture and save clips. Limited Photos access is enough because Sideline Save only needs to save videos and read back the videos it created. Microphone is optional.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I recover a play I forgot to save?</summary>
+            <div class="answer">
+              <p>Sometimes. If a recent idle buffer is available, open Sideline Save <strong>Settings &gt; Recover Buffers</strong> within about five minutes. Preview the buffer and choose Save to Photos. Recovery is intentionally short-lived and cannot guarantee that every missed play will be available.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do I change the sport on an existing video?</summary>
+            <div class="answer">
+              <p>Open Saved Videos, choose the clip, then tap anywhere on its <strong>Sport</strong> row or tap the pencil icon. Pick the new sport. Sideline Save keeps the clip in the main Sideline Save album, removes it from the prior sport album, and adds it to the new sport album. Choosing Custom removes it from the prior sport album without creating a Custom album.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why doesn’t my video have sound?</summary>
+            <div class="answer">
+              <p>Microphone access is optional. If you want sideline audio, open iOS Settings, find Sideline Save, and enable Microphone. A clip recorded while access is off will remain silent; granting access later cannot add audio to an existing clip.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do I share or delete a clip?</summary>
+            <div class="answer">
+              <p>Open Saved Videos, then open a clip or use Select to work with several clips. Use the share button to open the iOS share sheet. Deleting asks Photos to move the video to Recently Deleted. If you change your mind, recover it from the Photos app while Apple still retains it there.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why isn’t the level meter visible for every sport?</summary>
+            <div class="answer">
+              <p>The Level Meter is saved separately for each sport. Open Sideline Save Settings, choose the active sport, and turn on Level Meter for that sport. Motion access must also be enabled in iOS Settings.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What devices does Sideline Save support?</summary>
+            <div class="answer">
+              <p>Sideline Save 1.0 is designed for iPhone running iOS 17 or later. A real iPhone camera is required for capture; simulator previews used during development are not real camera recordings.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <aside class="side-stack" aria-label="More support information">
+        <section class="side-card">
+          <span class="status">Support available</span>
+          <h3>Before you email</h3>
+          <p>A few details make troubleshooting much faster:</p>
+          <ul>
+            <li>App version from Settings &gt; About Sideline Save</li>
+            <li>iPhone model and iOS version</li>
+            <li>Sport and capture settings you selected</li>
+            <li>What you expected and what happened</li>
+          </ul>
+        </section>
+
+        <section class="side-card privacy-card">
+          <h3>Your privacy matters</h3>
+          <p>You do not need to attach a private video to your first email. Start with a description of the issue and share media only if you are comfortable doing so.</p>
+          <p style="margin-top: 14px"><a href="privacy-policy.html">Read the Privacy Policy</a></p>
+        </section>
+
+        <section class="side-card">
+          <h3>Contact</h3>
+          <p>Sideline Save is developed and operated by Chase Seibert.</p>
+          <p style="margin-top: 14px"><a href="mailto:chase.seibert@gmail.com?subject=Sideline%20Save%20Support">chase.seibert@gmail.com</a></p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Chase Seibert. Sideline Save.</p></footer>
+</body>
+</html>
