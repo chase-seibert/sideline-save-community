@@ -88,8 +88,8 @@ from Settings for about five minutes.
 ## Your highlights stay yours
 
 Video and audio remain on your iPhone and in your Photos library. Sideline Save
-has no accounts, ads, or cross-app tracking, and collects only limited app-usage
-information to improve the product.
+has no accounts, ads, or cross-app tracking, and collects only limited app and
+website usage information to improve the product.
 
 [Read the Privacy Policy](https://chase-seibert.github.io/sideline-save-community/privacy-policy.html)
 
