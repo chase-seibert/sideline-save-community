@@ -132,6 +132,14 @@
     .feature-icon { display: grid; width: 40px; height: 40px; margin-bottom: 19px; place-items: center; border-radius: 50%; background: var(--forest-soft); color: var(--forest-dark); font-size: .84rem; font-weight: 850; }
     .feature-card p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.55; }
 
+    .showcase { padding: 64px 0 8px; }
+    .showcase-heading { max-width: 720px; margin-bottom: 28px; }
+    .showcase-heading p { margin: 0; color: var(--muted); }
+    .screenshot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; }
+    .screenshot-card { margin: 0; }
+    .screenshot-card img { display: block; width: 100%; height: auto; border: 1px solid rgba(18, 61, 45, .16); border-radius: 22px; background: #050807; box-shadow: 0 18px 42px rgba(9, 40, 29, .15); }
+    .screenshot-card figcaption { margin-top: 12px; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
+
     .privacy-band { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; margin-top: 42px; padding: clamp(30px, 5vw, 52px); border-radius: 24px; background: var(--forest-dark); color: white; }
     .privacy-band h2 { color: white; }
     .privacy-band p { max-width: 720px; margin: 0; color: rgba(255, 255, 255, .76); }
@@ -147,6 +155,7 @@
       .hero, .story, .privacy-band { grid-template-columns: 1fr; }
       .moment-card { max-width: 480px; }
       .privacy-link { justify-self: start; }
+      .screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 620px) { .fact-grid, .feature-grid { grid-template-columns: 1fr; } }
     @media (max-width: 520px) {
@@ -159,6 +168,8 @@
       .story { padding: 30px 24px; }
       .hero, .story { border-radius: 20px; }
       .moment-card { padding: 24px 20px; }
+      .screenshot-grid { grid-template-columns: 1fr; gap: 28px; }
+      .screenshot-card { max-width: 330px; margin-inline: auto; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
@@ -213,6 +224,19 @@
         <h2 id="why-title">The best plays rarely give you a warning.</h2>
         <p>It is easy to spend a whole game recording every pitch, shot, serve, or drive just in case something happens. Later, the real highlights are buried inside a camera roll full of misses and almosts.</p>
         <p>Sideline Save flips that routine around. Keep the camera pointed at the action and watch the game. When a play becomes worth keeping, start the clip then—Sideline Save can still include the lead-in. You save fewer videos, keep more of the context that matters, and spend less time cleaning up afterward.</p>
+      </div>
+    </section>
+
+    <section class="showcase" aria-labelledby="showcase-title">
+      <div class="showcase-heading">
+        <h2 id="showcase-title">See the whole highlight workflow.</h2>
+        <p>Keep the camera ready, review a full library of saved plays, open the latest highlight, and tune capture settings for the sport in front of you.</p>
+      </div>
+      <div class="screenshot-grid">
+        <figure class="screenshot-card"><img src="screenshots/01-home.jpg" width="660" height="1434" alt="Sideline Save camera ready with a full ten-second rolling buffer"><figcaption>Ready before the play starts.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/02-saved-videos.jpg" width="660" height="1434" loading="lazy" alt="Saved Videos organized across two days with thumbnails from several games"><figcaption>Seven highlights, organized by day.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/03-saved-video-preview.jpg" width="660" height="1434" loading="lazy" alt="A fifteen-second saved highlight open in the video preview screen"><figcaption>Review the complete 15-second clip.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/04-settings.jpg" width="660" height="1434" loading="lazy" alt="Sport-specific Sideline Save capture settings"><figcaption>Keep reliable settings for each sport.</figcaption></figure>
       </div>
     </section>
 

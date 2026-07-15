@@ -48,6 +48,18 @@ and watch the game. When a play becomes worth keeping, start the clip
 then—Sideline Save can still include the lead-in. You save fewer videos, keep
 more of the context that matters, and spend less time cleaning up afterward.
 
+## See the whole highlight workflow
+
+<p align="center">
+  <img src="screenshots/01-home.jpg" alt="Sideline Save camera ready with a full ten-second rolling buffer" width="23%">
+  <img src="screenshots/02-saved-videos.jpg" alt="Seven saved highlights organized across two days" width="23%">
+  <img src="screenshots/03-saved-video-preview.jpg" alt="A fifteen-second saved highlight open in the preview screen" width="23%">
+  <img src="screenshots/04-settings.jpg" alt="Sport-specific Sideline Save capture settings" width="23%">
+</p>
+
+Keep the camera ready, review highlights organized by day, open the complete
+15-second saved clip, and tune reliable capture settings for each sport.
+
 ## Made for a real sideline
 
 Fast controls, flexible capture choices, and a library built around the way
