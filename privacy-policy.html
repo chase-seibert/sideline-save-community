@@ -65,8 +65,6 @@
     .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
-    .site-nav .waitlist-nav { background: var(--red); color: white; }
-    .site-nav .waitlist-nav:hover { background: #eb3a44; color: white; }
     main { margin-bottom: 72px; }
 
     .hero {
@@ -110,6 +108,8 @@
     article li { padding-left: .35em; }
     article li + li { margin-top: 10px; }
     .plain-note { margin: 24px 0; padding: 18px 20px; border-left: 4px solid var(--red); border-radius: 0 12px 12px 0; background: #fff4f1; }
+    .waitlist-button { display: inline-flex; min-height: 48px; margin-top: 4px; padding: 12px 20px; align-items: center; justify-content: center; border-radius: 999px; background: var(--red); color: white; font-weight: 800; text-decoration: none; box-shadow: 0 8px 20px rgba(165,30,40,.2); }
+    .waitlist-button:hover { background: #eb3a44; color: white; }
     .table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--line); border-radius: 14px; }
     table { width: 100%; border-collapse: collapse; font-size: .92rem; }
     th, td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
@@ -156,10 +156,9 @@
       <a href="about.html">About</a>
       <a href="baseball-softball.html">Baseball + Softball</a>
       <a href="soccer.html">Soccer</a>
-      <a class="waitlist-nav" data-waitlist-placement="navigation" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" aria-label="Join the TestFlight waitlist (opens in a new tab)">Join Waitlist</a>
       <a href="support.html">Support</a>
       <a href="privacy-policy.html" aria-current="page">Privacy</a>
-      <a href="recommended-gimbals.html">Gimbals</a>
+      <a href="recommended-gimbals.html">Equipment</a>
     </nav>
   </header>
 
@@ -168,7 +167,7 @@
       <p class="eyebrow">Privacy, in plain language</p>
       <h1 id="policy-title">Your highlights stay yours.</h1>
       <p class="lede">Sideline Save is a local-first sports camera app. Your video and audio stay on your device and in your Photos library. We collect limited app and public-website usage information and the contact information you choose to provide through the TestFlight waitlist.</p>
-      <div class="policy-meta"><span>Privacy Policy</span><span>Effective <time datetime="2026-07-16">July 16, 2026</time></span><span>Version 1.3</span></div>
+      <div class="policy-meta"><span>Privacy Policy</span><span>Effective <time datetime="2026-07-16">July 16, 2026</time></span><span>Version 1.4</span></div>
     </section>
 
     <section class="summary-grid" aria-label="Privacy summary">
@@ -242,6 +241,7 @@
           <h2>TestFlight waitlist</h2>
           <p>If you choose to join the Sideline Save TestFlight waitlist, the linked Google Form collects the email address you enter, your consent response, and a submission timestamp. This information is separate from app analytics and is not linked to a Sideline Save installation or its saved videos.</p>
           <p>The waitlist information is used only to administer beta access and send Sideline Save beta or launch announcements that you requested.</p>
+          <a class="waitlist-button" data-waitlist-placement="privacy_waitlist_section" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Join the TestFlight waitlist</a>
         </section>
 
         <section id="uses">
@@ -293,7 +293,7 @@
 
         <section id="children">
           <h2>Children’s privacy</h2>
-          <p>Sideline Save is intended to help parents, families, and other sideline supporters record sports highlights. The waitlist is intended for adults and does not ask for a child’s information. The app is not designed to collect names, contact details, account information, or the content of children’s videos or audio. If you believe information from a child was provided contrary to this policy, contact the developer so it can be investigated and deleted where possible.</p>
+          <p>Sideline Save is intended for parents, families, and other sideline supporters. Videos and audio that an adult chooses to record are processed and saved locally; the developer and analytics services do not receive or upload those videos, audio, or video metadata. They also do not capture children’s names, contact details, account information, or other personal details. The waitlist is intended for adults and does not ask for a child’s information.</p>
         </section>
 
         <section id="security">

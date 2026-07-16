@@ -80,8 +80,6 @@
     .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
-    .site-nav .waitlist-nav { background: var(--red); color: white; }
-    .site-nav .waitlist-nav:hover { background: #eb3a44; color: white; }
     main { margin-bottom: 72px; }
 
     .hero {
@@ -125,9 +123,8 @@
     .moment-card > p { margin: 0 0 22px; color: rgba(255, 255, 255, .73); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .moment-step { position: relative; display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start; }
     .moment-step + .moment-step { margin-top: 20px; }
-    .moment-step + .moment-step::before { position: absolute; top: -20px; left: 18px; width: 2px; height: 20px; background: rgba(255, 255, 255, .22); content: ""; }
     .step-number { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(255, 255, 255, .3); border-radius: 50%; color: white; font-size: .82rem; font-weight: 800; }
-    .moment-step:nth-of-type(3) .step-number { border-color: var(--red); background: var(--red); }
+    .moment-step:nth-of-type(2) .step-number { border-color: var(--red); background: var(--red); }
     .moment-step strong { display: block; margin-bottom: 3px; }
     .moment-step span:last-child { color: rgba(255, 255, 255, .72); font-size: .88rem; line-height: 1.45; }
 
@@ -154,8 +151,7 @@
     .sport-heading { max-width: 720px; margin-bottom: 28px; }
     .sport-heading p { margin: 0; color: var(--muted); }
     .sport-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .sport-card { overflow: hidden; border: 1px solid rgba(18, 61, 45, .12); border-radius: 22px; background: var(--paper); box-shadow: 0 14px 38px rgba(9, 40, 29, .07); }
-    .sport-card img { display: block; width: 100%; height: 230px; object-fit: cover; }
+    .sport-card { border: 1px solid rgba(18, 61, 45, .12); border-radius: 22px; background: var(--paper); box-shadow: 0 14px 38px rgba(9, 40, 29, .07); }
     .sport-card-copy { padding: 26px; }
     .sport-card-copy p { margin: 0 0 18px; color: var(--muted); }
     .sport-card-copy a { font-weight: 800; }
@@ -207,7 +203,6 @@
       .screenshot-grid { grid-template-columns: 1fr; gap: 28px; }
       .screenshot-card { max-width: 330px; margin-inline: auto; }
       .hero-actions { align-items: stretch; flex-direction: column; }
-      .sport-card img { height: 210px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
@@ -230,10 +225,9 @@
       <a href="about.html" aria-current="page">About</a>
       <a href="baseball-softball.html">Baseball + Softball</a>
       <a href="soccer.html">Soccer</a>
-      <a class="waitlist-nav" data-waitlist-placement="navigation" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" aria-label="Join the TestFlight waitlist (opens in a new tab)">Join Waitlist</a>
       <a href="support.html">Support</a>
       <a href="privacy-policy.html">Privacy</a>
-      <a href="recommended-gimbals.html">Gimbals</a>
+      <a href="recommended-gimbals.html">Equipment</a>
     </nav>
   </header>
 
@@ -257,9 +251,9 @@
     </section>
 
     <section class="fact-grid" aria-label="Sideline Save at a glance">
-      <div class="fact-card"><strong>5, 10, or 20 seconds</strong><p>Choose how much action from before you press record should be included.</p></div>
       <div class="fact-card"><strong>Five sport presets</strong><p>Baseball, Basketball, Soccer, Football, and Custom remember their own setup.</p></div>
-      <div class="fact-card"><strong>Photos first</strong><p>Highlights are saved locally to Photos and organized into sport albums when possible.</p></div>
+      <div class="fact-card"><strong>Albums for every sport</strong><p>Saved videos go to Photos and are organized into matching sport albums when possible.</p></div>
+      <div class="fact-card"><strong>Your highlights stay yours</strong><p>Videos stay on your iPhone and in your Photos library until you choose to share them.</p></div>
     </section>
 
     <section class="story" aria-labelledby="why-title">
@@ -279,7 +273,6 @@
       </div>
       <div class="sport-grid">
         <article class="sport-card">
-          <img src="images/baseball-softball-sideline.jpg" width="1536" height="1024" loading="lazy" alt="Illustration of a parent recording a baseball or softball swing from behind the sideline fence">
           <div class="sport-card-copy">
             <h3>Baseball &amp; Softball</h3>
             <p>Press record after the hit. Your video will still have the pitch and the swing.</p>
@@ -287,7 +280,6 @@
           </div>
         </article>
         <article class="sport-card">
-          <img src="images/soccer-sideline.jpg" width="1536" height="1024" loading="lazy" alt="Illustration of a parent recording an attacking soccer play from the touchline">
           <div class="sport-card-copy">
             <h3>Soccer</h3>
             <p>Press record when the play heads toward goal. Your video will still have the pass that started it.</p>
@@ -299,27 +291,27 @@
 
     <section class="showcase" aria-labelledby="showcase-title">
       <div class="showcase-heading">
-        <h2 id="showcase-title">See the whole highlight workflow.</h2>
-        <p>Keep the camera ready, review a full library of saved plays, open the latest highlight, and tune capture settings for the sport in front of you.</p>
+        <h2 id="showcase-title">Here’s how it works.</h2>
+        <p>Press record after the play gets good, stop when it is over, and keep the beginning in the finished video.</p>
       </div>
       <div class="screenshot-grid">
-        <figure class="screenshot-card"><img src="screenshots/01-home.jpg" width="660" height="1434" alt="Sideline Save camera ready with a full ten-second rolling buffer"><figcaption>Ready before the play starts.</figcaption></figure>
-        <figure class="screenshot-card"><img src="screenshots/02-saved-videos.jpg" width="660" height="1434" loading="lazy" alt="Saved Videos organized across two days with thumbnails from several games"><figcaption>Seven highlights, organized by day.</figcaption></figure>
-        <figure class="screenshot-card"><img src="screenshots/03-saved-video-preview.jpg" width="660" height="1434" loading="lazy" alt="A fifteen-second saved highlight open in the video preview screen"><figcaption>Review the complete 15-second video.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/01-home-ready.jpg" width="660" height="1434" alt="A baseball player running after a hit while Sideline Save is ready to record"><figcaption>Your player just hit the ball. Press record now.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/02-home-recording.jpg" width="660" height="1434" loading="lazy" alt="Sideline Save actively recording as the baseball play concludes"><figcaption>Stop the recording when the play is finished.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/03-saved-video-preview.jpg" width="660" height="1434" loading="lazy" alt="The saved baseball video beginning before the swing"><figcaption>Your video starts 10 seconds before you press record.</figcaption></figure>
         <figure class="screenshot-card"><img src="screenshots/04-settings.jpg" width="660" height="1434" loading="lazy" alt="Sport-specific Sideline Save capture settings"><figcaption>Keep reliable settings for each sport.</figcaption></figure>
       </div>
     </section>
 
     <section class="features" aria-labelledby="features-title">
       <div class="features-heading">
-        <h2 id="features-title">Made for a real sideline.</h2>
+        <h2 id="features-title">Optimized for the big moment.</h2>
         <p>Fast controls, flexible capture choices, and a library built around the way families find and share highlights.</p>
       </div>
       <div class="feature-grid">
         <article class="feature-card"><span class="feature-icon" aria-hidden="true">01</span><h3>Ready for fast action</h3><p>Camera-style zoom controls, pinch-to-zoom, supported video stabilization, and quality and frame-rate options help you frame each sport.</p></article>
         <article class="feature-card"><span class="feature-icon" aria-hidden="true">02</span><h3>Organized by sport</h3><p>Each sport remembers its own capture settings. Saved videos can be reassigned later and moved to the matching sport album.</p></article>
         <article class="feature-card"><span class="feature-icon" aria-hidden="true">03</span><h3>Easy to find and share</h3><p>Open Saved Videos from the home screen to filter, play, favorite, share, delete, or change the sport for a highlight.</p></article>
-        <article class="feature-card"><span class="feature-icon" aria-hidden="true">04</span><h3>A brief safety net</h3><p>If you forget to press record, recently buffered video may still be recoverable from Settings for about five minutes.</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">04</span><h3>Never miss the big play again</h3><p>Wait until the moment proves it is worth saving, then press record and keep the action that led up to it.</p></article>
       </div>
     </section>
 

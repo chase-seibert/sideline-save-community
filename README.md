@@ -11,13 +11,14 @@
 When a play becomes worth saving, press record. Your video will still have the
 beginning of the play—without recording the whole game.
 
+[Join the TestFlight waitlist](https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor)
+
 [About](https://chase-seibert.github.io/sideline-save-community/) ·
 [Baseball + Softball](https://chase-seibert.github.io/sideline-save-community/baseball-softball.html) ·
 [Soccer](https://chase-seibert.github.io/sideline-save-community/soccer.html) ·
-[Waitlist](https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor) ·
 [Support](https://chase-seibert.github.io/sideline-save-community/support.html) ·
 [Privacy](https://chase-seibert.github.io/sideline-save-community/privacy-policy.html) ·
-[Gimbals](https://chase-seibert.github.io/sideline-save-community/recommended-gimbals.html)
+[Equipment](https://chase-seibert.github.io/sideline-save-community/recommended-gimbals.html)
 
 ## One moment, three steps
 
@@ -30,12 +31,12 @@ beginning of the play—without recording the whole game.
 
 ## Sideline Save at a glance
 
-- **5, 10, or 20 seconds:** Choose how much action from before you press record
-  should be included.
 - **Five sport presets:** Baseball, Basketball, Soccer, Football, and Custom
   remember their own setup.
-- **Photos first:** Highlights are saved locally to Photos and organized into
-  sport albums when possible.
+- **Albums for every sport:** Saved videos go to Photos and are organized into
+  matching sport albums when possible.
+- **Your highlights stay yours:** Videos stay on your iPhone and in your Photos
+  library until you choose to share them.
 
 ## Why it exists
 
@@ -65,19 +66,20 @@ pass that started it.
 
 [See Sideline Save for soccer](https://chase-seibert.github.io/sideline-save-community/soccer.html)
 
-## See the whole highlight workflow
+## Here’s how it works
 
 <p align="center">
-  <img src="screenshots/01-home.jpg" alt="Sideline Save camera ready with a full ten-second rolling buffer" width="23%">
-  <img src="screenshots/02-saved-videos.jpg" alt="Seven saved highlights organized across two days" width="23%">
-  <img src="screenshots/03-saved-video-preview.jpg" alt="A fifteen-second saved highlight open in the preview screen" width="23%">
+  <img src="screenshots/01-home-ready.jpg" alt="A baseball player running after a hit while Sideline Save is ready to record" width="23%">
+  <img src="screenshots/02-home-recording.jpg" alt="Sideline Save actively recording as the baseball play concludes" width="23%">
+  <img src="screenshots/03-saved-video-preview.jpg" alt="The saved baseball video beginning before the swing" width="23%">
   <img src="screenshots/04-settings.jpg" alt="Sport-specific Sideline Save capture settings" width="23%">
 </p>
 
-Keep the camera ready, review highlights organized by day, open the complete
-15-second saved video, and tune reliable capture settings for each sport.
+Press record after the play gets good, stop when it is over, and keep the
+beginning in the finished video. The final screen shows the reliable settings
+saved for each sport.
 
-## Made for a real sideline
+## Optimized for the big moment
 
 Fast controls, flexible capture choices, and a library built around the way
 families find and share highlights.
@@ -97,10 +99,10 @@ later and moved to the matching sport album.
 Open Saved Videos from the home screen to filter, play, favorite, share,
 delete, or change the sport for a highlight.
 
-### A brief safety net
+### Never miss the big play again
 
-If you forget to press record, recently buffered video may still be recoverable
-from Settings for about five minutes.
+Wait until the moment proves it is worth saving, then press record and keep the
+action that led up to it.
 
 ## Your highlights stay yours
 
