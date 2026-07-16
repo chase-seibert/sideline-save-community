@@ -107,6 +107,14 @@
     .sequence-card h3 { color: white; }
     .sequence-card p { margin: 0; color: rgba(255, 255, 255, .75); font-size: .92rem; }
 
+    .showcase { padding: 64px 0 8px; }
+    .showcase-heading { max-width: 720px; margin-bottom: 28px; }
+    .showcase-heading p { margin: 0; color: var(--muted); }
+    .screenshot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; }
+    .screenshot-card { margin: 0; }
+    .screenshot-card img { display: block; width: 100%; height: auto; border: 1px solid rgba(18, 61, 45, .16); border-radius: 22px; background: #050807; box-shadow: 0 18px 42px rgba(9, 40, 29, .15); }
+    .screenshot-card figcaption { margin-top: 12px; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
+
     .moment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .moment-card { padding: 28px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 18px; background: var(--paper); }
     .moment-label { display: inline-flex; margin-bottom: 16px; padding: 6px 10px; border-radius: 999px; background: #f5e5db; color: #7c3e21; font-size: .74rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
@@ -132,6 +140,7 @@
     @media (max-width: 820px) {
       .problem, .tips-panel, .waitlist-band { grid-template-columns: 1fr; }
       .sequence-grid { grid-template-columns: 1fr; }
+      .screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .waitlist-band .button { justify-self: start; }
     }
     @media (max-width: 620px) { .fact-grid, .moment-grid { grid-template-columns: 1fr; } }
@@ -146,6 +155,8 @@
       .problem, .tips-panel { padding: 30px 24px; }
       .hero-actions { align-items: stretch; flex-direction: column; }
       .hero-media figcaption { display: none; }
+      .screenshot-grid { grid-template-columns: 1fr; gap: 28px; }
+      .screenshot-card { max-width: 330px; margin-inline: auto; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
@@ -213,6 +224,19 @@
         <article class="sequence-card"><span class="sequence-number" aria-hidden="true">1</span><h3>Frame the at-bat</h3><p>Keep Sideline Save open and the pitcher, batter, and likely play area in view.</p></article>
         <article class="sequence-card"><span class="sequence-number" aria-hidden="true">2</span><h3>Press record after the hit</h3><p>The video starts with the action already held by Sideline Save, including the pitch and swing when they fit your selected window.</p></article>
         <article class="sequence-card"><span class="sequence-number" aria-hidden="true">3</span><h3>Press stop after the play</h3><p>Keep the run, throw, slide, reaction, or celebration, then save the finished video to Photos.</p></article>
+      </div>
+    </section>
+
+    <section class="showcase" aria-labelledby="showcase-title">
+      <div class="showcase-heading">
+        <h2 id="showcase-title">Here’s how it works.</h2>
+        <p>Press record after the play gets good, stop when it is over, and keep the beginning in the finished video.</p>
+      </div>
+      <div class="screenshot-grid">
+        <figure class="screenshot-card"><img src="screenshots/01-home-ready.jpg" width="660" height="1434" alt="A baseball player running after a hit while Sideline Save is ready to record"><figcaption>Your player just hit the ball. Press record now.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/02-home-recording.jpg" width="660" height="1434" loading="lazy" alt="Sideline Save actively recording as the baseball play concludes"><figcaption>Stop the recording when the play is finished.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/03-saved-video-preview.jpg" width="660" height="1434" loading="lazy" alt="The saved baseball video beginning before the swing"><figcaption>Your video starts 10 seconds before you press record.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/04-settings.jpg" width="660" height="1434" loading="lazy" alt="Sport-specific Sideline Save capture settings"><figcaption>Keep reliable settings for each sport.</figcaption></figure>
       </div>
     </section>
 
