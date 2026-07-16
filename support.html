@@ -14,6 +14,15 @@
     gtag('js', new Date());
 
     gtag('config', 'G-7KPLTQGLSL');
+
+    document.addEventListener('click', function(event) {
+      var link = event.target.closest('a[data-waitlist-placement]');
+      if (!link) return;
+      gtag('event', 'waitlist_click', {
+        page_path: window.location.pathname,
+        waitlist_placement: link.getAttribute('data-waitlist-placement')
+      });
+    });
   </script>
   <title>Support — Sideline Save</title>
   <style>
@@ -88,6 +97,8 @@
       text-decoration: none;
     }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    .site-nav .waitlist-nav { background: var(--red); color: white; }
+    .site-nav .waitlist-nav:hover { background: #eb3a44; color: white; }
     main { margin-bottom: 72px; }
 
     .hero {
@@ -266,7 +277,9 @@
     <span class="brand"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="about.html">About</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" aria-label="Join the TestFlight waitlist (opens in a new tab)">Waitlist</a>
+      <a href="baseball-softball.html">Baseball + Softball</a>
+      <a href="soccer.html">Soccer</a>
+      <a class="waitlist-nav" data-waitlist-placement="navigation" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" aria-label="Join the TestFlight waitlist (opens in a new tab)">Join Waitlist</a>
       <a href="support.html" aria-current="page">Support</a>
       <a href="privacy-policy.html">Privacy</a>
       <a href="recommended-gimbals.html">Gimbals</a>

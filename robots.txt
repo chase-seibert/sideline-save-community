@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chase-seibert.github.io/sideline-save-community/sitemap.xml

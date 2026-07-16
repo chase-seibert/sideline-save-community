@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sideline Save helps parents capture youth sports highlights with the moments before they tap, without recording the whole game.">
+  <meta name="description" content="Stop recording every youth sports play just in case. Press record when a play becomes worth saving and keep the beginning of the play in your video.">
+  <link rel="canonical" href="https://chase-seibert.github.io/sideline-save-community/">
   <meta name="theme-color" content="#123d2d">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <!-- Google tag (gtag.js) -->
@@ -14,8 +15,17 @@
     gtag('js', new Date());
 
     gtag('config', 'G-7KPLTQGLSL');
+
+    document.addEventListener('click', function(event) {
+      var link = event.target.closest('a[data-waitlist-placement]');
+      if (!link) return;
+      gtag('event', 'waitlist_click', {
+        page_path: window.location.pathname,
+        waitlist_placement: link.getAttribute('data-waitlist-placement')
+      });
+    });
   </script>
-  <title>About — Sideline Save</title>
+  <title>Youth Sports Video App for Parents — Sideline Save</title>
   <style>
     :root {
       --forest: #123d2d;
@@ -70,6 +80,8 @@
     .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    .site-nav .waitlist-nav { background: var(--red); color: white; }
+    .site-nav .waitlist-nav:hover { background: #eb3a44; color: white; }
     main { margin-bottom: 72px; }
 
     .hero {
@@ -103,6 +115,11 @@
     h2 { margin: 0 0 18px; font-size: clamp(1.7rem, 3.5vw, 2.55rem); }
     h3 { margin: 0 0 9px; font-size: 1.13rem; }
     .lede { max-width: 700px; margin: 24px 0 0; color: #35433c; font-size: clamp(1.08rem, 2vw, 1.28rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 28px; }
+    .button { display: inline-flex; min-height: 48px; padding: 12px 20px; align-items: center; justify-content: center; border-radius: 999px; font-weight: 800; text-decoration: none; }
+    .button-primary { background: var(--red); color: white; box-shadow: 0 8px 20px rgba(165, 30, 40, .2); }
+    .button-primary:hover { background: #eb3a44; color: white; }
+    .button-secondary { border: 1px solid var(--line); background: var(--paper); color: var(--forest-dark); }
 
     .moment-card { padding: 28px; border-radius: 22px; background: var(--forest); color: white; box-shadow: 0 16px 40px rgba(9, 40, 29, .22); }
     .moment-card > p { margin: 0 0 22px; color: rgba(255, 255, 255, .73); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
@@ -132,6 +149,16 @@
     .story-label { margin: 0; color: var(--red-dark); font-size: .8rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
     .story-copy p { margin: 0; color: #35433c; font-size: 1.04rem; }
     .story-copy p + p { margin-top: 18px; }
+
+    .sport-pages { padding: 64px 0 8px; }
+    .sport-heading { max-width: 720px; margin-bottom: 28px; }
+    .sport-heading p { margin: 0; color: var(--muted); }
+    .sport-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .sport-card { overflow: hidden; border: 1px solid rgba(18, 61, 45, .12); border-radius: 22px; background: var(--paper); box-shadow: 0 14px 38px rgba(9, 40, 29, .07); }
+    .sport-card img { display: block; width: 100%; height: 230px; object-fit: cover; }
+    .sport-card-copy { padding: 26px; }
+    .sport-card-copy p { margin: 0 0 18px; color: var(--muted); }
+    .sport-card-copy a { font-weight: 800; }
 
     .features { padding: 64px 0 14px; }
     .features-heading { max-width: 710px; margin-bottom: 28px; }
@@ -166,7 +193,7 @@
       .privacy-link { justify-self: start; }
       .screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-    @media (max-width: 620px) { .fact-grid, .feature-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 620px) { .fact-grid, .feature-grid, .sport-grid { grid-template-columns: 1fr; } }
     @media (max-width: 520px) {
       body { font-size: 16px; }
       .site-header, main, footer { width: calc(100% - 24px); }
@@ -179,6 +206,8 @@
       .moment-card { padding: 24px 20px; }
       .screenshot-grid { grid-template-columns: 1fr; gap: 28px; }
       .screenshot-card { max-width: 330px; margin-inline: auto; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .sport-card img { height: 210px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
@@ -199,7 +228,9 @@
     <span class="brand"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="about.html" aria-current="page">About</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" aria-label="Join the TestFlight waitlist (opens in a new tab)">Waitlist</a>
+      <a href="baseball-softball.html">Baseball + Softball</a>
+      <a href="soccer.html">Soccer</a>
+      <a class="waitlist-nav" data-waitlist-placement="navigation" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" aria-label="Join the TestFlight waitlist (opens in a new tab)">Join Waitlist</a>
       <a href="support.html">Support</a>
       <a href="privacy-policy.html">Privacy</a>
       <a href="recommended-gimbals.html">Gimbals</a>
@@ -210,19 +241,23 @@
     <section class="hero" aria-labelledby="about-title">
       <div class="hero-copy">
         <p class="eyebrow">About Sideline Save</p>
-        <h1 id="about-title">Tap when it matters. Save the whole highlight.</h1>
-        <p class="lede">Sideline Save is an iPhone camera app for parents, families, and sideline supporters who want the big moment without recording the whole game.</p>
+        <h1 id="about-title">Stop recording every play just in case.</h1>
+        <p class="lede">When a play becomes worth saving, press record. Your video will still have the beginning of the play—without recording the whole game.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" data-waitlist-placement="about_hero" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Join the TestFlight waitlist</a>
+          <a class="button button-secondary" href="#how-it-works">See how it works</a>
+        </div>
       </div>
-      <aside class="moment-card" aria-label="How Sideline Save works">
+      <aside class="moment-card" id="how-it-works" aria-label="How Sideline Save works">
         <p>One moment, three steps</p>
         <div class="moment-step"><span class="step-number">1</span><span><strong>Keep the camera ready</strong><span>Sideline Save holds a short rolling buffer while the app is open.</span></span></div>
-        <div class="moment-step"><span class="step-number">2</span><span><strong>Tap when the play breaks open</strong><span>Your clip starts with the seconds from before you tapped.</span></span></div>
-        <div class="moment-step"><span class="step-number">3</span><span><strong>Tap again to save</strong><span>The finished highlight goes directly to your Photos library.</span></span></div>
+        <div class="moment-step"><span class="step-number">2</span><span><strong>Press record when the play gets good</strong><span>Your video will still have the beginning of the play.</span></span></div>
+        <div class="moment-step"><span class="step-number">3</span><span><strong>Press stop when it ends</strong><span>The finished video goes directly to your Photos library.</span></span></div>
       </aside>
     </section>
 
     <section class="fact-grid" aria-label="Sideline Save at a glance">
-      <div class="fact-card"><strong>5, 10, or 20 seconds</strong><p>Choose how much action from before the first tap should be included.</p></div>
+      <div class="fact-card"><strong>5, 10, or 20 seconds</strong><p>Choose how much action from before you press record should be included.</p></div>
       <div class="fact-card"><strong>Five sport presets</strong><p>Baseball, Basketball, Soccer, Football, and Custom remember their own setup.</p></div>
       <div class="fact-card"><strong>Photos first</strong><p>Highlights are saved locally to Photos and organized into sport albums when possible.</p></div>
     </section>
@@ -232,7 +267,33 @@
       <div class="story-copy">
         <h2 id="why-title">The best plays rarely give you a warning.</h2>
         <p>It is easy to spend a whole game recording every pitch, shot, serve, or drive just in case something happens. Later, the real highlights are buried inside a camera roll full of misses and almosts.</p>
-        <p>Sideline Save flips that routine around. Keep the camera pointed at the action and watch the game. When a play becomes worth keeping, start the clip then—Sideline Save can still include the lead-in. You save fewer videos, keep more of the context that matters, and spend less time cleaning up afterward.</p>
+        <p>Sideline Save flips that routine around. Keep the camera pointed at the action and watch the game. When a play becomes worth keeping, press record then—your video can still include the beginning of the play. You save fewer videos, keep more of the context that matters, and spend less time cleaning up afterward.</p>
+      </div>
+    </section>
+
+    <section class="sport-pages" aria-labelledby="sport-pages-title">
+      <div class="sport-heading">
+        <p class="eyebrow">Made for your game</p>
+        <h2 id="sport-pages-title">See how Sideline Save fits the sport you record.</h2>
+        <p>The same record button solves a different “just in case” problem on every sideline.</p>
+      </div>
+      <div class="sport-grid">
+        <article class="sport-card">
+          <img src="images/baseball-softball-sideline.jpg" width="1536" height="1024" loading="lazy" alt="Illustration of a parent recording a baseball or softball swing from behind the sideline fence">
+          <div class="sport-card-copy">
+            <h3>Baseball &amp; Softball</h3>
+            <p>Press record after the hit. Your video will still have the pitch and the swing.</p>
+            <a href="baseball-softball.html">See Sideline Save for baseball and softball</a>
+          </div>
+        </article>
+        <article class="sport-card">
+          <img src="images/soccer-sideline.jpg" width="1536" height="1024" loading="lazy" alt="Illustration of a parent recording an attacking soccer play from the touchline">
+          <div class="sport-card-copy">
+            <h3>Soccer</h3>
+            <p>Press record when the play heads toward goal. Your video will still have the pass that started it.</p>
+            <a href="soccer.html">See Sideline Save for soccer</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -244,7 +305,7 @@
       <div class="screenshot-grid">
         <figure class="screenshot-card"><img src="screenshots/01-home.jpg" width="660" height="1434" alt="Sideline Save camera ready with a full ten-second rolling buffer"><figcaption>Ready before the play starts.</figcaption></figure>
         <figure class="screenshot-card"><img src="screenshots/02-saved-videos.jpg" width="660" height="1434" loading="lazy" alt="Saved Videos organized across two days with thumbnails from several games"><figcaption>Seven highlights, organized by day.</figcaption></figure>
-        <figure class="screenshot-card"><img src="screenshots/03-saved-video-preview.jpg" width="660" height="1434" loading="lazy" alt="A fifteen-second saved highlight open in the video preview screen"><figcaption>Review the complete 15-second clip.</figcaption></figure>
+        <figure class="screenshot-card"><img src="screenshots/03-saved-video-preview.jpg" width="660" height="1434" loading="lazy" alt="A fifteen-second saved highlight open in the video preview screen"><figcaption>Review the complete 15-second video.</figcaption></figure>
         <figure class="screenshot-card"><img src="screenshots/04-settings.jpg" width="660" height="1434" loading="lazy" alt="Sport-specific Sideline Save capture settings"><figcaption>Keep reliable settings for each sport.</figcaption></figure>
       </div>
     </section>
@@ -256,9 +317,9 @@
       </div>
       <div class="feature-grid">
         <article class="feature-card"><span class="feature-icon" aria-hidden="true">01</span><h3>Ready for fast action</h3><p>Camera-style zoom controls, pinch-to-zoom, supported video stabilization, and quality and frame-rate options help you frame each sport.</p></article>
-        <article class="feature-card"><span class="feature-icon" aria-hidden="true">02</span><h3>Organized by sport</h3><p>Each sport remembers its own capture settings. Saved clips can be reassigned later and moved to the matching sport album.</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">02</span><h3>Organized by sport</h3><p>Each sport remembers its own capture settings. Saved videos can be reassigned later and moved to the matching sport album.</p></article>
         <article class="feature-card"><span class="feature-icon" aria-hidden="true">03</span><h3>Easy to find and share</h3><p>Open Saved Videos from the home screen to filter, play, favorite, share, delete, or change the sport for a highlight.</p></article>
-        <article class="feature-card"><span class="feature-icon" aria-hidden="true">04</span><h3>A brief safety net</h3><p>If you miss the first tap, a recent available buffer may still be recoverable from Settings for about five minutes.</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">04</span><h3>A brief safety net</h3><p>If you forget to press record, recently buffered video may still be recoverable from Settings for about five minutes.</p></article>
       </div>
     </section>
 
