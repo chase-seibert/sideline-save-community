@@ -4,7 +4,7 @@
 
 # Sideline Save
 
-## About Sideline Save
+## Youth sports video for parents
 
 ### Stop recording every play just in case.
 
@@ -99,10 +99,10 @@ later and moved to the matching sport album.
 Open Saved Videos from the home screen to filter, play, favorite, share,
 delete, or change the sport for a highlight.
 
-### Never miss the big play again
+### Save space on your phone
 
-Wait until the moment proves it is worth saving, then press record and keep the
-action that led up to it.
+Short highlight clips take up far less space than long recordings of the whole
+game.
 
 ## Your highlights stay yours
 
