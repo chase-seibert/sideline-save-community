@@ -113,11 +113,33 @@
     .simple-setups { padding: 62px 0 8px; }
     .setup-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .setup-card { padding: 30px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 20px; background: var(--paper); box-shadow: 0 14px 38px rgba(9, 40, 29, .06); }
+    .setup-card--feature {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
+      gap: 26px;
+      align-items: start;
+    }
     .setup-label { display: inline-flex; margin-bottom: 18px; padding: 7px 11px; border-radius: 999px; background: var(--forest-soft); color: var(--forest-dark); font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
     .setup-card h3 { font-size: 1.45rem; }
     .setup-card p { margin: 0; color: var(--muted); font-size: .94rem; }
     .setup-card p + p { margin-top: 14px; }
     .setup-caution { padding-top: 14px; border-top: 1px solid var(--line); color: #5c493a !important; font-size: .84rem !important; }
+    .setup-figure { margin: 0; }
+    .setup-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 18px 42px rgba(9, 40, 29, .12);
+      object-fit: cover;
+    }
+    .setup-figure figcaption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.5;
+    }
 
     .benefits { padding: 62px 0 16px; }
     .section-heading { max-width: 720px; margin-bottom: 28px; }
@@ -178,7 +200,7 @@
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
     @media (max-width: 820px) {
-      .recommendation, .tips { grid-template-columns: 1fr; }
+      .recommendation, .tips, .setup-card--feature { grid-template-columns: 1fr; }
       .benefit-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 680px) { .setup-grid, .alternative-grid { grid-template-columns: 1fr; } }
@@ -232,11 +254,17 @@
         <p>These solve the most common sideline problems: where to put the phone and how to press record without touching it.</p>
       </div>
       <div class="setup-grid">
-        <article class="setup-card">
-          <span class="setup-label">Baseball fence setup</span>
-          <h3>Secure the phone with a short bungee.</h3>
-          <p>A short elastic bungee—about two inches, with small hooks—can hold a securely cased phone or phone mount against a chain-link fence. Position the camera lens through an opening so the fence stays out of the picture.</p>
-          <p class="setup-caution"><strong>Test the setup before warmups.</strong> Make sure the phone cannot slip, pad any contact points, keep hooks away from players and spectators, and follow the field’s mounting rules.</p>
+        <article class="setup-card setup-card--feature">
+          <div>
+            <span class="setup-label">Baseball fence setup</span>
+            <h3>Secure the phone with a short bungee.</h3>
+            <p>A short elastic bungee, about two inches with small hooks, can hold a securely cased phone or phone mount against a chain-link fence. Position the camera lens through an opening so the fence stays out of the picture.</p>
+            <p class="setup-caution"><strong>Test the setup before warmups.</strong> Make sure the phone cannot slip, pad any contact points, keep hooks away from players and spectators, and follow the field’s mounting rules.</p>
+          </div>
+          <figure class="setup-figure">
+            <img src="images/equipment-fence-setup.jpg" width="1600" height="1200" alt="iPhone running Sideline Save attached to a chain-link fence with a short black bungee cord at a baseball field">
+            <figcaption>A simple fence setup keeps the lens through the chain link while Sideline Save stays easy to start and stop during the game.</figcaption>
+          </figure>
         </article>
         <article class="setup-card">
           <span class="setup-label">Hands-free record button</span>
