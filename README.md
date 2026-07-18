@@ -11,7 +11,9 @@
 When a play becomes worth saving, press record. Your video will still have the
 beginning of the play—without recording the whole game.
 
-[Join the TestFlight waitlist](https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor)
+[Get early access on iPhone](https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor)
+
+Most parents get their TestFlight invite within five minutes.
 
 [About](https://chase-seibert.github.io/sideline-save-community/) ·
 [Baseball + Softball](https://chase-seibert.github.io/sideline-save-community/baseball-softball.html) ·
