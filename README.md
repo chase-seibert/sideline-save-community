@@ -16,6 +16,7 @@ beginning of the play—without recording the whole game.
 Most parents get their TestFlight invite within five minutes.
 
 [About](https://chase-seibert.github.io/sideline-save-community/) ·
+[Blog](https://chase-seibert.github.io/sideline-save-community/blog/) ·
 [Baseball + Softball](https://chase-seibert.github.io/sideline-save-community/baseball-softball.html) ·
 [Soccer](https://chase-seibert.github.io/sideline-save-community/soccer.html) ·
 [Support](https://chase-seibert.github.io/sideline-save-community/support.html) ·
