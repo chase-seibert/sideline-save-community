@@ -72,15 +72,13 @@ pass that started it.
 ## Here’s how it works
 
 <p align="center">
-  <img src="screenshots/01-home-ready.jpg" alt="A baseball player running after a hit while Sideline Save is ready to record" width="23%">
-  <img src="screenshots/02-home-recording.jpg" alt="Sideline Save actively recording as the baseball play concludes" width="23%">
-  <img src="screenshots/03-saved-video-preview.jpg" alt="The saved baseball video beginning before the swing" width="23%">
-  <img src="screenshots/04-settings.jpg" alt="Sport-specific Sideline Save capture settings" width="23%">
+  <img src="screenshots/01-home-ready.jpg" alt="A baseball player running after a hit while Sideline Save is ready to record" width="31%">
+  <img src="screenshots/02-home-recording.jpg" alt="Sideline Save actively recording as the baseball play concludes" width="31%">
+  <img src="screenshots/03-saved-videos.jpg" alt="Sideline Save's Saved Videos list grouped by day and sport" width="31%">
 </p>
 
-Press record after the play gets good, stop when it is over, and keep the
-beginning in the finished video. The final screen shows the reliable settings
-saved for each sport.
+Press record after the play gets good, stop when it is over, and open Saved
+Videos later to find the highlight fast.
 
 ## Optimized for the big moment
 
