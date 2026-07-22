@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Get help with recording, saving, organizing, and recovering sports highlights in Sideline Save for iPhone.">
+  <meta name="description" content="Get help with recording, saving, organizing, and sharing sports highlights in Sideline Save for iPhone.">
   <meta name="theme-color" content="#123d2d">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <!-- Google tag (gtag.js) -->
@@ -190,6 +190,8 @@
     }
     .section-intro { margin: -6px 0 25px; color: var(--muted); }
     .faq-list { border-top: 1px solid var(--line); }
+    .faq-category { margin: 36px 0 12px; color: var(--red-dark); font-size: .78rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+    .faq-category:first-child { margin-top: 0; }
     details { border-bottom: 1px solid var(--line); }
     summary {
       position: relative;
@@ -289,7 +291,7 @@
       <div class="hero-copy">
         <p class="eyebrow">Sideline Save Support</p>
         <h1 id="support-title">Let’s get you back to the game.</h1>
-        <p class="lede">Find quick answers for recording, saving, organizing, and recovering sports highlights on your iPhone.</p>
+        <p class="lede">Find quick answers for recording, saving, organizing, and sharing sports highlights on your iPhone.</p>
       </div>
       <aside class="contact-panel" aria-label="Contact support">
         <strong>Still need a hand?</strong>
@@ -301,7 +303,7 @@
     <section class="quick-grid" aria-label="Quick support facts">
       <div class="quick-card"><span class="quick-icon" aria-hidden="true">01</span><strong>Your clips live in Photos</strong><p>Look in Recents, the main Sideline Save album, and the album for the selected sport.</p></div>
       <div class="quick-card"><span class="quick-icon" aria-hidden="true">02</span><strong>Limited Photos access works</strong><p>Camera and Photos are required to save. Microphone is optional if you prefer silent video.</p></div>
-      <div class="quick-card"><span class="quick-icon" aria-hidden="true">03</span><strong>Recent buffers may be recoverable</strong><p>Open Settings &gt; Recover Buffers within about five minutes if an available highlight was not saved.</p></div>
+      <div class="quick-card"><span class="quick-icon" aria-hidden="true">03</span><strong>Capture the beginning, too</strong><p>Choose a short pre-roll so your saved highlight can include the action before you tap record.</p></div>
     </section>
 
     <div class="support-layout">
@@ -310,6 +312,36 @@
         <p class="section-intro">The fastest fixes for common sideline moments.</p>
 
         <div class="faq-list">
+          <h3 class="faq-category">Capture and game day</h3>
+          <details open>
+            <summary>How many seconds before I hit record can the app capture?</summary>
+            <div class="answer">
+              <p>Choose 0, 5, 10, or 20 seconds of pre-roll in Settings. Pre-roll captures action immediately before you start a highlight. You can also choose post-roll to continue recording briefly after you stop. The app starts with sport-specific pre-roll defaults.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does Sideline Save record when the app is closed?</summary>
+            <div class="answer">
+              <p>No. Sideline Save buffers video only while it is open and active. If you lock your phone, switch apps, or close Sideline Save, camera and microphone capture stop. If you had already started a highlight, the app makes a best-effort attempt to finish and save the footage captured so far.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How does using Sideline Save affect battery life?</summary>
+            <div class="answer">
+              <p>Keeping the camera active and maintaining a video buffer uses more battery than ordinary phone use, especially at higher-quality settings. Start with a full charge and bring a battery pack for tournaments or long game days.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Which sports does Sideline Save support?</summary>
+            <div class="answer">
+              <p>Sideline Save includes presets for Baseball, Basketball, Soccer, Football, and Custom. Each sport keeps its own capture preferences, so you can tune settings without changing another sport’s setup.</p>
+            </div>
+          </details>
+
+          <h3 class="faq-category">Saving and storage</h3>
           <details open>
             <summary>Where did my saved video go?</summary>
             <div class="answer">
@@ -319,16 +351,9 @@
           </details>
 
           <details>
-            <summary>How do I allow Camera or Photos access?</summary>
+            <summary>Does Sideline Save take up local storage?</summary>
             <div class="answer">
-              <p>Open the iOS Settings app, search for Sideline Save, and review Camera, Microphone, Motion, and Photos access. Camera and Photos are required to capture and save clips. Limited Photos access is enough because Sideline Save only needs to save videos and read back the videos it created. Microphone is optional.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Can I recover a play I forgot to save?</summary>
-            <div class="answer">
-              <p>Sometimes. If a recent idle buffer is available, open Sideline Save <strong>Settings &gt; Recover Buffers</strong> within about five minutes. Preview the buffer and choose Save to Photos. Recovery is intentionally short-lived and cannot guarantee that every missed play will be available.</p>
+              <p>Saved highlights are stored in your Apple Photos library. While capture is open, the app maintains a short temporary on-device video buffer so it can include pre-roll in a saved highlight. That temporary buffer is not uploaded or kept as a separate saved video.</p>
             </div>
           </details>
 
@@ -336,13 +361,6 @@
             <summary>How do I change the sport on an existing video?</summary>
             <div class="answer">
               <p>Open Saved Videos, choose the clip, then tap anywhere on its <strong>Sport</strong> row or tap the pencil icon. Pick the new sport. Sideline Save keeps the clip in the main Sideline Save album, removes it from the prior sport album, and adds it to the new sport album. Choosing Custom removes it from the prior sport album without creating a Custom album.</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Why doesn’t my video have sound?</summary>
-            <div class="answer">
-              <p>Microphone access is optional. If you want sideline audio, open iOS Settings, find Sideline Save, and enable Microphone. A clip recorded while access is off will remain silent; granting access later cannot add audio to an existing clip.</p>
             </div>
           </details>
 
@@ -360,6 +378,29 @@
             </div>
           </details>
 
+          <h3 class="faq-category">Permissions and privacy</h3>
+          <details>
+            <summary>How do I allow Camera or Photos access?</summary>
+            <div class="answer">
+              <p>Open the iOS Settings app, search for Sideline Save, and review Camera, Microphone, Motion, and Photos access. Camera and Photos are required to capture and save clips. Limited Photos access is enough because Sideline Save only needs to save videos and read back the videos it created. Microphone is optional.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why doesn’t my video have sound?</summary>
+            <div class="answer">
+              <p>Microphone access is optional. If you want sideline audio, open iOS Settings, find Sideline Save, and enable Microphone. A clip recorded while access is off will remain silent; granting access later cannot add audio to an existing clip.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How does Sideline Save protect my privacy?</summary>
+            <div class="answer">
+              <p>Your camera video and optional audio stay on your iPhone and in your Photos library. Sideline Save does not upload your camera feed, saved videos, audio, or Photos identifiers. The app has no user accounts; it may collect limited anonymous usage and permission-state analytics to improve the product. See the <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+            </div>
+          </details>
+
+          <h3 class="faq-category">Setup and troubleshooting</h3>
           <details>
             <summary>Can I mount my phone or camera on a Little League fence?</summary>
             <div class="answer">
