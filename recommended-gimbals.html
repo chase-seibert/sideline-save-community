@@ -141,13 +141,18 @@
       line-height: 1.5;
     }
 
-    .benefits { padding: 62px 0 16px; }
+    .step-up { padding: 62px 0 16px; }
     .section-heading { max-width: 720px; margin-bottom: 28px; }
     .section-heading p { margin: 0; color: var(--muted); }
-    .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .benefit-card { padding: 27px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 18px; background: var(--paper); }
-    .benefit-number { display: grid; width: 38px; height: 38px; margin-bottom: 18px; place-items: center; border-radius: 50%; background: var(--forest-soft); color: var(--forest-dark); font-size: .84rem; font-weight: 850; }
-    .benefit-card p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.55; }
+    .upgrade-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .upgrade-card { padding: 30px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 20px; background: var(--paper); box-shadow: 0 14px 38px rgba(9, 40, 29, .06); }
+    .upgrade-card h3 { font-size: 1.45rem; }
+    .upgrade-card p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .upgrade-card p + p { margin-top: 14px; }
+    .upgrade-benefit-list { display: grid; gap: 12px; margin: 22px 0 0; padding: 0; list-style: none; }
+    .upgrade-benefit-list li { position: relative; padding-left: 24px; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+    .upgrade-benefit-list li::before { position: absolute; left: 0; color: var(--forest); font-weight: 900; content: "✓"; }
+    .upgrade-benefit-list strong { color: var(--forest-dark); }
 
     .recommendation {
       display: grid;
@@ -173,19 +178,6 @@
     .button-secondary { border: 1px solid var(--line); background: var(--paper); color: var(--forest-dark); }
     .fine-print { margin: 18px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
 
-    .alternatives { padding: 64px 0 4px; }
-    .alternative-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .alternative-card { display: flex; min-height: 100%; padding: 30px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 20px; background: var(--paper); flex-direction: column; }
-    .alternative-rank { display: inline-flex; align-self: flex-start; margin-bottom: 18px; padding: 7px 11px; border-radius: 999px; background: var(--forest-soft); color: var(--forest-dark); font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
-    .alternative-card h3 { font-size: 1.45rem; }
-    .alternative-card > p { margin: 0; color: var(--muted); font-size: .93rem; }
-    .alternative-features { margin: 22px 0 26px; padding: 0; color: #35433c; font-size: .9rem; list-style: none; }
-    .alternative-features li { position: relative; padding-left: 22px; }
-    .alternative-features li + li { margin-top: 10px; }
-    .alternative-features li::before { position: absolute; left: 0; color: var(--orange); font-weight: 900; content: "•"; }
-    .alternative-card .button { align-self: flex-start; margin-top: auto; }
-    .alternatives-note { margin: 18px 0 0; color: var(--muted); font-size: .78rem; }
-
     .tips { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: clamp(28px, 6vw, 68px); padding: 64px 0 16px; }
     .tips > p { margin: 0; color: var(--muted); }
     .tip-list { margin: 0; padding: 0; list-style: none; }
@@ -201,9 +193,9 @@
 
     @media (max-width: 820px) {
       .recommendation, .tips, .setup-card--feature { grid-template-columns: 1fr; }
-      .benefit-grid { grid-template-columns: 1fr; }
+      .upgrade-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 680px) { .setup-grid, .alternative-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 680px) { .setup-grid { grid-template-columns: 1fr; } }
     @media (max-width: 520px) {
       body { font-size: 16px; }
       .site-header, main, footer { width: calc(100% - 24px); }
@@ -251,8 +243,8 @@
 
     <section class="simple-setups" aria-labelledby="simple-setups-title">
       <div class="section-heading">
-        <h2 id="simple-setups-title">Start with two small, inexpensive upgrades.</h2>
-        <p>These solve the most common sideline problems: where to put the phone and how to press record without touching it.</p>
+        <h2 id="simple-setups-title">Start with the simple basics.</h2>
+        <p>These solve the first two sideline problems: where to put the phone and how to press record without touching it.</p>
       </div>
       <div class="setup-grid">
         <article class="setup-card setup-card--feature">
@@ -276,15 +268,29 @@
       </div>
     </section>
 
-    <section class="benefits" aria-labelledby="benefits-title">
+    <section class="step-up" aria-labelledby="step-up-title">
       <div class="section-heading">
-        <h2 id="benefits-title">When to add a gimbal.</h2>
-        <p>Sports make you pan, stop, reframe, and move quickly. A gimbal helps those movements feel intentional instead of shaky.</p>
+        <h2 id="step-up-title">Step up to more flexible gear.</h2>
+        <p>These options cost more, but give you greater control over your camera position or smoother movement while you follow the action.</p>
       </div>
-      <div class="benefit-grid">
-        <article class="benefit-card"><span class="benefit-number" aria-hidden="true">01</span><h3>Smoother tracking</h3><p>Motorized stabilization reduces small hand movements while you follow a runner, drive, or fast transition.</p></article>
-        <article class="benefit-card"><span class="benefit-number" aria-hidden="true">02</span><h3>More level framing</h3><p>The gimbal helps keep the horizon steady when you turn, shift your stance, or move along the sideline.</p></article>
-        <article class="benefit-card"><span class="benefit-number" aria-hidden="true">03</span><h3>Easier-to-watch clips</h3><p>Controlled pans and fewer sudden jolts keep attention on the play, especially when highlights are viewed on a larger screen.</p></article>
+      <div class="upgrade-grid">
+        <article class="upgrade-card">
+          <span class="setup-label">Adjustable post mount</span>
+          <h3>For a steel backstop post, consider the FenceClip Post Mount.</h3>
+          <p>This compact, magnetic phone mount is made to attach to a steel backstop post. Its positioning arm makes it easier to angle the camera through a fence opening, then remove the setup quickly when the game is over.</p>
+          <p class="setup-caution"><strong>Ask before you mount.</strong> A magnetic mount is not a workaround for field rules. Little League says, <a href="https://www.littleleague.org/university/articles/little-league-online-internet-webcast-and-streaming-faqs-guidelines-and-policies/" target="_blank" rel="noopener noreferrer">“No equipment associated with the stream may be affixed to any location on the playing facility”</a> and says placement cannot obstruct spectators’ view. Get the league or facility’s permission first; if mounting is not allowed, use a tripod or handhold from an approved spot.</p>
+          <div class="actions"><a class="button button-secondary" href="https://www.thefenceclip.com/product-page/post-mount-for-cell-phone" target="_blank" rel="noopener noreferrer">See the FenceClip Post Mount</a></div>
+        </article>
+        <article class="upgrade-card">
+          <span class="setup-label">Smoother handheld video</span>
+          <h3>Add a gimbal for steadier action.</h3>
+          <p>Sports make you pan, stop, reframe, and move quickly. A three-axis smartphone gimbal helps those movements feel intentional instead of shaky.</p>
+          <ul class="upgrade-benefit-list" aria-label="Gimbal benefits">
+            <li><strong>Smoother tracking.</strong> Motorized stabilization reduces small hand movements while you follow a runner, drive, or fast transition.</li>
+            <li><strong>More level framing.</strong> The gimbal helps keep the horizon steady when you turn, shift your stance, or move along the sideline.</li>
+            <li><strong>Easier-to-watch clips.</strong> Controlled pans and fewer sudden jolts keep attention on the play.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -308,40 +314,6 @@
       </ul>
     </section>
 
-    <section class="alternatives" aria-labelledby="alternatives-title">
-      <div class="section-heading">
-        <h2 id="alternatives-title">Two more worth considering.</h2>
-        <p>The Osmo Mobile 8 remains our first pick. These are strong alternatives when you want a different ecosystem or more advanced remote framing.</p>
-      </div>
-      <div class="alternative-grid">
-        <article class="alternative-card">
-          <span class="alternative-rank">2 · Best alternative</span>
-          <h3>Insta360 Flow 2 Pro</h3>
-          <p>A compact all-in-one option for iPhone users who want continuous panning and native tracking from another established gimbal system.</p>
-          <ul class="alternative-features">
-            <li>Three-axis stabilization and continuous 360° pan rotation</li>
-            <li>Native Apple DockKit tracking in compatible iPhone apps</li>
-            <li>Built-in tripod and 210 mm extension stick</li>
-            <li>Rated for up to 10 hours in Insta360’s balanced, stationary test</li>
-          </ul>
-          <a class="button button-secondary" href="https://store.insta360.com/product/flow-2-pro" target="_blank" rel="noopener noreferrer">See the Flow 2 Pro</a>
-        </article>
-        <article class="alternative-card">
-          <span class="alternative-rank">3 · Premium remote option</span>
-          <h3>DJI Osmo Mobile 8P</h3>
-          <p>A step-up choice for people who want to frame and control shots away from the handle using DJI’s detachable Osmo FrameTap remote screen.</p>
-          <ul class="alternative-features">
-            <li>Detachable remote with a mirrored camera view for framing</li>
-            <li>Three-axis stabilization and unlimited 360° panning</li>
-            <li>Native Apple DockKit tracking in compatible iPhone apps</li>
-            <li>Built-in tripod and extension rod</li>
-          </ul>
-          <a class="button button-secondary" href="https://www.dji.com/osmo-mobile-8p" target="_blank" rel="noopener noreferrer">See the Osmo Mobile 8P</a>
-        </article>
-      </div>
-      <p class="alternatives-note">Products are listed in Sideline Save recommendation order. Features, compatibility, bundles, pricing, and availability can change; confirm current details with the manufacturer before purchasing.</p>
-    </section>
-
     <section class="tips" aria-labelledby="tips-title">
       <div>
         <h2 id="tips-title">Better results on game day.</h2>
@@ -358,7 +330,7 @@
 
     <aside class="safety-note" aria-labelledby="safety-title">
       <h2 id="safety-title">Stay behind the line.</h2>
-      <p>Never step into the playing area or block players, officials, or spectators to get a shot. Watch your surroundings, follow venue rules, and treat the highlight as less important than everyone’s safety.</p>
+      <p>Never step into the playing area, affix equipment where the facility does not allow it, or block players, officials, or spectators to get a shot. Watch your surroundings, follow venue rules, and treat the highlight as less important than everyone’s safety.</p>
     </aside>
   </main>
 
