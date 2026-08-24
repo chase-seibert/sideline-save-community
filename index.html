@@ -17,11 +17,11 @@
     gtag('config', 'G-7KPLTQGLSL');
 
     document.addEventListener('click', function(event) {
-      var link = event.target.closest('a[data-waitlist-placement]');
+      var link = event.target.closest('a[data-download-placement]');
       if (!link) return;
-      gtag('event', 'waitlist_click', {
+      gtag('event', 'download_click', {
         page_path: window.location.pathname,
-        waitlist_placement: link.getAttribute('data-waitlist-placement')
+        download_placement: link.getAttribute('data-download-placement')
       });
     });
   </script>
@@ -239,7 +239,7 @@
         <h1 id="about-title">Stop recording every play just in case.</h1>
         <p class="lede">When a play becomes worth saving, press record. Your video will still have the beginning of the play—without recording the whole game.</p>
         <div class="hero-actions">
-          <a class="button button-primary" data-waitlist-placement="about_hero" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Get early access on iPhone</a>
+          <a class="button button-primary" data-download-placement="about_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download</a>
           <a class="button button-secondary" href="#how-it-works">See how it works</a>
         </div>
       </div>
