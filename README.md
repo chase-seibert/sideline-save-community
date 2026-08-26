@@ -13,13 +13,13 @@ beginning of the play—without recording the whole game.
 
 [Download Sideline Save](https://apps.apple.com/us/app/sideline-save/id6790879656)
 
-[About](https://chase-seibert.github.io/sideline-save-community/) ·
-[Blog](https://chase-seibert.github.io/sideline-save-community/blog/) ·
-[Baseball + Softball](https://chase-seibert.github.io/sideline-save-community/baseball-softball.html) ·
-[Soccer](https://chase-seibert.github.io/sideline-save-community/soccer.html) ·
-[Support](https://chase-seibert.github.io/sideline-save-community/support.html) ·
-[Privacy](https://chase-seibert.github.io/sideline-save-community/privacy-policy.html) ·
-[Equipment](https://chase-seibert.github.io/sideline-save-community/recommended-gimbals.html)
+[About](https://sidelinesave.com/) ·
+[Blog](https://sidelinesave.com/blog/) ·
+[Baseball + Softball](https://sidelinesave.com/baseball-softball.html) ·
+[Soccer](https://sidelinesave.com/soccer.html) ·
+[Support](https://sidelinesave.com/support.html) ·
+[Privacy](https://sidelinesave.com/privacy-policy.html) ·
+[Equipment](https://sidelinesave.com/recommended-gimbals.html)
 
 ## One moment, three steps
 
@@ -58,14 +58,14 @@ more of the context that matters, and spend less time cleaning up afterward.
 
 Press record after the hit. Your video will still have the pitch and the swing.
 
-[See Sideline Save for baseball and softball](https://chase-seibert.github.io/sideline-save-community/baseball-softball.html)
+[See Sideline Save for baseball and softball](https://sidelinesave.com/baseball-softball.html)
 
 ### Soccer
 
 Press record when the play heads toward goal. Your video will still have the
 pass that started it.
 
-[See Sideline Save for soccer](https://chase-seibert.github.io/sideline-save-community/soccer.html)
+[See Sideline Save for soccer](https://sidelinesave.com/soccer.html)
 
 ## Here’s how it works
 
@@ -109,7 +109,7 @@ Video and audio remain on your iPhone and in your Photos library. Sideline Save
 has no accounts, ads, or cross-app tracking, and collects only limited app and
 website usage information to improve the product.
 
-[Read the Privacy Policy](https://chase-seibert.github.io/sideline-save-community/privacy-policy.html)
+[Read the Privacy Policy](https://sidelinesave.com/privacy-policy.html)
 
 ## Independent and personal
 
@@ -119,6 +119,6 @@ Sideline Save is developed for iPhone with a simple goal: make it easier for
 families to catch the moments they will want to replay. Questions, ideas, and
 honest feedback are welcome.
 
-[Visit Sideline Save Support](https://chase-seibert.github.io/sideline-save-community/support.html)
+[Visit Sideline Save Support](https://sidelinesave.com/support.html)
 
 © 2026 Chase Seibert. Sideline Save.
