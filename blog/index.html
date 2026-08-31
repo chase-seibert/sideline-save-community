@@ -63,9 +63,17 @@
     .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0 16px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--forest-dark); font-weight: 780; }
     .brand-mark { width: 30px; height: 30px; border-radius: 7px; box-shadow: 0 2px 7px rgba(9, 40, 29, .22); flex: 0 0 auto; object-fit: cover; }
-    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    .site-nav .nav-menu { position: relative; border: 0; border-radius: 0; background: transparent; }
+    .site-nav .nav-menu > summary { display: flex; padding: 8px 12px; align-items: center; border-radius: 999px; color: var(--forest-dark); cursor: pointer; font-size: .86rem; font-weight: 800; line-height: 1.65; list-style: none; }
+    .site-nav .nav-menu > summary::-webkit-details-marker { display: none; }
+    .site-nav .nav-menu > summary::before { content: "☰"; font-size: 1.05rem; line-height: 1; }
+    .site-nav .nav-menu > summary::after { content: none; }
+    .site-nav .nav-menu[open] > summary, .site-nav .nav-menu > summary[data-current="true"] { background: var(--forest-soft); }
+    .site-nav .nav-menu-panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; min-width: 170px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 14px 34px rgba(9, 40, 29, .16); }
+    .site-nav .nav-menu-panel a { display: block; white-space: nowrap; }
     main { margin-bottom: 72px; }
 
     .hero {
@@ -114,6 +122,10 @@
     .post-link:hover { background: var(--forest-dark); color: white; }
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
+    @media (max-width: 720px) {
+      .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
+    }
     @media (max-width: 680px) {
       .post-card { grid-template-columns: 1fr; }
       .post-link { justify-self: start; }
@@ -144,12 +156,10 @@
     <span class="brand"><img class="brand-mark" src="../app-icon.png" alt="">Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="../about.html">About</a>
-      <a href="index.html" aria-current="page">Blog</a>
       <a href="../baseball-softball.html">Baseball + Softball</a>
       <a href="../soccer.html">Soccer</a>
       <a href="../support.html">Support</a>
-      <a href="../privacy-policy.html">Privacy</a>
-      <a href="../recommended-gimbals.html">Equipment</a>
+      <details class="nav-menu"><summary aria-label="More pages" data-current="true"></summary><div class="nav-menu-panel"><a href="index.html" aria-current="page">Blog</a><a href="../recommended-gimbals.html">Equipment</a><a href="../privacy-policy.html">Privacy</a></div></details>
     </nav>
   </header>
 

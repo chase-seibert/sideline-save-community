@@ -87,7 +87,7 @@
       flex: 0 0 auto;
       object-fit: cover;
     }
-    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .site-nav a {
       padding: 8px 12px;
       border-radius: 999px;
@@ -97,6 +97,14 @@
       text-decoration: none;
     }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    .site-nav .nav-menu { position: relative; border: 0; border-radius: 0; background: transparent; }
+    .site-nav .nav-menu > summary { display: flex; padding: 8px 12px; align-items: center; border-radius: 999px; color: var(--forest-dark); cursor: pointer; font-size: .86rem; font-weight: 800; line-height: 1.65; list-style: none; }
+    .site-nav .nav-menu > summary::-webkit-details-marker { display: none; }
+    .site-nav .nav-menu > summary::before { content: "☰"; font-size: 1.05rem; line-height: 1; }
+    .site-nav .nav-menu > summary::after { content: none; }
+    .site-nav .nav-menu[open] > summary, .site-nav .nav-menu > summary[data-current="true"] { background: var(--forest-soft); }
+    .site-nav .nav-menu-panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; min-width: 170px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 14px 34px rgba(9, 40, 29, .16); }
+    .site-nav .nav-menu-panel a { display: block; white-space: nowrap; }
     main { margin-bottom: 72px; }
 
     .hero {
@@ -154,34 +162,12 @@
     }
     .primary-button:hover { background: #eb3a44; color: white; }
 
-    .quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0 36px; }
-    .quick-card {
-      min-height: 100%;
-      padding: 25px;
-      border: 1px solid rgba(18, 61, 45, .12);
-      border-radius: 18px;
-      background: rgba(255, 253, 248, .9);
-    }
-    .quick-icon {
-      display: grid;
-      width: 38px;
-      height: 38px;
-      margin-bottom: 18px;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--forest-soft);
-      color: var(--forest-dark);
-      font-size: 1.02rem;
-      font-weight: 850;
-    }
-    .quick-card strong { display: block; margin-bottom: 6px; color: var(--forest-dark); font-size: 1.05rem; }
-    .quick-card p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.55; }
-
     .support-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.45fr) minmax(260px, .55fr);
       gap: clamp(26px, 5vw, 64px);
       align-items: start;
+      margin-top: 24px;
       padding: clamp(30px, 6vw, 64px);
       border: 1px solid rgba(18, 61, 45, .12);
       border-radius: 28px;
@@ -243,9 +229,12 @@
     .status::before { width: 9px; height: 9px; border-radius: 50%; background: #2d8b57; content: ""; box-shadow: 0 0 0 4px rgba(45,139,87,.13); }
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
+    @media (max-width: 720px) {
+      .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
+    }
     @media (max-width: 860px) {
       .hero, .support-layout { grid-template-columns: 1fr; }
-      .quick-grid { grid-template-columns: 1fr; }
       .contact-panel { max-width: 470px; }
     }
     @media (max-width: 520px) {
@@ -262,7 +251,7 @@
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
       body { background: white; color: black; font-size: 11pt; }
-      .site-header, .skip-link, .quick-grid, .contact-panel { display: none; }
+      .site-header, .skip-link, .contact-panel { display: none; }
       main { width: 100%; margin: 0; }
       .hero, .support-layout { display: block; padding: 0; border: 0; box-shadow: none; }
       .hero::after { display: none; }
@@ -277,12 +266,10 @@
     <span class="brand"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="about.html">About</a>
-      <a href="blog/">Blog</a>
       <a href="baseball-softball.html">Baseball + Softball</a>
       <a href="soccer.html">Soccer</a>
       <a href="support.html" aria-current="page">Support</a>
-      <a href="privacy-policy.html">Privacy</a>
-      <a href="recommended-gimbals.html">Equipment</a>
+      <details class="nav-menu"><summary aria-label="More pages"></summary><div class="nav-menu-panel"><a href="blog/">Blog</a><a href="recommended-gimbals.html">Equipment</a><a href="privacy-policy.html">Privacy</a></div></details>
     </nav>
   </header>
 
@@ -300,12 +287,6 @@
       </aside>
     </section>
 
-    <section class="quick-grid" aria-label="Quick support facts">
-      <div class="quick-card"><span class="quick-icon" aria-hidden="true">01</span><strong>Your clips live in Photos</strong><p>Look in Recents, the main Sideline Save album, and the album for the selected sport.</p></div>
-      <div class="quick-card"><span class="quick-icon" aria-hidden="true">02</span><strong>Limited Photos access works</strong><p>Camera and Photos are required to save. Microphone is optional if you prefer silent video.</p></div>
-      <div class="quick-card"><span class="quick-icon" aria-hidden="true">03</span><strong>Capture the beginning, too</strong><p>Choose a short pre-roll so your saved highlight can include the action before you tap record.</p></div>
-    </section>
-
     <div class="support-layout">
       <section aria-labelledby="faq-title">
         <h2 id="faq-title">Frequently asked questions</h2>
@@ -313,6 +294,13 @@
 
         <div class="faq-list">
           <h3 class="faq-category">Capture and game day</h3>
+          <details open>
+            <summary>How do I start and stop a highlight?</summary>
+            <div class="answer">
+              <p>Use Sideline Save like the built-in Camera app: tap the red button once to start recording, then tap it again to stop and save the finished clip. The difference is that Sideline Save can include the action just before your first tap.</p>
+            </div>
+          </details>
+
           <details open>
             <summary>How many seconds before I hit record can the app capture?</summary>
             <div class="answer">
@@ -323,7 +311,7 @@
           <details>
             <summary>Does Sideline Save record when the app is closed?</summary>
             <div class="answer">
-              <p>No. Sideline Save buffers video only while it is open and active. If you lock your phone, switch apps, or close Sideline Save, camera and microphone capture stop. If you had already started a highlight, the app makes a best-effort attempt to finish and save the footage captured so far.</p>
+              <p>No. Sideline Save keeps recent video ready only while it is open and active. If you lock your phone, switch apps, or close Sideline Save, camera and microphone capture stop. If you had already started a highlight, the app makes a best-effort attempt to finish and save the footage captured so far.</p>
             </div>
           </details>
 
@@ -353,7 +341,7 @@
           <details>
             <summary>Does Sideline Save take up local storage?</summary>
             <div class="answer">
-              <p>Saved highlights are stored in your Apple Photos library. While capture is open, the app maintains a short temporary on-device video buffer so it can include pre-roll in a saved highlight. That temporary buffer is not uploaded or kept as a separate saved video.</p>
+              <p>Saved highlights are stored in your Apple Photos library. While capture is open, the app temporarily keeps only the most recent seconds ready on your iPhone so it can include them in a saved highlight. That temporary footage is not uploaded or kept as a separate saved video.</p>
             </div>
           </details>
 
@@ -372,9 +360,38 @@
           </details>
 
           <details>
-            <summary>How can I share my videos on Game Changer?</summary>
+            <summary>How can I share my videos on GameChanger?</summary>
             <div class="answer">
-              <p>Open Game Changer, open or create a new message thread, attach a photo, go to Albums, and choose your Sideline Save album.</p>
+              <p>Open GameChanger, open or create a new message thread, attach a photo, go to Albums, and choose your Sideline Save album.</p>
+            </div>
+          </details>
+
+          <h3 class="faq-category">Downloads and Sideline Save Pro</h3>
+          <details open>
+            <summary>Is Sideline Save free?</summary>
+            <div class="answer">
+              <p>Sideline Save is free to download and try with up to 15 successfully saved videos. A failed capture or save does not use one of those 15 videos.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What happens after I save 15 videos?</summary>
+            <div class="answer">
+              <p>You can still open, play, share, favorite, and manage the videos you already saved. Starting another capture requires Sideline Save Pro, which unlocks unlimited saves through an annual subscription.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What does Sideline Save Pro include?</summary>
+            <div class="answer">
+              <p>Sideline Save Pro unlocks unlimited saved videos. The current annual price is shown in the App Store and in the app before you purchase.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do I restore or manage my subscription?</summary>
+            <div class="answer">
+              <p>Open Sideline Save Settings, then open Manage Subscription. Use Restore Purchases if you already subscribed, or Manage Subscription to open Apple’s subscription controls where you can review or cancel the subscription.</p>
             </div>
           </details>
 
@@ -418,7 +435,7 @@
           <details>
             <summary>What devices does Sideline Save support?</summary>
             <div class="answer">
-              <p>Sideline Save 1.0 is designed for iPhone running iOS 17 or later. A real iPhone camera is required for capture; simulator previews used during development are not real camera recordings.</p>
+              <p>The current Sideline Save release is designed for iPhone running iOS 17 or later. A real iPhone camera is required for capture; simulator previews used during development are not real camera recordings.</p>
             </div>
           </details>
         </div>

@@ -62,9 +62,17 @@
     .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0 16px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--forest-dark); font-weight: 780; }
     .brand-mark { width: 30px; height: 30px; border-radius: 7px; box-shadow: 0 2px 7px rgba(9,40,29,.22); flex: 0 0 auto; object-fit: cover; }
-    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    .site-nav .nav-menu { position: relative; border: 0; border-radius: 0; background: transparent; }
+    .site-nav .nav-menu > summary { display: flex; padding: 8px 12px; align-items: center; border-radius: 999px; color: var(--forest-dark); cursor: pointer; font-size: .86rem; font-weight: 800; line-height: 1.65; list-style: none; }
+    .site-nav .nav-menu > summary::-webkit-details-marker { display: none; }
+    .site-nav .nav-menu > summary::before { content: "☰"; font-size: 1.05rem; line-height: 1; }
+    .site-nav .nav-menu > summary::after { content: none; }
+    .site-nav .nav-menu[open] > summary, .site-nav .nav-menu > summary[data-current="true"] { background: var(--forest-soft); }
+    .site-nav .nav-menu-panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; min-width: 170px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 14px 34px rgba(9, 40, 29, .16); }
+    .site-nav .nav-menu-panel a { display: block; white-space: nowrap; }
     main { margin-bottom: 72px; }
 
     .hero {
@@ -120,6 +128,10 @@
     .contact-card p:last-child { margin-bottom: 0; }
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
+    @media (max-width: 720px) {
+      .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
+    }
     @media (max-width: 820px) {
       .summary-grid, .policy-layout { grid-template-columns: 1fr; }
       .contents { position: static; }
@@ -154,12 +166,10 @@
     <span class="brand"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="about.html">About</a>
-      <a href="blog/">Blog</a>
       <a href="baseball-softball.html">Baseball + Softball</a>
       <a href="soccer.html">Soccer</a>
       <a href="support.html">Support</a>
-      <a href="privacy-policy.html" aria-current="page">Privacy</a>
-      <a href="recommended-gimbals.html">Equipment</a>
+      <details class="nav-menu"><summary aria-label="More pages" data-current="true"></summary><div class="nav-menu-panel"><a href="blog/">Blog</a><a href="recommended-gimbals.html">Equipment</a><a href="privacy-policy.html" aria-current="page">Privacy</a></div></details>
     </nav>
   </header>
 
@@ -167,7 +177,7 @@
     <section class="hero" aria-labelledby="policy-title">
       <p class="eyebrow">Privacy, in plain language</p>
       <h1 id="policy-title">Your highlights stay yours.</h1>
-      <p class="lede">Sideline Save is a local-first sports camera app. Your video and audio stay on your device and in your Photos library. We collect limited app and public-website usage information and the contact information you choose to provide through the TestFlight beta-access form.</p>
+      <p class="lede">Sideline Save is a local-first sports camera app. Your video and audio stay on your device and in your Photos library. We collect limited app and public-website usage information, plus any contact information you choose to provide through the optional TestFlight beta-access form.</p>
       <div class="policy-meta"><span>Privacy Policy</span><span>Effective <time datetime="2026-07-16">July 16, 2026</time></span><span>Version 1.4</span></div>
     </section>
 
@@ -184,7 +194,7 @@
           <li><a href="#scope">About this policy</a></li>
           <li><a href="#on-device">Information on your device</a></li>
           <li><a href="#analytics">Analytics we collect</a></li>
-          <li><a href="#waitlist">TestFlight beta access</a></li>
+          <li><a href="#waitlist">Optional TestFlight beta access</a></li>
           <li><a href="#uses">How we use information</a></li>
           <li><a href="#sharing">Sharing and service providers</a></li>
           <li><a href="#retention">Retention and deletion</a></li>
@@ -200,7 +210,7 @@
       <article aria-label="Sideline Save privacy policy">
         <section id="scope">
           <h2>About this policy</h2>
-          <p>Sideline Save is developed and operated by Chase Seibert. This policy describes how the Sideline Save iOS app, public webpages, TestFlight beta-access form, and developer-operated analytics service handle information.</p>
+          <p>Sideline Save is developed and operated by Chase Seibert. This policy describes how the Sideline Save iOS app, public webpages, optional TestFlight beta-access form, and developer-operated analytics service handle information.</p>
           <p>This policy does not govern Apple’s Photos or iCloud services, or third-party apps and services you choose when sharing a video. Those services have their own privacy practices.</p>
         </section>
 
@@ -208,7 +218,7 @@
           <h2>Information handled on your device</h2>
           <p>Sideline Save processes the following information locally to provide its features:</p>
           <ul>
-            <li><strong>Camera and microphone:</strong> Camera video and optional microphone audio are processed on your device to maintain the rolling buffer and create clips.</li>
+            <li><strong>Camera and microphone:</strong> Camera video and optional microphone audio are processed on your device to keep the most recent seconds ready and create clips.</li>
             <li><strong>Photos:</strong> Videos you save remain in your Photos library. Sideline Save reads back the videos it created so you can browse, play, organize, share, favorite, or delete them.</li>
             <li><strong>Motion:</strong> Device motion is used only while the optional level meter is active. Motion readings are not stored or transmitted.</li>
             <li><strong>App settings and records:</strong> Sport presets, onboarding state, local capture statistics, saved-video references, and related clip metadata are stored in the app’s private container.</li>
@@ -235,14 +245,14 @@
           <p>Apple uses the broad “Device ID” label for the persistent random installation identifier. It is not an Apple advertising identifier, IDFV, hardware serial number, account ID, or contact identifier. It changes after the app is deleted and installed again.</p>
           <p>Sideline Save does not send your name, email address, precise location, contacts, advertising identifier, hardware identifier, Photos content, video content, audio content, crash logs, performance measurements, or capture diagnostics as analytics.</p>
           <h3>Public website analytics</h3>
-          <p>The public Sideline Save webpages use Google Analytics to measure visits, beta-access link clicks, successful waitlist submissions, and which pages and calls to action are useful. The Google tag may process the page URL and title, referring page, waitlist-button placement, browser and device information, approximate region derived from network information, and a browser identifier stored by Google Analytics. When a waitlist submission is successfully added to the TestFlight group, the waitlist automation sends Google Analytics an anonymous event that a lead was generated; it does not send the form response, name, email address, or App Store Connect identifier. Website analytics is separate from the app’s installation analytics and does not receive your Sideline Save videos, audio, Photos information, or app records.</p>
+          <p>The public Sideline Save webpages use Google Analytics to measure visits, App Store and optional beta-access link clicks, successful beta-access form submissions, and which pages and calls to action are useful. The Google tag may process the page URL and title, referring page, button placement, browser and device information, approximate region derived from network information, and a browser identifier stored by Google Analytics. When a beta-access submission is successfully added to the TestFlight group, the automation sends Google Analytics an anonymous event that a lead was generated; it does not send the form response, name, email address, or App Store Connect identifier. Website analytics is separate from the app’s installation analytics and does not receive your Sideline Save videos, audio, Photos information, or app records.</p>
         </section>
 
         <section id="waitlist">
-          <h2>TestFlight beta access</h2>
-          <p>If you choose to request Sideline Save TestFlight beta access, the linked Google Form collects the email address you enter, your consent response, and a submission timestamp. This information is separate from app analytics and is not linked to a Sideline Save installation or its saved videos.</p>
-          <p>The form information is used only to administer beta access and send Sideline Save beta or launch announcements that you requested. Most parents are added to TestFlight within five minutes.</p>
-          <a class="waitlist-button" data-waitlist-placement="privacy_waitlist_section" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Request TestFlight access</a>
+          <h2>Optional TestFlight beta access</h2>
+          <p>Sideline Save is now publicly available on the App Store. A separate Google Form remains available for people specifically requesting access to TestFlight beta builds. If you choose to use it, the form collects the email address you enter, your consent response, and a submission timestamp. This information is separate from app analytics and is not linked to a Sideline Save installation or its saved videos.</p>
+          <p>The form information is used only to administer optional beta access and send Sideline Save beta or launch announcements that you requested. Most approved testers are added to TestFlight within five minutes.</p>
+          <a class="waitlist-button" data-waitlist-placement="privacy_waitlist_section" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Open the TestFlight access form</a>
         </section>
 
         <section id="uses">

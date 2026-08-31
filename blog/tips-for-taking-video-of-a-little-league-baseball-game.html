@@ -23,11 +23,11 @@
     gtag('config', 'G-7KPLTQGLSL');
 
     document.addEventListener('click', function(event) {
-      var link = event.target.closest('a[data-waitlist-placement]');
+      var link = event.target.closest('a[data-download-placement]');
       if (!link) return;
-      gtag('event', 'waitlist_click', {
+      gtag('event', 'download_click', {
         page_path: window.location.pathname,
-        waitlist_placement: link.getAttribute('data-waitlist-placement')
+        download_placement: link.getAttribute('data-download-placement')
       });
     });
   </script>
@@ -66,9 +66,17 @@
     .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0 16px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--forest-dark); font-weight: 780; }
     .brand-mark { width: 30px; height: 30px; border-radius: 7px; box-shadow: 0 2px 7px rgba(9, 40, 29, .22); flex: 0 0 auto; object-fit: cover; }
-    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+    .site-nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
+    .site-nav .nav-menu { position: relative; border: 0; border-radius: 0; background: transparent; }
+    .site-nav .nav-menu > summary { display: flex; padding: 8px 12px; align-items: center; border-radius: 999px; color: var(--forest-dark); cursor: pointer; font-size: .86rem; font-weight: 800; line-height: 1.65; list-style: none; }
+    .site-nav .nav-menu > summary::-webkit-details-marker { display: none; }
+    .site-nav .nav-menu > summary::before { content: "☰"; font-size: 1.05rem; line-height: 1; }
+    .site-nav .nav-menu > summary::after { content: none; }
+    .site-nav .nav-menu[open] > summary, .site-nav .nav-menu > summary[data-current="true"] { background: var(--forest-soft); }
+    .site-nav .nav-menu-panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; min-width: 170px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 14px 34px rgba(9, 40, 29, .16); }
+    .site-nav .nav-menu-panel a { display: block; white-space: nowrap; }
     main { margin-bottom: 72px; }
 
     article {
@@ -111,8 +119,17 @@
     }
     .placeholder-list { margin: 16px 0 0; padding-left: 1.25em; color: #35433c; }
     .placeholder-list li + li { margin-top: 10px; }
+    .product-callout { margin: 28px 0; padding: 24px; border-radius: 18px; background: var(--forest-dark); color: white; }
+    .product-callout strong { display: block; font-size: 1.2rem; }
+    .product-callout p { margin-top: 8px; color: rgba(255, 255, 255, .76); }
+    .download-button { display: inline-flex; min-height: 48px; margin-top: 18px; padding: 12px 20px; align-items: center; justify-content: center; border-radius: 999px; background: var(--red); color: white; font-weight: 800; text-decoration: none; }
+    .download-button:hover { background: #eb3a44; color: white; }
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
+    @media (max-width: 720px) {
+      .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
+    }
     @media (max-width: 520px) {
       body { font-size: 16px; }
       .site-header, main, footer { width: calc(100% - 24px); }
@@ -136,12 +153,10 @@
     <span class="brand"><img class="brand-mark" src="../app-icon.png" alt="">Sideline Save</span>
     <nav class="site-nav" aria-label="Website">
       <a href="../about.html">About</a>
-      <a href="index.html" aria-current="page">Blog</a>
       <a href="../baseball-softball.html">Baseball + Softball</a>
       <a href="../soccer.html">Soccer</a>
       <a href="../support.html">Support</a>
-      <a href="../privacy-policy.html">Privacy</a>
-      <a href="../recommended-gimbals.html">Equipment</a>
+      <details class="nav-menu"><summary aria-label="More pages" data-current="true"></summary><div class="nav-menu-panel"><a href="index.html" aria-current="page">Blog</a><a href="../recommended-gimbals.html">Equipment</a><a href="../privacy-policy.html">Privacy</a></div></details>
     </nav>
   </header>
 
@@ -162,18 +177,24 @@
       <div class="post-body">
         <p>This is not intended as advice for recording an entire game for the team, or for making video that a coach can use later. I am talking about the parent version of this: you want a few good clips of your player batting, pitching, fielding, or making a play. And I am talking about using a phone rather than a full digital camera, mostly because it is easy and because it is what most parents already have with them.</p>
 
+        <aside class="product-callout" aria-label="Download Sideline Save">
+          <strong>Stop recording every pitch just in case.</strong>
+          <p>Sideline Save lets you tap after the hit and still keep the pitch and swing. It is free to try with 15 saved videos on iPhone.</p>
+          <a class="download-button" data-download-placement="little_league_guide_intro" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+        </aside>
+
         <h2>The five most important tips</h2>
         <ul class="placeholder-list">
-          <li>Use the best video quality settings your phone offers before the game starts.</li>
+          <li>Choose a video-quality setting that balances detail, motion, storage, and battery life.</li>
           <li>Choose a position that gives you a clear angle on your player and the most likely action.</li>
           <li>Set your framing before the play starts so you do not have to chase the ball with the camera.</li>
           <li>Stabilize your phone whenever you can, especially if you are using zoom.</li>
           <li>Bring enough battery to get through the whole game or tournament day.</li>
         </ul>
 
-        <h2>Use the best video settings your phone gives you</h2>
-        <p>When you are using a phone to take videos of a sporting event, you probably want to use the highest quality settings available. On a modern phone, that usually means 4K resolution and 60 frames per second. You can typically find those options in the settings for your camera app.</p>
-        <p>The exact menu depends on your phone, but it is worth checking before the game starts. Once the game is moving, you probably will not want to be digging through settings while your player is walking up to bat.</p>
+        <h2>Choose video settings you can use all game</h2>
+        <p>The highest available setting is not automatically the best choice for a full game or tournament. Higher resolution and frame rates can use more storage and battery. For many outdoor games, 4K at 30 frames per second is a strong starting point for distant detail. If smooth motion matters more, 1080p at 60 frames per second can be a practical alternative.</p>
+        <p>The exact menu and tradeoffs depend on your phone. Record a short test before the game, check that it looks good, and confirm that your battery and available storage can support the setting. Once the game is moving, you probably will not want to be digging through settings while your player is walking up to bat.</p>
 
         <h2>Pick your position carefully</h2>
         <p>The second most important thing for how good your final videos look is where you position yourself. Obviously, you cannot stand on the playing field, so you usually have a few choices.</p>
@@ -224,6 +245,12 @@
         <h2>Conclusion</h2>
         <p>You do not need a fancy camera setup to get meaningful video of your Little League player. If you think ahead about settings, position, framing, stability, and battery, you can come home with clips that are fun to keep and easy to share.</p>
         <p>I hope this helps you create the best possible video you can while filming your Little League player.</p>
+
+        <aside class="product-callout" aria-label="Try Sideline Save">
+          <strong>Keep the hit, not every pitch before it.</strong>
+          <p>Tap Record after the play starts and Sideline Save can include up to 20 seconds from before the tap.</p>
+          <a class="download-button" data-download-placement="little_league_guide_footer" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+        </aside>
       </div>
     </article>
   </main>

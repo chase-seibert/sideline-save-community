@@ -4,53 +4,55 @@
 
 # Sideline Save
 
-## Youth sports video for parents
+## iPhone sports camera for parents
 
-### Stop recording every play just in case.
+### Record after the play.
 
-When a play becomes worth saving, press record. Your video will still have the
-beginning of the play—without recording the whole game.
+Sideline Save is a camera app for youth sports. It keeps the recent action
+ready, so you can hit Record at any time, continue recording as normal, then
+tap again to stop and save.
 
-[Download Sideline Save](https://apps.apple.com/us/app/sideline-save/id6790879656)
+[Download free for iPhone](https://apps.apple.com/us/app/sideline-save/id6790879656)
+
+Free to try with 15 saved videos · iPhone, iOS 17+ · No account or ads
 
 [About](https://sidelinesave.com/) ·
-[Blog](https://sidelinesave.com/blog/) ·
 [Baseball + Softball](https://sidelinesave.com/baseball-softball.html) ·
 [Soccer](https://sidelinesave.com/soccer.html) ·
 [Support](https://sidelinesave.com/support.html) ·
-[Privacy](https://sidelinesave.com/privacy-policy.html) ·
-[Equipment](https://sidelinesave.com/recommended-gimbals.html)
+[Blog](https://sidelinesave.com/blog/) ·
+[Equipment](https://sidelinesave.com/recommended-gimbals.html) ·
+[Privacy](https://sidelinesave.com/privacy-policy.html)
 
-## One moment, three steps
+## How it works
 
-1. **Keep the camera ready.** Sideline Save holds a short rolling buffer while
-   the app is open.
-2. **Press record when the play gets good.** Your video will still have the
-   beginning of the play.
-3. **Press stop when it ends.** The finished video goes directly to your Photos
-   library.
+1. **Always be shooting.** Keep the camera pointed at the play. Sideline Save
+   keeps the recent action ready.
+2. **Hit the record button.** At any time, you can hit the record button, even
+   after the play has happened.
+3. **Continue recording as normal.** Tap the same button again to stop and save.
 
-## Sideline Save at a glance
+## Tap to record. Tap again to stop.
 
-- **Five sport presets:** Baseball, Basketball, Soccer, Football, and Custom
-  remember their own setup.
-- **Albums for every sport:** Saved videos go to Photos and are organized into
-  matching sport albums when possible.
-- **Your highlights stay yours:** Videos stay on your iPhone and in your Photos
-  library until you choose to share them.
+Your video captures more on each end, helping make sure you do not miss the
+moment.
+
+<p align="center">
+  <img src="screenshots/01-home-ready.jpg" alt="A baseball player running after a hit while Sideline Save keeps the recent action ready" width="31%">
+  <img src="screenshots/02-home-recording.jpg" alt="Sideline Save actively recording as the baseball play concludes" width="31%">
+  <img src="screenshots/03-saved-videos.jpg" alt="Sideline Save showing a saved baseball highlight with extra time before and after the play" width="31%">
+</p>
 
 ## Why it exists
 
-### The best plays rarely give you a warning
+### Most plays are ordinary—until one isn’t
 
-It is easy to spend a whole game recording every pitch, shot, serve, or drive
-just in case something happens. Later, the real highlights are buried inside a
-camera roll full of misses and almosts.
+With the regular Camera app, you either record everything or react after the
+beginning is gone. Sideline Save lets you decide after the action starts and
+still keep the lead-in.
 
-Sideline Save flips that routine around. Keep the camera pointed at the action
-and watch the game. When a play becomes worth keeping, press record then—your
-video can still include the beginning of the play. You save fewer videos, keep
-more of the context that matters, and spend less time cleaning up afterward.
+That means fewer misses in Photos, less cleanup later, and more attention on the
+game.
 
 ## Made for your game
 
@@ -67,58 +69,23 @@ pass that started it.
 
 [See Sideline Save for soccer](https://sidelinesave.com/soccer.html)
 
-## Here’s how it works
+## Your footage never goes to a Sideline Save cloud
 
-<p align="center">
-  <img src="screenshots/01-home-ready.jpg" alt="A baseball player running after a hit while Sideline Save is ready to record" width="31%">
-  <img src="screenshots/02-home-recording.jpg" alt="Sideline Save actively recording as the baseball play concludes" width="31%">
-  <img src="screenshots/03-saved-videos.jpg" alt="Sideline Save's Saved Videos list grouped by day and sport" width="31%">
-</p>
-
-Press record after the play gets good, stop when it is over, and open Saved
-Videos later to find the highlight fast.
-
-## Optimized for the big moment
-
-Fast controls, flexible capture choices, and a library built around the way
-families find and share highlights.
-
-### Ready for fast action
-
-Camera-style zoom controls, pinch-to-zoom, supported video stabilization, and
-quality and frame-rate options help you frame each sport.
-
-### Organized by sport
-
-Each sport remembers its own capture settings. Saved videos can be reassigned
-later and moved to the matching sport album.
-
-### Easy to find and share
-
-Open Saved Videos from the home screen to filter, play, favorite, share,
-delete, or change the sport for a highlight.
-
-### Save space on your phone
-
-Short highlight clips take up far less space than long recordings of the whole
-game.
-
-## Your highlights stay yours
-
-Video and audio remain on your iPhone and in your Photos library. Sideline Save
-has no accounts, ads, or cross-app tracking, and collects only limited app and
-website usage information to improve the product.
+While Sideline Save is open, recent action is held temporarily on your iPhone so
+it can be added to a highlight. Lock your phone, switch apps, or close Sideline
+Save and camera capture stops. Finished clips go to Photos. There are no
+accounts, ads, or cross-app tracking.
 
 [Read the Privacy Policy](https://sidelinesave.com/privacy-policy.html)
 
 ## Independent and personal
 
-### Built by Chase Seibert
+### Built by a baseball dad with the same problem
 
-Sideline Save is developed for iPhone with a simple goal: make it easier for
-families to catch the moments they will want to replay. Questions, ideas, and
-honest feedback are welcome.
+I built Sideline Save after getting tired of recording pitch after pitch at my
+son’s games, deleting nearly all of them, and still worrying that the next pitch
+would be the one I missed.
 
-[Visit Sideline Save Support](https://sidelinesave.com/support.html)
+[Read why I built Sideline Save](https://sidelinesave.com/blog/why-i-built-a-camera-app-for-youth-sports-parents.html)
 
 © 2026 Chase Seibert. Sideline Save.
