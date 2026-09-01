@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sideline Save is a camera app for youth sports. Hit Record at any time, keep the action from before your tap, then tap again to stop and save.">
+  <meta name="description" content="Mount your iPhone, keep up to 30 seconds ready, and save only the youth sports highlights that matter—without recording and trimming the whole game.">
   <link rel="canonical" href="https://sidelinesave.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Record After the Play — Sideline Save">
-  <meta property="og:description" content="Sideline Save is a camera app for youth sports. Hit Record at any time, then tap again to stop and save.">
+  <meta property="og:title" content="Keep the Highlights. Skip the Two-Hour Recording. — Sideline Save">
+  <meta property="og:description" content="Sideline Save keeps up to 30 seconds of recent action ready, so you can save a highlight after it happens instead of recording the whole game.">
   <meta property="og:url" content="https://sidelinesave.com/">
-  <meta property="og:image" content="https://sidelinesave.com/images/baseball-softball-hero-photo.jpg">
+  <meta property="og:image" content="https://sidelinesave.com/images/sideline-save-app-preview-poster.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Record After the Play — Sideline Save">
-  <meta name="twitter:description" content="Sideline Save is a camera app for youth sports. Hit Record at any time, then tap again to stop and save.">
-  <meta name="twitter:image" content="https://sidelinesave.com/images/baseball-softball-hero-photo.jpg">
+  <meta name="twitter:title" content="Keep the Highlights. Skip the Two-Hour Recording. — Sideline Save">
+  <meta name="twitter:description" content="Save youth sports highlights after they happen instead of recording and trimming the whole game.">
+  <meta name="twitter:image" content="https://sidelinesave.com/images/sideline-save-app-preview-poster.jpg">
   <meta name="theme-color" content="#123d2d">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; media-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KPLTQGLSL"></script>
   <script>
@@ -34,7 +34,7 @@
       });
     });
   </script>
-  <title>Record After the Play — Sideline Save for iPhone</title>
+  <title>Save Youth Sports Highlights Without Recording the Whole Game — Sideline Save</title>
   <style>
     :root {
       --forest: #123d2d;
@@ -60,32 +60,14 @@
     }
     a { color: var(--red-dark); text-underline-offset: .18em; }
     a:hover { color: var(--red); }
-    a:focus-visible { border-radius: 5px; outline: 3px solid rgba(217, 47, 57, .35); outline-offset: 4px; }
-
-    .skip-link {
-      position: fixed;
-      top: 12px;
-      left: 12px;
-      z-index: 10;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--paper);
-      color: var(--forest-dark);
-      font-weight: 750;
-      transform: translateY(-150%);
-    }
+    a:focus-visible, button:focus-visible, summary:focus-visible { border-radius: 5px; outline: 3px solid rgba(217, 47, 57, .35); outline-offset: 4px; }
+    button { font: inherit; }
+    .skip-link { position: fixed; top: 12px; left: 12px; z-index: 100; padding: 10px 14px; border-radius: 999px; background: var(--paper); color: var(--forest-dark); font-weight: 750; transform: translateY(-150%); }
     .skip-link:focus { transform: translateY(0); }
     .site-header, main, footer { width: min(calc(100% - 40px), 1120px); margin-inline: auto; }
     .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0 16px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--forest-dark); font-weight: 780; }
-    .brand-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 7px;
-      box-shadow: 0 2px 7px rgba(9, 40, 29, .22);
-      flex: 0 0 auto;
-      object-fit: cover;
-    }
+    .brand-mark { width: 30px; height: 30px; border-radius: 7px; box-shadow: 0 2px 7px rgba(9, 40, 29, .22); flex: 0 0 auto; object-fit: cover; }
     .site-nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .site-nav a { padding: 8px 12px; border-radius: 999px; color: var(--forest-dark); font-size: .86rem; font-weight: 700; text-decoration: none; }
     .site-nav a[aria-current="page"] { background: var(--forest-soft); }
@@ -99,127 +81,107 @@
     .site-nav .nav-menu-panel a { display: block; white-space: nowrap; }
     main { margin-bottom: 72px; }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(285px, .75fr);
-      gap: clamp(34px, 7vw, 80px);
-      align-items: center;
-      padding: clamp(40px, 7vw, 78px);
-      border: 1px solid rgba(18, 61, 45, .12);
-      border-radius: 28px;
-      background: var(--paper);
-      box-shadow: 0 24px 70px rgba(9, 40, 29, .11);
-    }
-    .hero::after {
-      position: absolute;
-      top: -105px;
-      right: -95px;
-      width: 280px;
-      height: 280px;
-      border: 54px solid rgba(18, 61, 45, .055);
-      border-radius: 50%;
-      content: "";
-      pointer-events: none;
-    }
-    .hero-copy, .moment-card { position: relative; z-index: 1; }
-    .eyebrow { margin: 0 0 20px; color: var(--red-dark); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); grid-template-areas: "copy demo" "benefits benefits"; gap: 30px clamp(38px, 6vw, 72px); align-items: start; padding: clamp(36px, 6vw, 68px); border: 1px solid rgba(18, 61, 45, .12); border-radius: 28px; background: var(--paper); box-shadow: 0 24px 70px rgba(9, 40, 29, .11); }
+    .hero::after { position: absolute; top: -105px; right: -95px; width: 280px; height: 280px; border: 54px solid rgba(18, 61, 45, .055); border-radius: 50%; content: ""; pointer-events: none; }
+    .hero-copy { position: relative; z-index: 1; grid-area: copy; }
+    .eyebrow { margin: 0 0 18px; color: var(--red-dark); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
     h1, h2, h3 { color: var(--forest-dark); font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; letter-spacing: -.025em; line-height: 1.16; }
-    h1 { max-width: 690px; margin: 0; font-size: clamp(2.65rem, 7vw, 5.4rem); font-weight: 820; }
+    h1 { max-width: 680px; margin: 0; font-size: clamp(2.65rem, 5.2vw, 4rem); font-weight: 820; }
     h2 { margin: 0 0 18px; font-size: clamp(1.7rem, 3.5vw, 2.55rem); }
-    h3 { margin: 0 0 9px; font-size: 1.13rem; }
-    .lede { max-width: 700px; margin: 24px 0 0; color: #35433c; font-size: clamp(1.08rem, 2vw, 1.28rem); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 28px; }
-    .hero-note { margin: 14px 0 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
-    .button { display: inline-flex; min-height: 48px; padding: 12px 20px; align-items: center; justify-content: center; border-radius: 999px; font-weight: 800; text-decoration: none; }
-    .button-primary { background: var(--red); color: white; box-shadow: 0 8px 20px rgba(165, 30, 40, .2); }
-    .button-primary:hover { background: #eb3a44; color: white; }
-    .button-secondary { border: 1px solid var(--line); background: var(--paper); color: var(--forest-dark); }
+    h3 { margin: 0 0 7px; font-size: 1.04rem; }
+    .lede { max-width: 690px; margin: 22px 0 0; color: #35433c; font-size: clamp(1.08rem, 2vw, 1.24rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 26px; }
+    .app-store-link { display: inline-flex; min-height: 50px; align-items: center; border-radius: 8px; }
+    .app-store-link img { display: block; width: 188px; height: auto; }
+    .hero-note { margin: 12px 0 0; color: var(--muted); font-size: .86rem; font-weight: 700; }
 
-    .moment-card { padding: 28px; border-radius: 22px; background: var(--forest); color: white; box-shadow: 0 16px 40px rgba(9, 40, 29, .22); }
-    .moment-card > p { margin: 0 0 22px; color: rgba(255, 255, 255, .73); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-    .moment-step { position: relative; display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start; }
-    .moment-step + .moment-step { margin-top: 20px; }
-    .step-number { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(255, 255, 255, .3); border-radius: 50%; color: white; font-size: .82rem; font-weight: 800; }
-    .moment-step:nth-of-type(2) .step-number { border-color: var(--red); background: var(--red); }
-    .moment-step strong { display: block; margin-bottom: 3px; }
-    .moment-step span:last-child { color: rgba(255, 255, 255, .72); font-size: .88rem; line-height: 1.45; }
+    .demo-card { position: relative; z-index: 1; grid-area: demo; justify-self: center; width: min(100%, 305px); padding: 18px; border-radius: 28px; background: var(--forest-dark); color: white; box-shadow: 0 20px 48px rgba(9, 40, 29, .25); }
+    .demo-kicker { margin: 0 0 12px; color: rgba(255, 255, 255, .78); font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .video-shell { position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, .22); border-radius: 20px; background: #050807; aspect-ratio: 886 / 1920; }
+    .video-shell video { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .video-play { position: absolute; inset: 0; display: grid; place-content: center; gap: 12px; width: 100%; border: 0; background: linear-gradient(180deg, rgba(9, 40, 29, .08), rgba(9, 40, 29, .52)); color: white; cursor: pointer; font-weight: 800; }
+    .video-play[hidden] { display: none; }
+    .play-icon { display: grid; width: 72px; height: 72px; margin-inline: auto; place-items: center; padding-left: 5px; border: 2px solid rgba(255, 255, 255, .86); border-radius: 50%; background: rgba(217, 47, 57, .94); box-shadow: 0 10px 28px rgba(0, 0, 0, .3); font-size: 1.65rem; }
+    .demo-note { margin: 12px 2px 0; color: rgba(255, 255, 255, .74); font-size: .78rem; line-height: 1.45; }
 
-    .story {
-      display: grid;
-      grid-template-columns: minmax(250px, .65fr) minmax(0, 1.35fr);
-      gap: clamp(30px, 6vw, 72px);
-      padding: clamp(34px, 6vw, 66px);
-      border: 1px solid rgba(18, 61, 45, .12);
-      border-radius: 28px;
-      background: var(--paper);
-      box-shadow: 0 16px 48px rgba(9, 40, 29, .07);
-    }
-    .story-label { margin: 0; color: var(--red-dark); font-size: .8rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
-    .story-copy p { margin: 0; color: #35433c; font-size: 1.04rem; }
-    .story-copy p + p { margin-top: 18px; }
+    .benefit-list { position: relative; z-index: 2; grid-area: benefits; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .benefit { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 15px 16px; border: 1px solid rgba(18, 61, 45, .11); border-radius: 16px; background: rgba(229, 239, 233, .48); }
+    .benefit-number { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: var(--forest); color: white; font-size: .76rem; font-weight: 800; }
+    .benefit:nth-child(3) .benefit-number { background: var(--red); }
+    .benefit p { margin: 0; color: #3d4a43; font-size: .91rem; line-height: 1.48; }
+    .estimate { position: relative; display: inline-flex; align-items: baseline; font-weight: 800; color: var(--forest-dark); }
+    .estimate-marker { display: inline; padding: 0 2px; border: 0; background: transparent; color: var(--red-dark); cursor: help; font-size: .76em; font-weight: 900; vertical-align: super; }
+    .estimate-tooltip { position: absolute; left: 50%; bottom: calc(100% + 11px); z-index: 30; width: min(280px, 78vw); padding: 11px 13px; border-radius: 10px; background: var(--forest-dark); color: white; box-shadow: 0 10px 26px rgba(9, 40, 29, .25); font-size: .76rem; font-weight: 600; line-height: 1.4; opacity: 0; pointer-events: none; transform: translate(-50%, 5px); transition: opacity .15s ease, transform .15s ease; }
+    .estimate:hover .estimate-tooltip, .estimate:focus-within .estimate-tooltip { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+    .estimate-tooltip a { color: white; }
 
-    .sport-pages { padding: 64px 0 8px; }
-    .sport-heading { max-width: 720px; margin-bottom: 28px; }
-    .sport-heading p { margin: 0; color: var(--muted); }
-    .sport-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .sport-card { border: 1px solid rgba(18, 61, 45, .12); border-radius: 22px; background: var(--paper); box-shadow: 0 14px 38px rgba(9, 40, 29, .07); }
-    .sport-card-copy { padding: 26px; }
-    .sport-card-copy p { margin: 0 0 18px; color: var(--muted); }
-    .sport-card-copy a { font-weight: 800; }
-
-    .showcase { padding: 36px 0 8px; }
-    .showcase-heading { max-width: 720px; margin-bottom: 28px; }
+    .showcase { padding: 64px 0 8px; }
+    .showcase-heading { max-width: 760px; margin-bottom: 28px; }
     .showcase-heading p { margin: 0; color: var(--muted); }
-    .screenshot-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+    .screenshot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 5vw, 52px); align-items: start; max-width: 840px; margin-inline: auto; }
     .screenshot-card { margin: 0; }
     .screenshot-card img { display: block; width: 100%; height: auto; border: 1px solid rgba(18, 61, 45, .16); border-radius: 22px; background: #050807; box-shadow: 0 18px 42px rgba(9, 40, 29, .15); }
-    .screenshot-card figcaption { margin-top: 12px; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
+    .screenshot-card figcaption { margin-top: 12px; color: var(--muted); font-size: .86rem; line-height: 1.5; text-align: center; }
+    .capture-mock { position: relative; overflow: hidden; aspect-ratio: 660 / 1434; border: 1px solid rgba(18, 61, 45, .16); border-radius: 22px; background: #050807; box-shadow: 0 18px 42px rgba(9, 40, 29, .15); }
+    .capture-mock video { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .capture-control { position: absolute; left: 50%; bottom: 4.4%; z-index: 4; width: 22%; aspect-ratio: 1; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; transform: translateX(-50%); }
+    .capture-control:focus-visible { border-radius: 50%; outline: 0; }
+    .capture-mock:has(.capture-control:focus-visible) .record-tip { outline: 3px solid rgba(255, 255, 255, .86); outline-offset: 3px; }
+    .record-tip { position: absolute; left: 50%; bottom: 16.5%; z-index: 4; width: max-content; max-width: 84%; padding: 9px 12px; border-radius: 10px; background: rgba(9, 40, 29, .94); color: white; font-size: .76rem; font-weight: 800; line-height: 1.3; text-align: center; transform: translateX(-50%); pointer-events: none; }
+    .record-tip::after { position: absolute; top: 100%; left: 50%; border: 7px solid transparent; border-top-color: rgba(9, 40, 29, .94); content: ""; transform: translateX(-50%); }
 
-    .privacy-band { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; margin-top: 42px; padding: clamp(30px, 5vw, 52px); border-radius: 24px; background: var(--forest-dark); color: white; }
+    .faq-section { padding: 68px 0 8px; }
+    .faq-heading { max-width: 710px; margin-bottom: 26px; }
+    .faq-heading p { margin: 0; color: var(--muted); }
+    .faq-list { display: grid; gap: 12px; max-width: 900px; }
+    .faq-list details { padding: 0 22px; border: 1px solid rgba(18, 61, 45, .13); border-radius: 16px; background: var(--paper); box-shadow: 0 10px 28px rgba(9, 40, 29, .05); }
+    .faq-list summary { padding: 19px 30px 19px 0; color: var(--forest-dark); cursor: pointer; font-weight: 800; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { float: right; margin-right: -26px; color: var(--red-dark); content: "+"; font-size: 1.35rem; line-height: 1; }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { margin: -2px 0 20px; color: #3d4a43; }
+
+    .privacy-band { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; margin-top: 52px; padding: clamp(30px, 5vw, 52px); border-radius: 24px; background: var(--forest-dark); color: white; }
     .privacy-band h2 { color: white; }
     .privacy-band p { max-width: 720px; margin: 0; color: rgba(255, 255, 255, .76); }
     .privacy-link { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 999px; background: var(--paper); color: var(--forest-dark); font-weight: 800; text-decoration: none; white-space: nowrap; }
     .privacy-link:hover { color: var(--red-dark); }
-
     .developer { max-width: 760px; margin: 64px auto 0; text-align: center; }
     .developer p { margin: 0 auto 22px; color: var(--muted); }
     .support-link { font-weight: 800; }
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; grid-template-areas: "copy" "demo" "benefits"; }
+      .demo-card { width: min(100%, 360px); }
+      .benefit-list { grid-template-columns: 1fr; }
+      .privacy-band { grid-template-columns: 1fr; }
+      .privacy-link { justify-self: start; }
+    }
     @media (max-width: 720px) {
       .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
     }
-    @media (max-width: 820px) {
-      .hero, .story, .privacy-band { grid-template-columns: 1fr; }
-      .moment-card { max-width: 480px; }
-      .privacy-link { justify-self: start; }
-      .screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 620px) { .sport-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 520px) {
+    @media (max-width: 580px) {
       body { font-size: 16px; }
       .site-header, main, footer { width: calc(100% - 24px); }
-      .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
-      .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
       .site-nav a { padding: 7px; font-size: .82rem; }
-      .hero { padding: 32px 24px; }
-      .story { padding: 30px 24px; }
-      .hero, .story { border-radius: 20px; }
-      .moment-card { padding: 24px 20px; }
-      .screenshot-grid { grid-template-columns: 1fr; gap: 28px; }
-      .screenshot-card { max-width: 330px; margin-inline: auto; }
-      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero { padding: 30px 22px; border-radius: 20px; }
+      .hero-actions { align-items: flex-start; flex-direction: column; }
+      .demo-card { width: min(100%, 330px); }
+      .screenshot-grid { grid-template-columns: 1fr; gap: 34px; }
+      .screenshot-card { max-width: 350px; margin-inline: auto; }
+      .benefit { grid-template-columns: 30px 1fr; padding: 14px; }
+      .benefit-number { width: 30px; height: 30px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
       body { background: white; color: black; font-size: 11pt; }
-      .site-header, .skip-link, .moment-card { display: none; }
+      .site-header, .skip-link, .demo-card, .record-tip, .capture-control { display: none; }
       main { width: 100%; margin: 0; }
-      .hero, .story, .privacy-band { display: block; padding: 0; border: 0; background: white; color: black; box-shadow: none; }
+      .hero, .privacy-band { display: block; padding: 0; border: 0; background: white; color: black; box-shadow: none; }
       .hero::after { display: none; }
+      .benefit-list { margin-top: 24px; }
       .privacy-band { margin-top: 36px; }
       .privacy-band h2, .privacy-band p { color: black; }
     }
@@ -241,72 +203,102 @@
   <main id="main-content">
     <section class="hero" aria-labelledby="about-title">
       <div class="hero-copy">
-        <p class="eyebrow">iPhone sports camera for parents</p>
-        <h1 id="about-title">Record after the play.</h1>
-        <p class="lede">Sideline Save is a camera app for youth sports. It keeps the recent action ready, so you can hit Record at any time, continue recording as normal, then tap again to stop and save.</p>
+        <p class="eyebrow">A dash cam for game day</p>
+        <h1 id="about-title">Keep the highlights. Skip the two-hour recording.</h1>
+        <p class="lede">Mount your iPhone, watch the game, and save only the moment that mattered. Sideline Save keeps up to 30 seconds ready, so after something great happens, tap Record and the beginning is already there.</p>
         <div class="hero-actions">
-          <a class="button button-primary" data-download-placement="about_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
-          <a class="button button-secondary" href="#how-it-works">See how it works</a>
+          <a class="app-store-link" data-download-placement="about_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer" aria-label="Download Sideline Save free on the App Store"><img src="images/download-on-the-app-store.svg" width="250" height="83" alt="Download on the App Store"></a>
         </div>
-        <p class="hero-note">Free to try with 15 saved videos · iPhone, iOS 17+ · No account or ads</p>
+        <p class="hero-note">Download free for iPhone · 15 saved videos included · iOS 17+ · No account or ads</p>
       </div>
-      <aside class="moment-card" id="how-it-works" aria-label="How Sideline Save works">
-        <p>How it works</p>
-        <div class="moment-step"><span class="step-number">1</span><span><strong>Always be shooting</strong><span>Keep the camera pointed at the play. Sideline Save keeps the recent action ready.</span></span></div>
-        <div class="moment-step"><span class="step-number">2</span><span><strong>Hit the record button</strong><span>At any time, you can hit the record button, even after the play has happened.</span></span></div>
-        <div class="moment-step"><span class="step-number">3</span><span><strong>Continue recording as normal</strong><span>Tap the same button again to stop and save.</span></span></div>
+
+      <aside class="demo-card" id="how-it-works" aria-labelledby="demo-title">
+        <p class="demo-kicker" id="demo-title">See it in 18 seconds</p>
+        <div class="video-shell">
+          <video id="app-preview" controls playsinline preload="metadata" poster="images/sideline-save-app-preview-poster.jpg" aria-describedby="demo-description">
+            <source src="videos/sideline-save-app-preview.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <button class="video-play" id="video-play" type="button" aria-label="Play the Sideline Save app demo inline">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            <span>Play app demo</span>
+          </button>
+        </div>
+        <p class="demo-note" id="demo-description">Choose a sport, point the camera, and tap after the play to keep the action that just happened.</p>
       </aside>
+
+      <ol class="benefit-list" aria-label="Why parents use Sideline Save">
+        <li class="benefit">
+          <span class="benefit-number">1</span>
+          <div><h3>Watch the game, not your screen.</h3><p>Use a $5 bungee cord to mount your iPhone to a fence. Keep your hands free, stay present, and stop holding a phone in another parent’s view.</p></div>
+        </li>
+        <li class="benefit">
+          <span class="benefit-number">2</span>
+          <div>
+            <h3>Skip the storage and editing marathon.</h3>
+            <p>A two-hour 4K/60 recording can use <span class="estimate">about 53 GB<button class="estimate-marker" type="button" aria-describedby="storage-estimate">*</button><span class="estimate-tooltip" id="storage-estimate" role="tooltip">Estimate: 440 MB per minute for 4K/60 HEVC × 120 minutes = 52,800 MB, or about 53 GB.</span></span> and take <span class="estimate">about 15 minutes<button class="estimate-marker" type="button" aria-describedby="editing-estimate">†</button><span class="estimate-tooltip" id="editing-estimate" role="tooltip">Estimate for a focused highlight pass: about 10 minutes to skim at high speed, plus 5 minutes to select, trim, and export a few clips.</span></span> to review and trim. Sideline Save saves you <span class="estimate">98% of that storage and time<button class="estimate-marker" type="button" aria-describedby="savings-estimate">‡</button><span class="estimate-tooltip" id="savings-estimate" role="tooltip">Illustrative estimate: about two minutes of highlights instead of 120 minutes of footage, and roughly 18 seconds of total tap-to-save interaction instead of a 15-minute editing pass. Actual savings vary.</span></span>.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <span class="benefit-number">3</span>
+          <div><h3>Decide after it happens.</h3><p>Sideline Save keeps a rolling window ready. Once you know the moment was special, tap Record to keep the lead-in, then tap again when the play is over.</p></div>
+        </li>
+      </ol>
     </section>
 
-    <section class="showcase" aria-labelledby="showcase-title">
+    <section class="showcase" id="try-the-button" aria-labelledby="showcase-title">
       <div class="showcase-heading">
-        <h2 id="showcase-title">Tap to record. Tap again to stop.</h2>
-        <p>Your video captures more on each end, helping make sure you do not miss the moment.</p>
+        <p class="eyebrow">Try the interaction</p>
+        <h2 id="showcase-title">Tap after the hit. The swing is already there.</h2>
+        <p>The phone keeps a short rolling window without filling Photos. Tap the red button below to see the camera move from ready to recording.</p>
       </div>
       <div class="screenshot-grid">
-        <figure class="screenshot-card"><img src="screenshots/01-home-ready.jpg" width="660" height="1434" alt="A baseball player running after a hit while Sideline Save keeps the recent action ready"><figcaption>Always be shooting. Keep the camera pointed at the action.</figcaption></figure>
-        <figure class="screenshot-card"><img src="screenshots/02-home-recording.jpg" width="660" height="1434" loading="lazy" alt="Sideline Save actively recording as the baseball play concludes"><figcaption>Record after the play, then continue recording as normal.</figcaption></figure>
-        <figure class="screenshot-card"><img src="screenshots/03-saved-videos.jpg" width="660" height="1434" loading="lazy" alt="Sideline Save showing a saved baseball highlight with extra time before and after the play"><figcaption>Tap again to stop. The finished video includes extra time before and after the play.</figcaption></figure>
+        <figure class="screenshot-card">
+          <div class="capture-mock">
+            <video id="capture-demo-video" muted playsinline preload="metadata" poster="images/sideline-save-simulator-capture-poster.jpg" aria-label="The real Sideline Save capture screen in the iPhone Simulator, beginning just before its recording timer starts at 10 seconds">
+              <source src="videos/sideline-save-simulator-capture.mp4" type="video/mp4">
+            </video>
+            <span class="record-tip" id="record-tip">Notice that the timer started at 10 seconds.</span>
+            <button class="capture-control" id="record-hotspot" type="button" aria-pressed="false" aria-describedby="capture-demo-caption" aria-label="Start the simulator recording example"></button>
+          </div>
+          <figcaption id="capture-demo-caption" aria-live="polite">Nothing has been saved yet. Sideline Save is holding the recent action in a rolling window.</figcaption>
+        </figure>
+        <figure class="screenshot-card">
+          <img src="screenshots/03-saved-videos.jpg" width="660" height="1434" loading="lazy" alt="Sideline Save showing a saved baseball highlight in Saved Videos">
+          <figcaption>Only the finished video highlights are saved.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="story" aria-labelledby="why-title">
-      <div><p class="story-label">Why it exists</p></div>
-      <div class="story-copy">
-        <h2 id="why-title">Most plays are ordinary—until one isn’t.</h2>
-        <p>With the regular Camera app, you either record everything or react after the beginning is gone. Sideline Save lets you decide after the action starts and still keep the lead-in.</p>
-        <p>That means fewer misses in Photos, less cleanup later, and more attention on the game.</p>
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="faq-heading">
+        <h2 id="faq-title">Quick answers</h2>
+        <p>More about how Sideline Save works.</p>
       </div>
-    </section>
-
-    <section class="sport-pages" aria-labelledby="sport-pages-title">
-      <div class="sport-heading">
-        <p class="eyebrow">Made for your game</p>
-        <h2 id="sport-pages-title">See how Sideline Save fits the sport you record.</h2>
-        <p>The same record button solves a different “just in case” problem on every sideline.</p>
-      </div>
-      <div class="sport-grid">
-        <article class="sport-card">
-          <div class="sport-card-copy">
-            <h3>Baseball &amp; Softball</h3>
-            <p>Press record after the hit. Your video will still have the pitch and the swing.</p>
-            <a href="baseball-softball.html">See Sideline Save for baseball and softball</a>
-          </div>
-        </article>
-        <article class="sport-card">
-          <div class="sport-card-copy">
-            <h3>Soccer</h3>
-            <p>Press record when the play heads toward goal. Your video will still have the pass that started it.</p>
-            <a href="soccer.html">See Sideline Save for soccer</a>
-          </div>
-        </article>
+      <div class="faq-list">
+        <details open>
+          <summary>What sports does Sideline Save work with?</summary>
+          <p>Every sport. Choose a built-in starting mode for Baseball, Basketball, Soccer, or Football, or use Custom for anything else. Baseball works well for softball, and Custom is a good starting point for volleyball.</p>
+        </details>
+        <details>
+          <summary>Will Sideline Save kill my battery?</summary>
+          <p>Sideline Save does not use more battery than leaving the built-in Camera app recording for the same amount of time. In our iPhone 17 Pro testing, budget roughly 25% of a full charge for a two-hour game. For the best battery life, lower the screen brightness and shade the phone from direct sunlight.</p>
+        </details>
+        <details>
+          <summary>Is the whole game being saved somewhere?</summary>
+          <p>No. Like a dash cam or doorbell camera, Sideline Save keeps a temporary rolling window. Only the moments you choose are finished and saved to Photos; closing the app stops capture.</p>
+        </details>
+        <details>
+          <summary>How does the video compare with GameChanger?</summary>
+          <p>GameChanger’s full-event video is limited to 720p, which can look soft when you crop or zoom. Sideline Save records using your chosen iPhone camera quality, so it can preserve much more detail. GameChanger only provides a full-event replay when the event was live streamed, and non-staff viewers need Premium or a Premium Team Pass. <a href="https://help.gc.com/hc/en-us/articles/360057075012-Full-Event-Videos" target="_blank" rel="noopener noreferrer">Read GameChanger’s documentation.</a></p>
+        </details>
       </div>
     </section>
 
     <section class="privacy-band" aria-labelledby="privacy-title">
       <div>
         <h2 id="privacy-title">Your footage never goes to a Sideline Save cloud.</h2>
-        <p>While Sideline Save is open, recent action is held temporarily on your iPhone so it can be added to a highlight. Lock your phone, switch apps, or close Sideline Save and camera capture stops. Finished clips go to Photos. There are no accounts, ads, or cross-app tracking.</p>
+        <p>Everything stays on your iPhone—Sideline Save never uploads your footage. There are no accounts, ads, or cross-app tracking.</p>
       </div>
       <a class="privacy-link" href="privacy-policy.html">Read the Privacy Policy</a>
     </section>
@@ -314,11 +306,65 @@
     <section class="developer" aria-labelledby="developer-title">
       <p class="eyebrow">Independent and personal</p>
       <h2 id="developer-title">Built by a baseball dad with the same problem.</h2>
-      <p>I built Sideline Save after getting tired of recording pitch after pitch at my son’s games, deleting nearly all of them, and still worrying that the next pitch would be the one I missed.</p>
+      <p>Sideline Save is a handcrafted app made by one person. I built it after getting tired of recording pitch after pitch at my son’s games, deleting nearly all of them, and still worrying that the next pitch would be the one I missed.</p>
       <a class="support-link" href="blog/why-i-built-a-camera-app-for-youth-sports-parents.html">Read why I built Sideline Save</a>
     </section>
   </main>
 
   <footer><p>&copy; 2026 Chase Seibert. Sideline Save.</p></footer>
+
+  <script>
+    (function() {
+      var video = document.getElementById('app-preview');
+      var playButton = document.getElementById('video-play');
+      var hotspot = document.getElementById('record-hotspot');
+      var captureVideo = document.getElementById('capture-demo-video');
+      var recordTip = document.getElementById('record-tip');
+      var caption = document.getElementById('capture-demo-caption');
+      var hasSaved = false;
+
+      playButton.addEventListener('click', function() {
+        playButton.hidden = true;
+        var playPromise = video.play();
+        if (playPromise && playPromise.catch) {
+          playPromise.catch(function() { playButton.hidden = false; });
+        }
+      });
+
+      video.addEventListener('ended', function() { playButton.hidden = false; });
+
+      hotspot.addEventListener('click', function() {
+        var isRecording = hotspot.getAttribute('aria-pressed') === 'true';
+        if (isRecording) {
+          captureVideo.pause();
+          recordTip.textContent = 'Saved. Tap to try it again';
+          caption.textContent = 'You stopped the recording. The finished highlight includes the rolling-window lead-in.';
+          hotspot.setAttribute('aria-pressed', 'false');
+          hotspot.setAttribute('aria-label', 'Replay the simulator recording example');
+          hasSaved = true;
+        } else {
+          if (hasSaved || captureVideo.currentTime >= captureVideo.duration - 0.15) captureVideo.currentTime = 0;
+          captureVideo.playbackRate = 1;
+          var capturePlayPromise = captureVideo.play();
+          if (capturePlayPromise && capturePlayPromise.catch) {
+            capturePlayPromise.catch(function() {});
+          }
+          recordTip.textContent = 'Notice that the timer started at 10 seconds.';
+          caption.textContent = 'Sideline Save has already included the action from before your tap.';
+          hotspot.setAttribute('aria-pressed', 'true');
+          hotspot.setAttribute('aria-label', 'Stop and save the simulator recording example');
+          hasSaved = false;
+        }
+      });
+
+      captureVideo.addEventListener('ended', function() {
+        hotspot.setAttribute('aria-pressed', 'false');
+        hotspot.setAttribute('aria-label', 'Replay the simulator recording example');
+        recordTip.textContent = 'Saved. Tap to try it again';
+        caption.textContent = 'The simulator example ended and the highlight was saved.';
+        hasSaved = true;
+      });
+    }());
+  </script>
 </body>
 </html>

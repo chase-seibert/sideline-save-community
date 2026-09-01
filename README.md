@@ -4,17 +4,24 @@
 
 # Sideline Save
 
-## iPhone sports camera for parents
+## A dash cam for game day
 
-### Record after the play.
+### Keep the highlights. Skip the two-hour recording.
 
-Sideline Save is a camera app for youth sports. It keeps the recent action
-ready, so you can hit Record at any time, continue recording as normal, then
-tap again to stop and save.
+Mount your iPhone, watch the game, and save only the moment that mattered.
+Sideline Save keeps up to 30 seconds ready, so after something great
+happens, tap Record and the beginning is already there.
 
-[Download free for iPhone](https://apps.apple.com/us/app/sideline-save/id6790879656)
+<p>
+  <a href="https://apps.apple.com/us/app/sideline-save/id6790879656">
+    <img src="images/download-on-the-app-store.svg" alt="Download on the App Store" width="188">
+  </a>
+</p>
 
-Free to try with 15 saved videos · iPhone, iOS 17+ · No account or ads
+Download free for iPhone · 15 saved videos included · iOS 17+ · No account or
+ads
+
+[Watch the 18-second app demo](https://sidelinesave.com/videos/sideline-save-app-preview.mp4)
 
 [About](https://sidelinesave.com/) ·
 [Baseball + Softball](https://sidelinesave.com/baseball-softball.html) ·
@@ -24,57 +31,70 @@ Free to try with 15 saved videos · iPhone, iOS 17+ · No account or ads
 [Equipment](https://sidelinesave.com/recommended-gimbals.html) ·
 [Privacy](https://sidelinesave.com/privacy-policy.html)
 
-## How it works
+## Why parents use Sideline Save
 
-1. **Always be shooting.** Keep the camera pointed at the play. Sideline Save
-   keeps the recent action ready.
-2. **Hit the record button.** At any time, you can hit the record button, even
-   after the play has happened.
-3. **Continue recording as normal.** Tap the same button again to stop and save.
+1. **Watch the game, not your screen.** Use a $5 bungee cord to mount your
+   iPhone to a fence. Keep your hands free, stay present, and stop holding a
+   phone in another parent’s view.
+2. **Skip the storage and editing marathon.** A two-hour 4K/60 recording can use
+   about 53 GB[^storage] and take about 15 minutes[^editing] to review and
+   trim. Sideline Save saves you 98% of that storage and time.[^savings]
+3. **Decide after it happens.** Sideline Save keeps a rolling window ready.
+   Once you know the moment was special, tap Record to keep the lead-in, then
+   tap again when the play is over.
 
-## Tap to record. Tap again to stop.
+[^storage]: Estimate: 440 MB per minute for 4K/60 HEVC × 120 minutes = 52,800
+    MB, or about 53 GB.
+[^editing]: Estimate for a focused highlight pass: about 10 minutes to skim at
+    high speed, plus 5 minutes to select, trim, and export a few clips.
+[^savings]: Illustrative estimate: about two minutes of highlights instead of
+    120 minutes of footage, and roughly 18 seconds of total tap-to-save
+    interaction instead of a 15-minute editing pass. Actual savings vary.
 
-Your video captures more on each end, helping make sure you do not miss the
-moment.
+## Tap after the hit. The swing is already there.
+
+The phone keeps a short rolling window without filling Photos. Tap Record after
+the hit to keep the lead-in, then tap again when the play is over.
 
 <p align="center">
-  <img src="screenshots/01-home-ready.jpg" alt="A baseball player running after a hit while Sideline Save keeps the recent action ready" width="31%">
-  <img src="screenshots/02-home-recording.jpg" alt="Sideline Save actively recording as the baseball play concludes" width="31%">
-  <img src="screenshots/03-saved-videos.jpg" alt="Sideline Save showing a saved baseball highlight with extra time before and after the play" width="31%">
+  <img src="images/sideline-save-simulator-capture-poster.jpg" alt="Sideline Save simulator capture demo immediately before the red 10-second recording timer appears" width="45%">
+  <img src="screenshots/03-saved-videos.jpg" alt="Sideline Save showing a saved baseball highlight in Saved Videos" width="45%">
 </p>
 
-## Why it exists
+## Quick answers
 
-### Most plays are ordinary—until one isn’t
+### What sports does Sideline Save work with?
 
-With the regular Camera app, you either record everything or react after the
-beginning is gone. Sideline Save lets you decide after the action starts and
-still keep the lead-in.
+Every sport. Choose a built-in starting mode for Baseball, Basketball, Soccer,
+or Football, or use Custom for anything else. Baseball works well for softball,
+and Custom is a good starting point for volleyball.
 
-That means fewer misses in Photos, less cleanup later, and more attention on the
-game.
+### Will Sideline Save kill my battery?
 
-## Made for your game
+Sideline Save does not use more battery than leaving the built-in Camera app
+recording for the same amount of time. In our iPhone 17 Pro testing, budget
+roughly 25% of a full charge for a two-hour game. For the best battery life,
+lower the screen brightness and shade the phone from direct sunlight.
 
-### Baseball & Softball
+### Is the whole game being saved somewhere?
 
-Press record after the hit. Your video will still have the pitch and the swing.
+No. Like a dash cam or doorbell camera, Sideline Save keeps a temporary rolling
+window. Only the moments you choose are finished and saved to Photos; closing
+the app stops capture.
 
-[See Sideline Save for baseball and softball](https://sidelinesave.com/baseball-softball.html)
+### How does the video compare with GameChanger?
 
-### Soccer
-
-Press record when the play heads toward goal. Your video will still have the
-pass that started it.
-
-[See Sideline Save for soccer](https://sidelinesave.com/soccer.html)
+GameChanger’s full-event video is limited to 720p, which can look soft when you
+crop or zoom. Sideline Save records using your chosen iPhone camera quality, so
+it can preserve much more detail. GameChanger only provides a full-event replay
+when the event was live streamed, and non-staff viewers need Premium or a
+Premium Team Pass. See
+[GameChanger’s documentation](https://help.gc.com/hc/en-us/articles/360057075012-Full-Event-Videos).
 
 ## Your footage never goes to a Sideline Save cloud
 
-While Sideline Save is open, recent action is held temporarily on your iPhone so
-it can be added to a highlight. Lock your phone, switch apps, or close Sideline
-Save and camera capture stops. Finished clips go to Photos. There are no
-accounts, ads, or cross-app tracking.
+Everything stays on your iPhone—Sideline Save never uploads your footage. There
+are no accounts, ads, or cross-app tracking.
 
 [Read the Privacy Policy](https://sidelinesave.com/privacy-policy.html)
 
@@ -82,9 +102,9 @@ accounts, ads, or cross-app tracking.
 
 ### Built by a baseball dad with the same problem
 
-I built Sideline Save after getting tired of recording pitch after pitch at my
-son’s games, deleting nearly all of them, and still worrying that the next pitch
-would be the one I missed.
+Sideline Save is a handcrafted app made by one person. I built it after getting
+tired of recording pitch after pitch at my son’s games, deleting nearly all of
+them, and still worrying that the next pitch would be the one I missed.
 
 [Read why I built Sideline Save](https://sidelinesave.com/blog/why-i-built-a-camera-app-for-youth-sports-parents.html)
 
