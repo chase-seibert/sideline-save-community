@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
+  <!-- Matches SaveCircularArrowSymbol in CaptureView.swift, including its
+       76-point symbol frame, 5-point inset, and 10-degree resting rotation. -->
+  <circle cx="43" cy="43" r="43" fill="#ff363d"/>
+  <g transform="translate(5 5)">
+    <g transform="rotate(10 38 38)">
+      <path d="M64.7771 27.1814 A28.88 28.88 0 1 1 52.44 12.9892"
+            fill="none" stroke="#fff" stroke-width="6.1"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M64.5906 17.2251 L47.1620 19.2152 L54.1584 4.8705 Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

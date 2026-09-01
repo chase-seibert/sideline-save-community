@@ -21,7 +21,7 @@ goes back in time to get the beginning of the play.
 Download free for iPhone · 15 saved videos included · iOS 17+ · No account or
 ads
 
-[Watch the 18-second app demo](https://sidelinesave.com/videos/sideline-save-app-preview.mp4)
+[Watch the 27-second app demo with voiceover](https://sidelinesave.com/videos/sideline-save-app-preview.mp4)
 
 [About](https://sidelinesave.com/) ·
 [Baseball + Softball](https://sidelinesave.com/baseball-softball.html) ·
@@ -51,14 +51,18 @@ ads
     120 minutes of footage, and roughly 18 seconds of total tap-to-save
     interaction instead of a 15-minute editing pass. Actual savings vary.
 
-## Tap after the hit. The swing is already there.
+## How to use Sideline Save
 
-The phone keeps a short rolling window without filling Photos. Tap Record after
-the hit to keep the lead-in, then tap again when the play is over.
+Keep the camera ready, tap after the play, and keep recording.
+
+1. **Always be shooting.** Sideline Save is always keeping the recent action ready. Keep the camera pointed at the player and the play on the field.
+2. **Record after the play.** When the play is over, tap the button once to record the moment.
+3. **Continue recording as normal.** Continue recording as normal. When the play is over, tap the same button again to stop and save the finished clip.
 
 <p align="center">
-  <img src="images/sideline-save-simulator-capture-poster.jpg" alt="Sideline Save simulator capture demo immediately before the red 10-second recording timer appears" width="45%">
-  <img src="screenshots/03-saved-videos.jpg" alt="Sideline Save showing a saved baseball highlight in Saved Videos" width="45%">
+  <img src="screenshots/tutorial-01-always-be-shooting.jpg" alt="Tutorial step 1: Always be shooting" width="31%">
+  <img src="screenshots/tutorial-02-record-after-the-play.jpg" alt="Tutorial step 2: Record after the play" width="31%">
+  <img src="screenshots/tutorial-03-continue-recording.jpg" alt="Tutorial step 3: Continue recording as normal" width="31%">
 </p>
 
 ## Quick answers

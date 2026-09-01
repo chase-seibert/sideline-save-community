@@ -118,17 +118,16 @@
     .showcase { padding: 64px 0 8px; }
     .showcase-heading { max-width: 760px; margin-bottom: 28px; }
     .showcase-heading p { margin: 0; color: var(--muted); }
-    .screenshot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 5vw, 52px); align-items: start; max-width: 840px; margin-inline: auto; }
-    .screenshot-card { margin: 0; }
-    .screenshot-card img { display: block; width: 100%; height: auto; border: 1px solid rgba(18, 61, 45, .16); border-radius: 22px; background: #050807; box-shadow: 0 18px 42px rgba(9, 40, 29, .15); }
-    .screenshot-card figcaption { margin-top: 12px; color: var(--muted); font-size: .86rem; line-height: 1.5; text-align: center; }
-    .capture-mock { position: relative; overflow: hidden; aspect-ratio: 660 / 1434; border: 1px solid rgba(18, 61, 45, .16); border-radius: 22px; background: #050807; box-shadow: 0 18px 42px rgba(9, 40, 29, .15); }
-    .capture-mock video { display: block; width: 100%; height: 100%; object-fit: cover; }
-    .capture-control { position: absolute; left: 50%; bottom: 4.4%; z-index: 4; width: 22%; aspect-ratio: 1; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; transform: translateX(-50%); }
-    .capture-control:focus-visible { border-radius: 50%; outline: 0; }
-    .capture-mock:has(.capture-control:focus-visible) .record-tip { outline: 3px solid rgba(255, 255, 255, .86); outline-offset: 3px; }
-    .record-tip { position: absolute; left: 50%; bottom: 16.5%; z-index: 4; width: max-content; max-width: 84%; padding: 9px 12px; border-radius: 10px; background: rgba(9, 40, 29, .94); color: white; font-size: .76rem; font-weight: 800; line-height: 1.3; text-align: center; transform: translateX(-50%); pointer-events: none; }
-    .record-tip::after { position: absolute; top: 100%; left: 50%; border: 7px solid transparent; border-top-color: rgba(9, 40, 29, .94); content: ""; transform: translateX(-50%); }
+    .screenshot-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 3vw, 32px); margin-inline: auto; }
+    .screenshot-card { overflow: hidden; margin: 0; border: 1px solid rgba(18, 61, 45, .16); border-radius: 22px; background: var(--paper); box-shadow: 0 12px 30px rgba(9, 40, 29, .08); }
+    .step-image { position: relative; background: var(--forest-dark); }
+    .screenshot-card img { display: block; width: 100%; height: auto; }
+    .capture-indicator { position: absolute; right: 14px; bottom: 14px; display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: #ff363d url("images/sideline-save-record.svg") center / contain no-repeat; box-shadow: 0 2px 12px rgba(0, 0, 0, .22); pointer-events: none; }
+    .capture-indicator.is-recording { background: rgba(9, 20, 14, .85); }
+    .capture-indicator.is-recording::before { width: 22px; height: 22px; border-radius: 6px; background: #ff363d; content: ""; }
+    .screenshot-card figcaption { padding: 22px; color: var(--muted); font-size: .95rem; line-height: 1.55; }
+    .screenshot-card h3 { margin-bottom: 12px; font-size: 1.16rem; line-height: 1.25; }
+    .screenshot-card figcaption p { margin: 0; }
 
     .faq-section { padding: 68px 0 8px; }
     .faq-heading { max-width: 710px; margin-bottom: 26px; }
@@ -161,6 +160,8 @@
     @media (max-width: 720px) {
       .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
+      .screenshot-grid { grid-template-columns: 1fr; gap: 34px; }
+      .screenshot-card { width: min(100%, 380px); margin-inline: auto; }
     }
     @media (max-width: 580px) {
       body { font-size: 16px; }
@@ -169,15 +170,13 @@
       .hero { padding: 30px 22px; border-radius: 20px; }
       .hero-actions { align-items: flex-start; flex-direction: column; }
       .demo-card { width: min(100%, 330px); }
-      .screenshot-grid { grid-template-columns: 1fr; gap: 34px; }
-      .screenshot-card { width: min(100%, 36.8svh); max-width: 350px; margin-inline: auto; }
       .benefit { grid-template-columns: 30px 1fr; padding: 14px; }
       .benefit-number { width: 30px; height: 30px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
       body { background: white; color: black; font-size: 11pt; }
-      .site-header, .skip-link, .demo-card, .record-tip, .capture-control { display: none; }
+      .site-header, .skip-link, .demo-card { display: none; }
       main { width: 100%; margin: 0; }
       .hero, .privacy-band { display: block; padding: 0; border: 0; background: white; color: black; box-shadow: none; }
       .hero::after { display: none; }
@@ -213,18 +212,18 @@
       </div>
 
       <aside class="demo-card" id="how-it-works" aria-labelledby="demo-title">
-        <p class="demo-kicker" id="demo-title">See it in 18 seconds</p>
+        <p class="demo-kicker" id="demo-title">See it in 27 seconds</p>
         <div class="video-shell">
           <video id="app-preview" controls playsinline preload="metadata" poster="images/sideline-save-app-preview-poster.jpg" aria-describedby="demo-description">
             <source src="videos/sideline-save-app-preview.mp4" type="video/mp4">
             Your browser does not support embedded video.
           </video>
-          <button class="video-play" id="video-play" type="button" aria-label="Play the Sideline Save app demo inline">
+          <button class="video-play" id="video-play" type="button" aria-label="Play the Sideline Save app demo inline with sound">
             <span class="play-icon" aria-hidden="true">▶</span>
-            <span>Play app demo</span>
+            <span>Play demo with sound</span>
           </button>
         </div>
-        <p class="demo-note" id="demo-description">Point the camera and tap after the play to keep the action that just happened.</p>
+        <p class="demo-note" id="demo-description">Watch the app in action, with a quick voiceover walkthrough.</p>
       </aside>
 
       <ol class="benefit-list" aria-label="Why parents use Sideline Save">
@@ -248,24 +247,31 @@
 
     <section class="showcase" id="try-the-button" aria-labelledby="showcase-title">
       <div class="showcase-heading">
-        <p class="eyebrow">Try the interaction</p>
-        <h2 id="showcase-title">Tap after the hit. The swing is already there.</h2>
-        <p>The phone keeps a short rolling window without filling Photos. Tap the red button below to see the camera move from ready to recording.</p>
+        <p class="eyebrow">Three simple steps</p>
+        <h2 id="showcase-title">How to use Sideline Save</h2>
+        <p>Keep the camera ready, tap after the play, and keep recording.</p>
       </div>
       <div class="screenshot-grid">
         <figure class="screenshot-card">
-          <div class="capture-mock">
-            <video id="capture-demo-video" muted playsinline preload="metadata" poster="images/sideline-save-simulator-capture-poster.jpg" aria-label="The real Sideline Save capture screen in the iPhone Simulator, beginning just before its recording timer starts at 10 seconds">
-              <source src="videos/sideline-save-simulator-capture.mp4" type="video/mp4">
-            </video>
-            <span class="record-tip" id="record-tip">Notice that the timer started at 10 seconds.</span>
-            <button class="capture-control" id="record-hotspot" type="button" aria-pressed="false" aria-describedby="capture-demo-caption" aria-label="Start the simulator recording example"></button>
+          <div class="step-image">
+            <img src="screenshots/tutorial-01-always-be-shooting.jpg" width="612" height="262" loading="lazy" alt="Camera view of a batter at the plate before the play">
+            <div class="capture-indicator" aria-hidden="true"></div>
           </div>
-          <figcaption id="capture-demo-caption" aria-live="polite">Nothing has been saved yet. Sideline Save is holding the recent action in a rolling window.</figcaption>
+          <figcaption><h3>Step 1: Always be shooting</h3><p>Sideline Save is always keeping the recent action ready. Keep the camera pointed at the player and the play on the field.</p></figcaption>
         </figure>
         <figure class="screenshot-card">
-          <img src="screenshots/03-saved-videos.jpg" width="660" height="1434" loading="lazy" alt="Sideline Save showing a saved baseball highlight in Saved Videos">
-          <figcaption>Only the finished video highlights are saved.</figcaption>
+          <div class="step-image">
+            <img src="screenshots/tutorial-02-record-after-the-play.jpg" width="612" height="262" loading="lazy" alt="Camera view of the batter running after a hit">
+            <div class="capture-indicator" aria-hidden="true"></div>
+          </div>
+          <figcaption><h3>Step 2: Record after the play</h3><p>When the play is over, tap the button once to record the moment.</p></figcaption>
+        </figure>
+        <figure class="screenshot-card">
+          <div class="step-image">
+            <img src="screenshots/tutorial-03-continue-recording.jpg" width="612" height="262" loading="lazy" alt="Camera view following the players as the action continues">
+            <div class="capture-indicator is-recording" aria-hidden="true"></div>
+          </div>
+          <figcaption><h3>Step 3: Continue recording as normal</h3><p>Continue recording as normal. When the play is over, tap the same button again to stop and save the finished clip.</p></figcaption>
         </figure>
       </div>
     </section>
@@ -317,11 +323,6 @@
     (function() {
       var video = document.getElementById('app-preview');
       var playButton = document.getElementById('video-play');
-      var hotspot = document.getElementById('record-hotspot');
-      var captureVideo = document.getElementById('capture-demo-video');
-      var recordTip = document.getElementById('record-tip');
-      var caption = document.getElementById('capture-demo-caption');
-      var hasSaved = false;
 
       playButton.addEventListener('click', function() {
         playButton.hidden = true;
@@ -333,37 +334,6 @@
 
       video.addEventListener('ended', function() { playButton.hidden = false; });
 
-      hotspot.addEventListener('click', function() {
-        var isRecording = hotspot.getAttribute('aria-pressed') === 'true';
-        if (isRecording) {
-          captureVideo.pause();
-          recordTip.textContent = 'Saved. Tap to try it again';
-          caption.textContent = 'You stopped the recording. The finished highlight includes the rolling-window lead-in.';
-          hotspot.setAttribute('aria-pressed', 'false');
-          hotspot.setAttribute('aria-label', 'Replay the simulator recording example');
-          hasSaved = true;
-        } else {
-          if (hasSaved || captureVideo.currentTime >= captureVideo.duration - 0.15) captureVideo.currentTime = 0;
-          captureVideo.playbackRate = 1;
-          var capturePlayPromise = captureVideo.play();
-          if (capturePlayPromise && capturePlayPromise.catch) {
-            capturePlayPromise.catch(function() {});
-          }
-          recordTip.textContent = 'Notice that the timer started at 10 seconds.';
-          caption.textContent = 'Sideline Save has already included the action from before your tap.';
-          hotspot.setAttribute('aria-pressed', 'true');
-          hotspot.setAttribute('aria-label', 'Stop and save the simulator recording example');
-          hasSaved = false;
-        }
-      });
-
-      captureVideo.addEventListener('ended', function() {
-        hotspot.setAttribute('aria-pressed', 'false');
-        hotspot.setAttribute('aria-label', 'Replay the simulator recording example');
-        recordTip.textContent = 'Saved. Tap to try it again';
-        caption.textContent = 'The simulator example ended and the highlight was saved.';
-        hasSaved = true;
-      });
     }());
   </script>
 </body>
