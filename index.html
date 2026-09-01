@@ -99,6 +99,9 @@
     .demo-kicker { margin: 0 0 12px; color: rgba(255, 255, 255, .78); font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .video-shell { position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, .22); border-radius: 20px; background: #050807; aspect-ratio: 886 / 1920; }
     .video-shell video { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .video-shell video::cue { color: white; background-color: rgba(5, 8, 7, .9); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; font-weight: 650; line-height: 1.4; text-shadow: 0 1px 2px black; }
+    .video-shell video:fullscreen { object-fit: contain; }
+    .video-shell video:fullscreen::cue { font-size: clamp(18px, 2.5vw, 32px); }
     .video-play { position: absolute; inset: 0; display: grid; place-content: center; gap: 12px; width: 100%; border: 0; background: linear-gradient(180deg, rgba(9, 40, 29, .08), rgba(9, 40, 29, .52)); color: white; cursor: pointer; font-weight: 800; }
     .video-play[hidden] { display: none; }
     .play-icon { display: grid; width: 72px; height: 72px; margin-inline: auto; place-items: center; padding-left: 5px; border: 2px solid rgba(255, 255, 255, .86); border-radius: 50%; background: rgba(217, 47, 57, .94); box-shadow: 0 10px 28px rgba(0, 0, 0, .3); font-size: 1.65rem; }
@@ -216,14 +219,15 @@
         <div class="video-shell">
           <video id="app-preview" controls playsinline preload="metadata" poster="images/sideline-save-app-preview-poster.jpg" aria-describedby="demo-description">
             <source src="videos/sideline-save-app-preview.mp4" type="video/mp4">
+            <track kind="captions" src="videos/sideline-save-app-preview.en.vtt" srclang="en" label="English" default>
             Your browser does not support embedded video.
           </video>
-          <button class="video-play" id="video-play" type="button" aria-label="Play the Sideline Save app demo inline with sound">
+          <button class="video-play" id="video-play" type="button" aria-label="Play the Sideline Save app demo with captions">
             <span class="play-icon" aria-hidden="true">▶</span>
-            <span>Play demo with sound</span>
+            <span>Play app demo</span>
           </button>
         </div>
-        <p class="demo-note" id="demo-description">Watch the app in action, with a quick voiceover walkthrough.</p>
+        <p class="demo-note" id="demo-description">Voiceover and captions included. Sound optional.</p>
       </aside>
 
       <ol class="benefit-list" aria-label="Why parents use Sideline Save">

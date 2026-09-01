@@ -21,7 +21,7 @@ goes back in time to get the beginning of the play.
 Download free for iPhone · 15 saved videos included · iOS 17+ · No account or
 ads
 
-[Watch the 27-second app demo with voiceover](https://sidelinesave.com/videos/sideline-save-app-preview.mp4)
+[Watch the 27-second app demo with voiceover and captions](https://sidelinesave.com/#how-it-works)
 
 [About](https://sidelinesave.com/) ·
 [Baseball + Softball](https://sidelinesave.com/baseball-softball.html) ·
