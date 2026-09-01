@@ -4,13 +4,13 @@
 
 # Sideline Save
 
-## A dash cam for game day
+## A dash cam for youth sports
 
 ### Keep the highlights. Skip the two-hour recording.
 
-Mount your iPhone, watch the game, and save only the moment that mattered.
-Sideline Save keeps up to 30 seconds ready, so after something great
-happens, tap Record and the beginning is already there.
+Watch the game and save only the moment that mattered. Sideline Save keeps up
+to 30 seconds ready, so after something great happens, tap Record and the app
+goes back in time to get the beginning of the play.
 
 <p>
   <a href="https://apps.apple.com/us/app/sideline-save/id6790879656">
