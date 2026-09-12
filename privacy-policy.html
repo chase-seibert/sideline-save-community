@@ -178,7 +178,7 @@
       <p class="eyebrow">Privacy, in plain language</p>
       <h1 id="policy-title">Your highlights stay yours.</h1>
       <p class="lede">Sideline Save is a local-first sports camera app. Your video and audio stay on your device and in your Photos library. We collect limited app and public-website usage information, plus any contact information you choose to provide through the optional TestFlight beta-access form.</p>
-      <div class="policy-meta"><span>Privacy Policy</span><span>Effective <time datetime="2026-07-16">July 16, 2026</time></span><span>Version 1.4</span></div>
+      <div class="policy-meta"><span>Privacy Policy</span><span>Effective <time datetime="2026-09-01">September 1, 2026</time></span><span>Version 1.5</span></div>
     </section>
 
     <section class="summary-grid" aria-label="Privacy summary">
@@ -220,7 +220,7 @@
           <ul>
             <li><strong>Camera and microphone:</strong> Camera video and optional microphone audio are processed on your device to keep the most recent seconds ready and create clips.</li>
             <li><strong>Photos:</strong> Videos you save remain in your Photos library. Sideline Save reads back the videos it created so you can browse, play, organize, share, favorite, or delete them.</li>
-            <li><strong>Motion:</strong> Device motion is used only while the optional level meter is active. Motion readings are not stored or transmitted.</li>
+            <li><strong>Motion and editing signals:</strong> While camera capture is active, the app keeps lightweight audio-level and spike features, device movement, zoom, coarse visual changes, and capture-control interaction times with local clip records for future editing features. These signals are not sent to our analytics service or included in shared videos. Device motion also powers the optional level meter. No additional raw audio or image copies are retained for this analysis.</li>
             <li><strong>App settings and records:</strong> Sport presets, onboarding state, local capture statistics, saved-video references, and related clip metadata are stored in the app’s private container.</li>
             <li><strong>Recoverable buffers:</strong> Short-lived camera buffers may be kept in the app’s private container after an interruption. They expire after approximately five minutes and are subject to count and storage limits.</li>
             <li><strong>Temporary share files:</strong> Exports are removed after sharing, and files left by an interrupted share are removed after 24 hours. File modification times are read only to perform this cleanup.</li>
@@ -292,8 +292,9 @@
           <h2>Your choices and rights</h2>
           <ul>
             <li>You can review or change Camera, Microphone, Motion, and Photos permissions in iOS Settings.</li>
-            <li>You can turn off the Level Meter in Sideline Save Settings to stop use of motion data for that feature.</li>
+            <li>You can turn off the Level Meter in Sideline Save Settings to stop use of motion data for that display. Capture-related movement signals continue while the camera is capturing, subject to available device permissions.</li>
             <li>You can delete saved clips from Sideline Save or Photos.</li>
+            <li>Local editing signals are removed when Sideline Save removes the clip's local record, or when the app is deleted. Deleting a video only in Photos does not immediately remove its local app metadata. Temporary buffer signals expire with their buffers. Local sidecars may be included in device backups but are not stored in the Photos asset or synchronized by Sideline Save across devices.</li>
             <li>You can stop future analytics collection from an installation by deleting the app. This also removes queued, not-yet-uploaded analytics from the device.</li>
             <li>You can limit public website analytics with browser cookie, script-blocking, or privacy controls and can clear website data stored by your browser.</li>
             <li>You can unsubscribe from beta-access emails or ask the developer to delete your form response.</li>
