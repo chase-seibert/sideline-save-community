@@ -60,6 +60,7 @@ button { font: inherit; }
   gap: 11px;
   color: var(--forest-dark);
   font-weight: 780;
+  text-decoration: none;
 }
 .brand-mark {
   width: 30px;
