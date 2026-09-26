@@ -79,6 +79,8 @@
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 26px; }
     .app-store-link { display: inline-flex; min-height: 50px; align-items: center; border-radius: 8px; }
     .app-store-link img { display: block; width: 188px; height: auto; }
+    .android-waitlist-link { display: inline-flex; min-height: 50px; padding: 12px 18px; align-items: center; border: 1px solid var(--line); border-radius: 999px; color: var(--forest-dark); font-weight: 800; text-decoration: none; }
+    .android-waitlist-link:hover { background: var(--forest-soft); color: var(--red-dark); }
     .hero-note { margin: 12px 0 0; color: var(--muted); font-size: .86rem; font-weight: 700; }
 
     .demo-card { position: relative; z-index: 1; grid-area: demo; justify-self: center; width: min(100%, 305px); padding: 18px; border-radius: 28px; background: var(--forest-dark); color: white; box-shadow: 0 20px 48px rgba(9, 40, 29, .25); }
@@ -197,6 +199,7 @@
         <p class="lede">Watch the game and save only the moment that mattered. Sideline Save keeps up to 30 seconds ready, so after something great happens, tap Record and the app goes back in time to get the beginning of the play.</p>
         <div class="hero-actions">
           <a class="app-store-link" data-download-placement="about_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer" aria-label="Download Sideline Save free on the App Store"><img src="images/download-on-the-app-store.svg" width="250" height="83" alt="Download on the App Store"></a>
+          <a class="android-waitlist-link" data-waitlist-placement="about_android_waitlist" href="https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Join the Android waitlist</a>
         </div>
         <p class="hero-note">Try it free with 15 saved videos. Then just $9.99/year. No account. No ads.</p>
       </div>
@@ -220,7 +223,7 @@
       <ol class="benefit-list" aria-label="Why parents use Sideline Save">
         <li class="benefit">
           <span class="benefit-number">1</span>
-          <div><h3>Watch the game, not your screen.</h3><p>Use a $5 bungee cord to mount your iPhone to a fence. Keep your hands free, stay present, and stop holding a phone in another parent’s view.</p></div>
+          <div><h3>Keep the camera where the play is.</h3><p>Use a <a href="recommended-gimbals.html#simple-setups-title">five dollar bungee cord</a> to mount your iPhone to a fence, or hand-hold it from an approved spot. Mounting keeps your hands free; hand-holding gives you flexibility when mounting is not allowed.</p></div>
         </li>
         <li class="benefit">
           <span class="benefit-number">2</span>
@@ -278,6 +281,10 @@
           <p>Every sport. Choose a built-in starting mode for Baseball, Basketball, Soccer, or Football, or use Custom for anything else. Baseball works well for softball, and Custom is a good starting point for volleyball.</p>
         </details>
         <details>
+          <summary>How does retroactive recording work?</summary>
+          <p>While Sideline Save is open, it keeps a short, temporary rolling buffer of the most recent camera footage. When you tap Record, the app preserves the video already in that buffer and continues recording. When you tap again to stop, it combines the footage from before and after your tap into one saved clip. The temporary buffer is continuously overwritten and is never saved as a full game.</p>
+        </details>
+        <details>
           <summary>Will Sideline Save kill my battery?</summary>
           <p>Sideline Save uses about the same amount of battery as the built-in Camera app. If you're just recording one player's at-bats, that's about 5% of your battery per game. Recording a whole 2-hour game takes about 50% of your battery. It really depends on how much time you leave the app open and recording.</p>
           <p>For the best battery life, lower the screen brightness and shade the phone from direct sunlight.</p>
@@ -285,6 +292,15 @@
         <details>
           <summary>Is the whole game being saved somewhere?</summary>
           <p>No. Like a dash cam or doorbell camera, Sideline Save keeps a temporary rolling window. Only the moments you choose are finished and saved to Photos; closing the app stops capture.</p>
+        </details>
+        <details>
+          <summary>How does storage work?</summary>
+          <p>Saved videos go into your Photos library, so Sideline Save does not keep a separate cloud copy. If you use iCloud Photos, Apple backs up and syncs those videos automatically through your normal Photos settings.</p>
+          <p>For an illustrative season, imagine 20 games with four at-bats per game and a 30-second saved clip for each at-bat. That is about 40 minutes of video—roughly 18 GB at the same 4K/60 estimate used above—instead of about 1.1 TB for recording all 20 two-hour games. That is roughly 1 TB saved. Actual storage depends on your capture quality, frame rate, clip length, and iCloud settings.</p>
+        </details>
+        <details>
+          <summary>What happens after my 15th saved video?</summary>
+          <p>After the 15 included saves, Sideline Save stops you from taking new saved videos until you unlock Sideline Save Pro. Your existing videos stay available in Sideline Save and Photos, so you can always view the highlights you already saved.</p>
         </details>
         <details>
           <summary>How does the video compare with GameChanger?</summary>

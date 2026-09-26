@@ -18,6 +18,8 @@ goes back in time to get the beginning of the play.
   </a>
 </p>
 
+[Join the Android waitlist](https://docs.google.com/forms/d/e/1FAIpQLScZcynubUWDhJu5gBwgFu-eE2r5PIz1a63V5BcG1F11n85OKg/viewform?usp=publish-editor)
+
 Download free for iPhone · 15 saved videos included · iOS 17+ · No account or
 ads
 
@@ -33,9 +35,7 @@ ads
 
 ## Why parents use Sideline Save
 
-1. **Watch the game, not your screen.** Use a $5 bungee cord to mount your
-   iPhone to a fence. Keep your hands free, stay present, and stop holding a
-   phone in another parent’s view.
+1. **Keep the camera where the play is.** Use a [five dollar bungee cord](https://sidelinesave.com/recommended-gimbals.html#simple-setups-title) to mount your iPhone to a fence, or hand-hold it from an approved spot. Mounting keeps your hands free; hand-holding gives you flexibility when mounting is not allowed.
 2. **Skip the storage and editing marathon.** A two-hour 4K/60 recording can use
    about 53 GB[^storage] and take about 15 minutes[^editing] to review and
    trim. Sideline Save saves you 98% of that storage and time.[^savings]
@@ -73,6 +73,14 @@ Every sport. Choose a built-in starting mode for Baseball, Basketball, Soccer,
 or Football, or use Custom for anything else. Baseball works well for softball,
 and Custom is a good starting point for volleyball.
 
+### How does retroactive recording work?
+
+While Sideline Save is open, it keeps a short, temporary rolling buffer of the
+most recent camera footage. When you tap Record, the app preserves the video
+already in that buffer and continues recording. When you tap again to stop, it
+combines the footage from before and after your tap into one saved clip. The
+temporary buffer is continuously overwritten and is never saved as a full game.
+
 ### Will Sideline Save kill my battery?
 
 Sideline Save does not use more battery than leaving the built-in Camera app
@@ -85,6 +93,25 @@ lower the screen brightness and shade the phone from direct sunlight.
 No. Like a dash cam or doorbell camera, Sideline Save keeps a temporary rolling
 window. Only the moments you choose are finished and saved to Photos; closing
 the app stops capture.
+
+### How does storage work?
+
+Saved videos go into your Photos library, so Sideline Save does not keep a
+separate cloud copy. If you use iCloud Photos, Apple backs up and syncs those
+videos automatically through your normal Photos settings.
+
+For an illustrative season, imagine 20 games with four at-bats per game and a
+30-second saved clip for each at-bat. That is about 40 minutes of video—roughly
+18 GB at the same 4K/60 estimate used above—instead of about 1.1 TB for
+recording all 20 two-hour games. That is roughly 1 TB saved. Actual storage
+depends on your capture quality, frame rate, clip length, and iCloud settings.
+
+### What happens after my 15th saved video?
+
+After the 15 included saves, Sideline Save stops you from taking new saved
+videos until you unlock Sideline Save Pro. Your existing videos stay available
+in Sideline Save and Photos, so you can always view the highlights you already
+saved.
 
 ### How does the video compare with GameChanger?
 
