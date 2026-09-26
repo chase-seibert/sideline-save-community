@@ -14,24 +14,10 @@
   <meta property="article:published_time" content="2026-07-18">
   <meta property="article:modified_time" content="2026-07-18">
   <meta name="theme-color" content="#123d2d">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KPLTQGLSL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7KPLTQGLSL');
-
-    document.addEventListener('click', function(event) {
-      var link = event.target.closest('a[data-download-placement]');
-      if (!link) return;
-      gtag('event', 'download_click', {
-        page_path: window.location.pathname,
-        download_placement: link.getAttribute('data-download-placement')
-      });
-    });
-  </script>
+  <script defer src="../scripts/site.js"></script>
   <title>Tips for Taking Video of a Little League Baseball Game - Sideline Save</title>
   <style>
     :root {
@@ -147,6 +133,7 @@
       article { max-width: none; padding: 0; border: 0; box-shadow: none; }
     }
   </style>
+  <link rel="stylesheet" href="../styles/site.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to blog post</a>

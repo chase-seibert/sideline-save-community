@@ -1,0 +1,164 @@
+:root {
+  --forest: #123d2d;
+  --forest-dark: #09281d;
+  --forest-soft: #e5efe9;
+  --paper: #fffdf8;
+  --cream: #f7f2e8;
+  --ink: #17211c;
+  --muted: #5b6760;
+  --line: #d8ded9;
+  --red: #d92f39;
+  --red-dark: #a51e28;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at 12% 4%, rgba(217, 47, 57, .08), transparent 24rem), var(--cream);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--red-dark); text-underline-offset: .18em; }
+a:hover { color: var(--red); }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  border-radius: 5px;
+  outline: 3px solid rgba(217, 47, 57, .35);
+  outline-offset: 4px;
+}
+button { font: inherit; }
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--forest-dark);
+  font-weight: 750;
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+.site-header, main, footer {
+  width: min(calc(100% - 40px), 1120px);
+  margin-inline: auto;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 0 16px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--forest-dark);
+  font-weight: 780;
+}
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  box-shadow: 0 2px 7px rgba(9, 40, 29, .22);
+  flex: 0 0 auto;
+  object-fit: cover;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.site-nav a {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--forest-dark);
+  font-size: .86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.site-nav a[aria-current="page"] { background: var(--forest-soft); }
+.site-nav .nav-menu {
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.site-nav .nav-menu > summary {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  border-radius: 999px;
+  color: var(--forest-dark);
+  cursor: pointer;
+  font-size: .86rem;
+  font-weight: 800;
+  line-height: 1.65;
+  list-style: none;
+}
+.site-nav .nav-menu > summary::-webkit-details-marker { display: none; }
+.site-nav .nav-menu > summary::before { content: "☰"; font-size: 1.05rem; line-height: 1; }
+.site-nav .nav-menu > summary::after { content: none; }
+.site-nav .nav-menu[open] > summary,
+.site-nav .nav-menu > summary[data-current="true"] { background: var(--forest-soft); }
+.site-nav .nav-menu-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  min-width: 170px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 14px 34px rgba(9, 40, 29, .16);
+}
+.site-nav .nav-menu-panel a { display: block; white-space: nowrap; }
+main { margin-bottom: 72px; }
+
+h1, h2, h3 {
+  color: var(--forest-dark);
+  font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif;
+  letter-spacing: -.025em;
+  line-height: 1.16;
+}
+h1 { margin: 0; font-size: clamp(2.65rem, 5.2vw, 4rem); font-weight: 820; }
+h2 { margin: 0 0 18px; font-size: clamp(1.7rem, 3.5vw, 2.55rem); }
+h3 { margin: 0 0 7px; font-size: 1.04rem; }
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--red-dark);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.lede {
+  max-width: 690px;
+  margin: 22px 0 0;
+  color: #35433c;
+  font-size: clamp(1.08rem, 2vw, 1.24rem);
+}
+footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
+
+@media (max-width: 720px) {
+  .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
+}
+@media (max-width: 580px) {
+  body { font-size: 16px; }
+  .site-header, main, footer { width: calc(100% - 24px); }
+  .site-nav a { padding: 7px; font-size: .82rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  body { background: white; color: black; font-size: 11pt; }
+  .site-header, .skip-link { display: none; }
+  main { width: 100%; margin: 0; }
+}
