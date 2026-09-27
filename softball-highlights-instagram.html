@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Capture softball highlights for Instagram and TikTok without recording the whole game. Sideline Save keeps the moment ready, supports HDR on compatible iPhones, and organizes clips by date.">
+  <meta name="sideline-save-page-type" content="landing">
+  <link rel="canonical" href="https://sidelinesave.com/softball-highlights-instagram.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="app-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Softball Highlights for Instagram and TikTok — Sideline Save">
+  <meta property="og:description" content="Save the big softball moments without recording the whole game, then share short, HDR-ready clips that are easy to find later.">
+  <meta property="og:url" content="https://sidelinesave.com/softball-highlights-instagram.html">
+  <meta property="og:image" content="https://sidelinesave.com/images/sideline-save-app-preview-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Softball Highlights for Instagram and TikTok — Sideline Save">
+  <meta name="twitter:description" content="Capture more of the softball moments worth posting, without editing a full-game recording first.">
+  <meta name="twitter:image" content="https://sidelinesave.com/images/sideline-save-app-preview-poster.jpg">
+  <meta name="theme-color" content="#123d2d">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KPLTQGLSL"></script>
+  <script defer src="scripts/site.js"></script>
+  <title>Softball Highlights for Instagram and TikTok — Sideline Save</title>
+  <style>
+    .softball-page {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: clamp(36px, 7vw, 76px);
+      border: 1px solid rgba(18, 61, 45, .12);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(9, 40, 29, .11);
+    }
+    .softball-page .hero {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .softball-page .hero::after { display: none; }
+    .softball-page .hero::before {
+      position: absolute;
+      top: -44px;
+      right: -18px;
+      width: 150px;
+      height: 150px;
+      border: 30px solid rgba(217, 47, 57, .10);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+    .softball-page .hero-copy,
+    .softball-page .article-copy { position: relative; z-index: 1; max-width: none; }
+    .softball-page .hero .eyebrow { color: var(--red-dark); }
+    .softball-page .hero .lede { max-width: 760px; }
+    .softball-page .section { padding: 52px 0 0; }
+    .softball-page .section-heading { max-width: none; margin-bottom: 28px; }
+    .softball-page .section-heading p { margin: 0; color: var(--muted); }
+    .softball-page .article-copy p { margin: 0; color: #35433c; }
+    .softball-page .article-copy p + p { margin-top: 18px; }
+    .softball-page .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .softball-page .button {
+      display: inline-flex;
+      min-height: 48px;
+      padding: 12px 20px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .softball-page .button-primary { background: var(--red); color: white; box-shadow: 0 8px 20px rgba(165, 30, 40, .2); }
+    .softball-page .button-primary:hover { background: #eb3a44; color: white; }
+    .softball-page .hero-note { margin: 14px 0 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .softball-page .pull-quote {
+      margin-top: 28px !important;
+      padding: 22px 26px;
+      border-left: 5px solid var(--red);
+      border-radius: 0 16px 16px 0;
+      background: rgba(217, 47, 57, .08);
+      color: var(--forest-dark) !important;
+      font-size: 1.16rem;
+      font-weight: 750;
+    }
+    .softball-page .article-list { margin: 24px 0 0; padding-left: 1.25em; color: #35433c; }
+    .softball-page .article-list li + li { margin-top: 12px; }
+    .softball-page .article-list strong { color: var(--forest-dark); }
+    .softball-page .article-callout {
+      margin-top: 28px;
+      padding: 24px;
+      border-radius: 18px;
+      background: var(--forest-dark);
+      color: white;
+    }
+    .softball-page .article-callout strong { display: block; font-size: 1.2rem; }
+    .softball-page .article-callout p { margin: 8px 0 0; color: rgba(255, 255, 255, .76); }
+    .softball-page .faq-list { display: grid; gap: 12px; max-width: 900px; }
+    .softball-page .faq-list details { border: 1px solid rgba(18, 61, 45, .12); border-radius: 16px; background: var(--paper); }
+    .softball-page .faq-list summary { padding: 20px 22px; color: var(--forest-dark); cursor: pointer; font-weight: 800; }
+    .softball-page .faq-list details p { margin: 0; padding: 0 22px 22px; color: var(--muted); }
+    .softball-page .cta-band {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      margin-top: 52px;
+      padding: clamp(30px, 5vw, 52px);
+      border-radius: 24px;
+      background: var(--forest-dark);
+      color: white;
+    }
+    .softball-page .cta-band h2 { color: white; }
+    .softball-page .cta-band p { max-width: 720px; margin: 0; color: rgba(255, 255, 255, .76); }
+    @media (max-width: 820px) {
+      .softball-page .cta-band { grid-template-columns: 1fr; }
+      .softball-page .cta-band .button { justify-self: start; }
+    }
+    @media (max-width: 520px) {
+      .softball-page { width: calc(100% - 24px); padding: 30px 24px; border-radius: 20px; }
+      .softball-page .hero-actions { align-items: stretch; flex-direction: column; }
+      .softball-page .hero-actions .button { width: 100%; }
+      .softball-page .cta-band { padding: 30px 24px; border-radius: 20px; }
+    }
+  </style>
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to softball highlight details</a>
+  <header class="site-header" aria-label="Sideline Save">
+    <a class="brand" href="about.html"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</a>
+    <nav class="site-nav" aria-label="Website">
+      <a href="about.html">About</a>
+      <a href="baseball-softball.html">Baseball + Softball</a>
+      <a href="soccer.html">Soccer</a>
+      <a href="support.html">Support</a>
+      <details class="nav-menu"><summary aria-label="More pages"></summary><div class="nav-menu-panel"><a href="blog/">Blog</a><a href="recommended-gimbals.html">Equipment</a><a href="privacy-policy.html">Privacy</a></div></details>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article class="softball-page">
+      <section class="hero" aria-labelledby="softball-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Softball video for Instagram and TikTok</p>
+          <h1 id="softball-title">Capture the softball moments people want to see.</h1>
+          <p class="lede">Sideline Save helps parents capture the hit, catch, slide, strikeout, and celebration without recording the whole game. Save a short highlight after it happens, then share it while the moment is still fresh.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" data-download-placement="softball_social_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+          </div>
+          <p class="hero-note">15 saved videos included · No account · No ads</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="whole-game-title">
+        <div class="article-copy">
+          <p class="eyebrow">Why not record the whole game?</p>
+          <h2 id="whole-game-title">You came to watch softball, not manage a two-hour video file.</h2>
+          <p>Full-game recording makes the parent behind the phone do a second job: stay on the camera, keep the frame pointed at the action, remember every big moment, and sort through hours of footage later. That is a lot to ask when the best plays happen without warning.</p>
+          <p>Sideline Save keeps recent action ready while you watch. When your daughter turns a double play, lines a shot into the gap, makes a diving catch, or rounds third, tap Record after the moment and the app reaches back to save the beginning of it.</p>
+          <p class="pull-quote">Watch the game first. Save the highlight when you realize it was one.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="moments-title">
+        <div class="article-copy">
+          <p class="eyebrow">More of the moments you did not see coming</p>
+          <h2 id="moments-title">The spectacular plays are usually the ones nobody can schedule.</h2>
+          <p>Softball is full of moments that arrive between pitches: a runner stealing second, a shortstop making a stop in the hole, a catcher blocking a wild pitch, or a player celebrating with her teammates after a big at-bat.</p>
+          <p>Because the camera is already ready, you do not have to predict which pitch will become the highlight. You can keep your attention on the field and still save the play when it happens.</p>
+          <ul class="article-list">
+            <li><strong>Keep watching.</strong> The app is ready in the background while you follow the game.</li>
+            <li><strong>Tap after the play.</strong> The recent action is still there when you decide it is worth keeping.</li>
+            <li><strong>Save the moment.</strong> You get a short clip instead of a full game to review.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="share-title">
+        <div class="article-copy">
+          <p class="eyebrow">Made for sharing</p>
+          <h2 id="share-title">A highlight you can post, not a project you have to edit.</h2>
+          <p>The hard part of posting a softball video is often finding the play. Sideline Save does that part at capture time. Instead of scrubbing through a whole-game recording, you start with a short clip that is already centered on the hit, catch, slide, or celebration you wanted to share.</p>
+          <p>Send it to family, save it to Photos, or post it to Instagram and TikTok while the team is still talking about the play. You can edit when you want to, but you do not need a separate editing session just to find the moment.</p>
+          <aside class="article-callout" aria-label="Sideline Save sharing summary"><strong>Short clips are easier to share.</strong><p>Sideline Save is built for the highlight you want to send—not the full game you have to trim first.</p></aside>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="hdr-title">
+        <div class="article-copy">
+          <p class="eyebrow">Make the post pop</p>
+          <h2 id="hdr-title">HDR can keep a softball highlight looking like the real field.</h2>
+          <p>Bright sun, white uniforms, deep dugout shadows, and green grass can all show up in the same softball frame. On supported iPhones, Sideline Save can preserve High Dynamic Range video so more of those highlights, shadows, and natural contrast stay in the clip.</p>
+          <p>That can make a visible difference when you share to a compatible Instagram workflow or watch the clip on an HDR-capable iPhone or TV. If you compare an HDR Sideline Save clip with an SDR GameChanger clip, the Sideline Save version can retain more of the bright and dark detail that makes the play feel alive.</p>
+          <p>HDR is not a filter and it is not guaranteed on every phone or sharing path. The iPhone, capture format, saved file, display, and social app all matter. Sideline Save reports the clip’s actual HDR or SDR status in its capture metadata.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="find-title">
+        <div class="article-copy">
+          <p class="eyebrow">Find it after the game</p>
+          <h2 id="find-title">Your softball videos have a place of their own.</h2>
+          <p>Months later, you should not have to remember whether a highlight is between vacation photos, screenshots, and every other video on your phone. In Sideline Save, saved videos are organized by date so you can go back to the game and find the clip you want without sorting through the rest of your camera roll.</p>
+          <p>The videos you save from the app also go into the dedicated Sideline Save album in Photos. That gives your softball highlights a clear home for sharing, revisiting, and building a season of memories.</p>
+          <ul class="article-list">
+            <li><strong>In Sideline Save:</strong> browse saved clips by date and return to a previous game quickly.</li>
+            <li><strong>In Photos:</strong> find videos saved from the app in the Sideline Save album instead of mixing them into everything else.</li>
+            <li><strong>When sharing:</strong> start with the exact highlight rather than searching through an entire game.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Common questions</p>
+          <h2 id="faq-title">Softball highlights, without the extra work.</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Do I have to record the whole softball game?</summary><p>No. Sideline Save keeps recent action ready while you watch, so you can tap Record after a play and save the highlight instead of recording the entire game.</p></details>
+          <details><summary>How does it capture a play after it happens?</summary><p>The app keeps a rolling buffer of recent action. When you tap Record, it reaches back to include the beginning of the play, so you do not have to predict the exact pitch or moment in advance.</p></details>
+          <details><summary>Can I share softball videos to Instagram and TikTok?</summary><p>Yes. Saved clips are available to share from your iPhone. Compatible Instagram and TikTok workflows may preserve HDR when the iPhone, video file, and viewing path support it.</p></details>
+          <details><summary>Do I need to edit the video before sharing?</summary><p>Not to find the play. Sideline Save saves a short highlight centered on the moment you chose, so you can share it without scrubbing through a full-game recording first. Optional editing is still available when you want it.</p></details>
+          <details><summary>Where do my softball videos go?</summary><p>Sideline Save organizes saved videos by date inside the app. The videos you save also go into the Sideline Save album in Photos, giving clips captured with the app a separate place from the rest of your camera roll.</p></details>
+          <details><summary>Will every softball video be HDR?</summary><p>HDR depends on the iPhone model, active capture format, and output path. When HDR is supported, Sideline Save uses it; otherwise the app saves the clip as SDR and identifies that actual format in the capture metadata.</p></details>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="download-title">
+        <div>
+          <h2 id="download-title">Save the softball moments worth posting.</h2>
+          <p>Free to try with 15 saved videos on iPhone. Sideline Save Pro unlocks unlimited saves.</p>
+        </div>
+        <a class="button button-primary" data-download-placement="softball_social_footer" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+      </section>
+    </article>
+  </main>
+
+  <footer><p>&copy; 2026 Chase Seibert. Sideline Save.</p></footer>
+</body>
+</html>

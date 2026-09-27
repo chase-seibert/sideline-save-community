@@ -63,10 +63,15 @@
     .button-primary:hover { background: #eb3a44; color: white; }
     .button-secondary { border: 1px solid var(--line); background: var(--paper); color: var(--forest-dark); }
     .hero-note { margin: 14px 0 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .editorial-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; color: var(--muted); font-size: .84rem; font-weight: 750; }
 
     .section { padding: 68px 0 0; }
     .section-heading { max-width: 760px; margin-bottom: 28px; }
     .section-heading p { margin: 0; color: var(--muted); }
+    .article-copy { max-width: 820px; }
+    .article-copy p { margin: 0; color: #35433c; }
+    .article-copy p + p { margin-top: 18px; }
+    .pull-quote { margin-top: 28px !important; padding: 22px 26px; border-left: 5px solid var(--hdr-gold); border-radius: 0 16px 16px 0; background: var(--hdr-amber); color: var(--forest-dark) !important; font-size: 1.16rem; font-weight: 750; }
     .hdr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .hdr-card {
       padding: 28px;
@@ -89,6 +94,11 @@
     }
     .hdr-card h3 { margin-bottom: 10px; }
     .hdr-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    .scenario-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .scenario-card { padding: 24px; border-top: 3px solid var(--hdr-gold); background: rgba(255, 253, 248, .72); }
+    .scenario-card h3 { margin-bottom: 10px; }
+    .scenario-card p { margin: 0; color: var(--muted); font-size: .95rem; }
 
     .detail-panel {
       display: grid;
@@ -127,6 +137,11 @@
     .compare-note p { color: #294c3d; font-size: .92rem; }
     .compare-note a { color: var(--forest-dark); font-weight: 750; }
 
+    .product-callout { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; padding: clamp(28px, 5vw, 44px); border-radius: 24px; background: var(--forest-soft); }
+    .product-callout h2 { margin: 0 0 10px; color: var(--forest-dark); }
+    .product-callout p { max-width: 720px; margin: 0; color: #294c3d; }
+    .product-callout .button { justify-self: end; }
+
     .faq-list { display: grid; gap: 12px; max-width: 900px; }
     .faq-list details { border: 1px solid rgba(18, 61, 45, .12); border-radius: 16px; background: var(--paper); }
     .faq-list summary { padding: 20px 22px; color: var(--forest-dark); cursor: pointer; font-weight: 800; }
@@ -147,18 +162,39 @@
     .cta-band p { max-width: 720px; margin: 0; color: rgba(255, 255, 255, .76); }
 
     @media (max-width: 820px) {
-      .hdr-grid, .detail-panel, .compare, .cta-band { grid-template-columns: 1fr; }
-      .cta-band .button { justify-self: start; }
+      .hdr-grid, .scenario-grid, .detail-panel, .compare, .product-callout, .cta-band { grid-template-columns: 1fr; }
+      .product-callout .button, .cta-band .button { justify-self: start; }
     }
     @media (max-width: 520px) {
       .hero { padding: 32px 24px; border-radius: 20px; }
       .hero-actions { align-items: stretch; flex-direction: column; }
-      .detail-panel, .compare { padding: 30px 24px; border-radius: 20px; }
+      .detail-panel, .compare, .product-callout { padding: 30px 24px; border-radius: 20px; }
     }
     @media print {
-      .site-header, .skip-link, .hero-actions, .cta-band { display: none; }
+      .site-header, .skip-link, .hero-actions, .product-callout, .cta-band { display: none; }
       .hero, .detail-panel, .compare { display: block; padding: 0; border: 0; background: white; color: black; box-shadow: none; }
       .detail-panel h2, .detail-panel p, .detail-list strong, .detail-list span { color: black; }
+    }
+
+    /* Editorial landing-page treatment: a blog-like reading column with a light CTA spine. */
+    .editorial-page { max-width: 820px; margin: 0 auto; padding: clamp(36px, 7vw, 76px); border: 1px solid rgba(18, 61, 45, .12); border-radius: 28px; background: var(--paper); box-shadow: 0 24px 70px rgba(9, 40, 29, .11); }
+    .editorial-page .hero { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+    .editorial-page .hero::after { display: none; }
+    .editorial-page .hero-copy, .editorial-page .article-copy { max-width: none; }
+    .editorial-page .section { padding: 52px 0 0; }
+    .editorial-page .section-heading { max-width: none; }
+    .article-list { margin: 24px 0 0; padding-left: 1.25em; color: #35433c; }
+    .article-list li + li { margin-top: 12px; }
+    .article-list strong { color: var(--forest-dark); }
+    .article-callout { margin-top: 28px; padding: 24px; border-radius: 18px; background: var(--forest-dark); color: white; }
+    .article-callout strong { display: block; font-size: 1.2rem; }
+    .article-callout p { margin: 8px 0 0; color: rgba(255, 255, 255, .76); }
+    .editorial-page .compare { display: block; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+    .editorial-page .compare-note { margin-top: 24px; }
+    .editorial-page .cta-band { margin-top: 52px; }
+    @media (max-width: 520px) {
+      .editorial-page { width: calc(100% - 24px); padding: 30px 24px; border-radius: 20px; }
+      .editorial-page .hero { padding: 0; }
     }
   </style>
   <link rel="stylesheet" href="styles/site.css">
@@ -177,96 +213,98 @@
   </header>
 
   <main id="main-content">
-    <section class="hero" aria-labelledby="hdr-title">
-      <div class="hero-copy">
-        <p class="eyebrow">HDR video for youth sports</p>
-        <h1 id="hdr-title">Make the play look as real as it felt.</h1>
-        <p class="lede">Sideline Save can preserve High Dynamic Range video on supported iPhones, keeping more of the bright highlights, shadow detail, and natural contrast that make a game-day moment feel real.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" data-download-placement="hdr_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
-          <a class="button button-secondary" href="#how-hdr-works">See how HDR works</a>
+    <article class="editorial-page">
+      <section class="hero" aria-labelledby="hdr-title">
+        <div class="hero-copy">
+          <p class="eyebrow">HDR video for youth sports</p>
+          <h1 id="hdr-title">Make the play look as real as it felt.</h1>
+          <p class="lede">Sideline Save can preserve High Dynamic Range video on supported iPhones, keeping more of the bright highlights, shadow detail, and natural contrast that make a game-day moment feel real.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" data-download-placement="hdr_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+          </div>
+          <p class="hero-note">15 saved videos included · No account · No ads</p>
         </div>
-        <p class="hero-note">HDR is automatic when your iPhone and capture format support it · No account · No ads</p>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" aria-labelledby="notice-title">
-      <div class="section-heading">
-        <p class="eyebrow">What you notice</p>
-        <h2 id="notice-title">The same play, with more of the scene still there.</h2>
-        <p>HDR is most useful when a game has both bright and dark areas—the exact conditions that can make ordinary video look flat or lose detail.</p>
-      </div>
-      <div class="hdr-grid">
-        <article class="hdr-card"><span class="hdr-card-mark" aria-hidden="true">☀</span><h3>Keep bright detail</h3><p>Sunlit jerseys, clouds, bright fields, and stadium lights can retain more texture instead of turning into blank white patches.</p></article>
-        <article class="hdr-card"><span class="hdr-card-mark" aria-hidden="true">◐</span><h3>See into the shadows</h3><p>Faces under caps, shaded dugouts, and players moving between light and shade can keep more visible detail.</p></article>
-        <article class="hdr-card"><span class="hdr-card-mark" aria-hidden="true">✦</span><h3>Keep natural contrast</h3><p>HDR expands brightness and color range so your highlight can look more like the moment you actually watched.</p></article>
-      </div>
-    </section>
+      <section class="section" aria-labelledby="why-hdr-title">
+        <div class="article-copy">
+          <p class="eyebrow">Why this matters on the sideline</p>
+          <h2 id="why-hdr-title">Outdoor games are hard on ordinary video.</h2>
+          <p>A youth sports field can put bright sky, white jerseys, shaded dugouts, and faces under caps into the same shot. Standard Dynamic Range video has less room to preserve all of those differences, so a highlight can look flatter than the moment felt in person.</p>
+          <p>HDR gives compatible iPhones more room to retain bright highlights, shadow detail, and natural contrast. You may notice it most when you replay a clip on the same phone, send it to a compatible TV through Apple TV, or share it through a workflow that keeps HDR.</p>
+          <p class="pull-quote">HDR is most noticeable when the scene contains both very bright and very dark areas.</p>
+        </div>
+      </section>
 
-    <section class="section" id="how-hdr-works" aria-labelledby="works-title">
-      <div class="detail-panel">
+      <section class="section" aria-labelledby="changes-title">
+        <div class="article-copy">
+          <p class="eyebrow">What HDR actually changes</p>
+          <h2 id="changes-title">More room for the details that make the memory feel real.</h2>
+          <p>HDR is not just an abstract color specification. In a game-day highlight, it can help preserve:</p>
+          <ul class="article-list">
+            <li><strong>More detail in bright areas.</strong> Sunlit clouds, white jerseys, bright fields, and stadium lights can retain texture instead of turning into blank white patches.</li>
+            <li><strong>More visibility in shadows.</strong> Faces under caps, shaded dugouts, and players moving between light and shade can keep more visible detail.</li>
+            <li><strong>More natural contrast.</strong> The finished highlight can look closer to the moment you actually watched.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="sports-title">
+        <div class="article-copy">
+          <p class="eyebrow">Why sports are a good test for HDR</p>
+          <h2 id="sports-title">A sports field can put the hardest scenes into one frame.</h2>
+          <p>A controlled indoor scene is relatively easy to expose. A sports field is not. The camera may be pointed toward a bright sky while the player is standing in shadow. A white uniform may reflect direct sunlight while the grass and fence behind it are much darker.</p>
+          <p>A player can run from a sunny part of the field into the shade of the dugout in the same clip. These are the moments when HDR is most useful: when the scene contains both very bright and very dark areas.</p>
+          <p>The goal is not to make every highlight look flashy. The goal is to preserve more of the scene so the video feels more like the moment you remember.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="watch-title">
+        <div class="article-copy">
+          <p class="eyebrow">HDR when you are watching later</p>
+          <h2 id="watch-title">The whole playback path matters.</h2>
+          <p>HDR is most noticeable when the camera, saved file, display, and playback app all support it. You may see the benefit on:</p>
+          <ul class="article-list">
+            <li>An HDR-capable iPhone</li>
+            <li>A compatible HDR television connected through Apple TV 4K</li>
+            <li>A social-video workflow that preserves HDR for compatible viewers</li>
+          </ul>
+          <p>On an SDR display, or after a video has been converted to standard range, the clip may look different. That is normal. Not everyone who receives the video will necessarily see the same version.</p>
+        </div>
+      </section>
+
+      <section class="section" id="how-hdr-works" aria-labelledby="works-title">
+        <div class="article-copy">
+          <p class="eyebrow">How Sideline Save handles HDR</p>
+          <h2 id="works-title">HDR should be easy, not another setting to manage.</h2>
+          <p>You do not need to understand a video format menu before the game. Sideline Save checks the active iPhone capture format and video output. When both support HDR, the rolling buffer and saved clip use the HDR path automatically.</p>
+          <p>When the device or format cannot support HDR, Sideline Save records in SDR. The app does not pretend that an SDR clip is HDR, and the saved-video metadata identifies the clip’s actual dynamic range.</p>
+          <aside class="article-callout" aria-label="Sideline Save HDR capture summary"><strong>The file is the proof.</strong><p>A video can have high resolution and still be SDR. Sideline Save reports whether the local original is HDR or SDR.</p></aside>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Common questions</p>
+          <h2 id="faq-title">HDR video, without the mystery.</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Which iPhones can record HDR with Sideline Save?</summary><p>HDR depends on the iPhone model, active camera format, frame rate, and video output support. Sideline Save checks those capabilities at runtime, so the app uses HDR where the capture path supports it and SDR elsewhere.</p></details>
+          <details><summary>Is HDR the same as 4K?</summary><p>No. Resolution describes how many pixels the video has. HDR describes the range of brightness and color the video can preserve. They can work together, but one does not guarantee the other.</p></details>
+          <details><summary>Will every person see my video in HDR?</summary><p>No. The viewer’s phone, display, app, and any later editing or re-encoding step all matter. Compatible Apple displays and supported Instagram Reels workflows can show HDR; other paths may show a standard-range version.</p></details>
+          <details><summary>What happens when HDR is not available?</summary><p>Sideline Save saves the clip as SDR. The app keeps the capture reliable and reports the clip’s actual dynamic range in its saved-video metadata.</p></details>
+          <details><summary>Do I need to change a setting before recording?</summary><p>No. HDR is not a separate capture-screen toggle in Sideline Save. When the active iPhone format and video output support HDR, the app selects it automatically.</p></details>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="download-title">
         <div>
-          <p class="eyebrow">Built into the capture path</p>
-          <h2 id="works-title">No HDR toggle to remember.</h2>
-          <p>Sideline Save checks the active iPhone capture format and video output. When both support HDR, the rolling buffer and saved clip use the HDR path automatically.</p>
-          <p>When the device or format cannot support HDR, the app stays on its reliable SDR path. You still get a saved video; the app does not pretend an SDR clip is HDR.</p>
+          <h2 id="download-title">Save the play the way you remember it.</h2>
+          <p>Free to try with 15 saved videos on iPhone. Sideline Save Pro unlocks unlimited saves.</p>
         </div>
-        <ul class="detail-list">
-          <li><strong>HDR when supported</strong><span>Capability-driven capture on compatible iPhones and formats.</span></li>
-          <li><strong>Local original</strong><span>Save the selected moment to Photos without needing a live stream.</span></li>
-          <li><strong>Clear capture metadata</strong><span>Saved-video details identify whether the clip is HDR or SDR.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="view-title">
-      <div class="section-heading">
-        <p class="eyebrow">Where it can stand out</p>
-        <h2 id="view-title">Keep the benefit through the moments you rewatch and share.</h2>
-      </div>
-      <div class="compare">
-        <div>
-          <h3>On your iPhone or living-room TV</h3>
-          <p>On an HDR-capable iPhone, the difference can be visible immediately. Send the clip through a compatible Apple TV 4K and HDR television, and the display can use the extra range too.</p>
-          <p>On an SDR screen or in a workflow that converts the video, it will be tone-mapped to standard range. HDR is a capability—not a promise that every screen will show the same result.</p>
-        </div>
-        <div class="compare-note"><strong>And on Instagram Reels</strong><p>Instagram supports HDR upload and playback for Reels on compatible devices. Your clip can look brighter and more dimensional there, while viewers on unsupported devices may receive an SDR version.</p></div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="comparison-title">
-      <div class="compare">
-        <div>
-          <p class="eyebrow">A different capture goal</p>
-          <h2 id="comparison-title">A local highlight is not the same as a team stream.</h2>
-          <p>GameChanger is built around team events, live streaming, and archived video. Sideline Save is built around one parent keeping a short, high-quality local highlight after the play.</p>
-          <p>If HDR matters to you, check the file you keep—not just the resolution shown in an app. Sideline Save records an HDR local original when your iPhone capture path supports it.</p>
-        </div>
-        <div class="compare-note"><strong>Compare the workflow</strong><p>GameChanger's published <a href="https://help.gc.com/hc/en-us/articles/21334712734733-Automatic-Video-Clips-FAQs" target="_blank" rel="noopener noreferrer">clip documentation</a> discusses stored-video resolution and sharing compression. It does not make a universal HDR promise for every workflow.</p></div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="faq-title">
-      <div class="section-heading">
-        <p class="eyebrow">Common questions</p>
-        <h2 id="faq-title">HDR video, without the mystery.</h2>
-      </div>
-      <div class="faq-list">
-        <details><summary>Which iPhones can record HDR with Sideline Save?</summary><p>HDR depends on the iPhone model, active camera format, frame rate, and video output support. Sideline Save checks those capabilities at runtime, so the app uses HDR where the capture path supports it and SDR elsewhere.</p></details>
-        <details><summary>Is HDR the same as 4K?</summary><p>No. Resolution describes how many pixels the video has. HDR describes the range of brightness and color the video can preserve. They can work together, but one does not guarantee the other.</p></details>
-        <details><summary>Will every person see my video in HDR?</summary><p>No. The viewer's phone, display, app, and any later editing or re-encoding step all matter. Compatible Apple displays and supported Instagram Reels workflows can show HDR; other paths may show a standard-range version.</p></details>
-        <details><summary>What happens when HDR is not available?</summary><p>Sideline Save saves the clip as SDR. The app keeps the capture reliable and reports the clip's actual dynamic range in its saved-video metadata.</p></details>
-        <details><summary>Do I need to change a setting before recording?</summary><p>No. HDR is not a separate capture-screen toggle in Sideline Save. When the active iPhone format and video output support HDR, the app selects it automatically.</p></details>
-      </div>
-    </section>
-
-    <section class="cta-band" aria-labelledby="download-title">
-      <div>
-        <h2 id="download-title">Save the play the way you remember it.</h2>
-        <p>Free to try with 15 saved videos on iPhone. Sideline Save Pro unlocks unlimited saves.</p>
-      </div>
-      <a class="button button-primary" data-download-placement="hdr_footer" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
-    </section>
+        <a class="button button-primary" data-download-placement="hdr_footer" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+      </section>
+    </article>
   </main>
 
   <footer><p>&copy; 2026 Chase Seibert. Sideline Save.</p></footer>
