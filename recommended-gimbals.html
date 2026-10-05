@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Simple game-day phone gear for parents: fence mounting, Bluetooth shutter remotes, and recommended gimbals for smoother youth sports video.">
+  <meta name="description" content="Game-day phone gear for youth sports parents, including fence mounts, Bluetooth shutter remotes, gimbals, phone shades, and hot-weather cooling ideas.">
   <meta name="theme-color" content="#123d2d">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <link rel="icon" type="image/png" sizes="32x32" href="app-icon.png">
@@ -183,6 +183,17 @@
     .safety-note { margin-top: 40px; padding: 28px; border-left: 5px solid var(--orange); border-radius: 0 18px 18px 0; background: #fff7ed; }
     .safety-note h2 { margin-bottom: 9px; font-size: 1.3rem; }
     .safety-note p { margin: 0; color: #5c493a; }
+    .cooling-section { padding: 64px 0 16px; }
+    .cooling-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .cooling-card { overflow: hidden; border: 1px solid rgba(18, 61, 45, .12); border-radius: 20px; background: var(--paper); box-shadow: 0 14px 38px rgba(9, 40, 29, .06); }
+    .cooling-card img { display: block; width: 100%; height: auto; }
+    .cooling-card-copy { padding: 25px 28px 28px; }
+    .cooling-card h3 { font-size: 1.4rem; }
+    .cooling-card p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .cooling-card p + p { margin-top: 14px; }
+    .cooling-card .actions { margin-top: 20px; }
+    .cooling-section > .section-heading { margin-bottom: 24px; }
+    .cooling-note { margin: 18px 0 0; color: var(--muted); font-size: .84rem; }
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
     @media (max-width: 720px) {
@@ -191,7 +202,7 @@
     }
     @media (max-width: 820px) {
       .recommendation, .tips, .setup-card--feature { grid-template-columns: 1fr; }
-      .upgrade-grid { grid-template-columns: 1fr; }
+      .upgrade-grid, .cooling-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 680px) { .setup-grid { grid-template-columns: 1fr; } }
     @media (max-width: 520px) {
@@ -323,6 +334,33 @@
         <li><strong>Practice the controls first.</strong><span>Learn the follow mode, recenter action, and phone mounting at home so game time stays focused on the sport.</span></li>
         <li><strong>Charge both devices.</strong><span>Long events use the phone and gimbal batteries. Bring a battery pack if you expect a full day at the field.</span></li>
       </ul>
+    </section>
+
+    <section class="cooling-section" aria-labelledby="cooling-title">
+      <div class="section-heading">
+        <h2 id="cooling-title">Keep your phone cooler in the sun.</h2>
+        <p>Direct sun can heat a phone even when it is not recording. Shade it whenever you can, and give it a break between plays on especially hot days.</p>
+      </div>
+      <div class="cooling-grid">
+        <article class="cooling-card">
+          <img src="images/fenceclip-paper-phone-shade.png" width="1120" height="840" loading="lazy" alt="A white FenceClip paper shade mounted over a phone on a chain-link baseball fence">
+          <div class="cooling-card-copy">
+            <span class="setup-label">Phone shade</span>
+            <h3>A simple paper shade for the fence.</h3>
+            <p>This lightweight paper shade sits above the phone to block direct sun while leaving the camera exposed. Angle it so the lens and microphones stay clear, and make sure the shade does not trap heat against the phone.</p>
+            <div class="actions"><a class="button button-secondary" href="https://www.thefenceclip.com/product-page/paper-shade-for-cell-phone" target="_blank" rel="noopener noreferrer">See the FenceClip Paper Shade</a></div>
+          </div>
+        </article>
+        <article class="cooling-card">
+          <div class="cooling-card-copy">
+            <span class="setup-label">Between-play cooling</span>
+            <h3>Consider a phone cooling puck.</h3>
+            <p>A phone cooling puck can be another option for a long, hot game. Test it with your phone and mount before relying on it, follow its instructions, and stop if you see moisture or condensation. Keep the camera and any ventilation openings clear.</p>
+            <p>Pair active cooling with shade and breaks. A puck cannot make it safe to keep recording when the phone shows a temperature warning.</p>
+          </div>
+        </article>
+      </div>
+      <p class="cooling-note">For more hot-weather advice, read <a href="blog/keeping-your-phone-cool-at-a-hot-game.html">How to Keep Your Phone Cool While Recording a Game</a>.</p>
     </section>
 
     <aside class="safety-note" aria-labelledby="safety-title">

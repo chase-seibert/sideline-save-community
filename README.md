@@ -69,9 +69,9 @@ Keep the camera ready, tap after the play, and keep recording.
 
 ### What sports does Sideline Save work with?
 
-Every sport. Choose a built-in starting mode for Baseball, Basketball, Soccer,
-or Football, or use Custom for anything else. Baseball works well for softball,
-and Custom is a good starting point for volleyball.
+Every sport. Choose a built-in starting mode for Baseball, Basketball,
+Volleyball, Soccer, or Football, or use Custom for anything else. Baseball
+works well for softball.
 
 ### How does retroactive recording work?
 
