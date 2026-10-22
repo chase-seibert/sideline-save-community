@@ -115,6 +115,14 @@
     .screenshot-card h3 { margin-bottom: 12px; font-size: 1.16rem; line-height: 1.25; }
     .screenshot-card figcaption p { margin: 0; }
 
+    .feedback-section { padding: 64px 0 8px; }
+    .feedback-heading { max-width: 760px; margin-bottom: 26px; }
+    .feedback-heading p { margin: 0; color: var(--muted); }
+    .feedback-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .feedback-card { display: flex; flex-direction: column; min-height: 100%; margin: 0; padding: clamp(22px, 3vw, 30px); border: 1px solid rgba(18, 61, 45, .14); border-radius: 20px; background: var(--paper); box-shadow: 0 12px 30px rgba(9, 40, 29, .06); }
+    .feedback-card blockquote { flex: 1; margin: 0; color: var(--forest-dark); font-size: 1.08rem; font-weight: 700; line-height: 1.5; }
+    .feedback-context { margin: 17px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+
     .faq-section { padding: 68px 0 8px; }
     .faq-heading { max-width: 710px; margin-bottom: 26px; }
     .faq-heading p { margin: 0; color: var(--muted); }
@@ -147,6 +155,7 @@
       .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .site-nav { justify-content: flex-start; width: 100%; gap: 0; }
       .screenshot-grid { grid-template-columns: 1fr; gap: 34px; }
+      .feedback-grid { grid-template-columns: 1fr; }
       .screenshot-card { width: min(100%, 380px); margin-inline: auto; }
     }
     @media (max-width: 580px) {
@@ -238,6 +247,25 @@
             <div class="capture-indicator is-recording" aria-hidden="true"></div>
           </div>
           <figcaption><h3>Step 3: Continue recording as normal.</h3><p>Tap again to stop recording. Your clip just has the highlight of the actual action. No editing needed.</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feedback-section" aria-labelledby="feedback-title">
+      <div class="feedback-heading">
+        <h2 id="feedback-title">Testimonials</h2>
+        <p>A real story from a Sideline Save user, alongside early reactions to the idea.</p>
+      </div>
+      <div class="feedback-grid">
+        <figure class="feedback-card">
+          <blockquote>“With kids, you’re always like, ‘Oh, I wish I had what happened in the last two minutes.’”</blockquote>
+        </figure>
+        <figure class="feedback-card">
+          <blockquote>“This would be amazing for my brother-in-law… He’s a baseball fanatic with his son, so this would go hand-in-hand with that.”</blockquote>
+        </figure>
+        <figure class="feedback-card">
+          <blockquote>“Most of the time, the animals were just sitting around, but when they moved I wanted to get them in action. Using the app helped me get the action shots I wanted without five minutes of an orangutan sitting in a tree beforehand.”</blockquote>
+          <figcaption class="feedback-context">This clip came from safari footage of monkeys, not a sports game.</figcaption>
         </figure>
       </div>
     </section>
