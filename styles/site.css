@@ -151,6 +151,15 @@ h3 { margin: 0 0 7px; font-size: 1.04rem; }
   font-size: clamp(1.08rem, 2vw, 1.24rem);
 }
 footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: -8px;
+}
+.social-links a { color: var(--muted); font-weight: 700; }
+.social-links a:hover { color: var(--red-dark); }
 
 @media (max-width: 720px) {
   .site-header { flex-direction: column; align-items: flex-start; gap: 8px; }
