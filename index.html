@@ -67,7 +67,7 @@
     .site-nav .nav-menu-panel a { display: block; white-space: nowrap; }
     main { margin-bottom: 72px; }
 
-    .hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); grid-template-areas: "copy demo" "benefits benefits"; gap: 30px clamp(38px, 6vw, 72px); align-items: start; padding: clamp(36px, 6vw, 68px); border: 1px solid rgba(18, 61, 45, .12); border-radius: 28px; background: var(--paper); box-shadow: 0 24px 70px rgba(9, 40, 29, .11); }
+    .hero { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); grid-template-areas: "copy demo"; gap: 30px clamp(38px, 6vw, 72px); align-items: start; padding: clamp(36px, 6vw, 68px); border: 1px solid rgba(18, 61, 45, .12); border-radius: 28px; background: var(--paper); box-shadow: 0 24px 70px rgba(9, 40, 29, .11); }
     .hero::after { position: absolute; top: -105px; right: -95px; width: 280px; height: 280px; border: 54px solid rgba(18, 61, 45, .055); border-radius: 50%; content: ""; pointer-events: none; }
     .hero-copy { position: relative; z-index: 1; grid-area: copy; }
     .eyebrow { margin: 0 0 18px; color: var(--red-dark); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
@@ -95,11 +95,6 @@
     .play-icon { display: grid; width: 72px; height: 72px; margin-inline: auto; place-items: center; padding-left: 5px; border: 2px solid rgba(255, 255, 255, .86); border-radius: 50%; background: rgba(217, 47, 57, .94); box-shadow: 0 10px 28px rgba(0, 0, 0, .3); font-size: 1.65rem; }
     .demo-note { margin: 12px 2px 0; color: rgba(255, 255, 255, .74); font-size: .78rem; line-height: 1.45; }
 
-    .benefit-list { position: relative; z-index: 2; grid-area: benefits; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
-    .benefit { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 15px 16px; border: 1px solid rgba(18, 61, 45, .11); border-radius: 16px; background: rgba(229, 239, 233, .48); }
-    .benefit-number { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: var(--forest); color: white; font-size: .76rem; font-weight: 800; }
-    .benefit:nth-child(3) .benefit-number { background: var(--red); }
-    .benefit p { margin: 0; color: #3d4a43; font-size: .91rem; line-height: 1.48; }
     .estimate { position: relative; display: inline-flex; align-items: baseline; font-weight: 800; color: var(--forest-dark); }
     .estimate-marker { display: inline; padding: 0 2px; border: 0; background: transparent; color: var(--red-dark); cursor: help; font-size: .76em; font-weight: 900; vertical-align: super; }
     .estimate-tooltip { position: absolute; left: 50%; bottom: calc(100% + 11px); z-index: 30; width: min(280px, 78vw); padding: 11px 13px; border-radius: 10px; background: var(--forest-dark); color: white; box-shadow: 0 10px 26px rgba(9, 40, 29, .25); font-size: .76rem; font-weight: 600; line-height: 1.4; opacity: 0; pointer-events: none; transform: translate(-50%, 5px); transition: opacity .15s ease, transform .15s ease; }
@@ -137,14 +132,14 @@
     .privacy-link { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 999px; background: var(--paper); color: var(--forest-dark); font-weight: 800; text-decoration: none; white-space: nowrap; }
     .privacy-link:hover { color: var(--red-dark); }
     .developer { max-width: 760px; margin: 64px auto 0; text-align: center; }
+    .founder-photo { display: block; width: min(100%, 760px); height: auto; margin: 0 auto 28px; border-radius: 24px; box-shadow: 0 18px 48px rgba(9, 40, 29, .14); }
     .developer p { margin: 0 auto 22px; color: var(--muted); }
     .support-link { font-weight: 800; }
     footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
 
     @media (max-width: 860px) {
-      .hero { grid-template-columns: 1fr; grid-template-areas: "copy" "demo" "benefits"; }
+      .hero { grid-template-columns: 1fr; grid-template-areas: "copy" "demo"; }
       .demo-card { width: min(100%, 360px); }
-      .benefit-list { grid-template-columns: 1fr; }
       .privacy-band { grid-template-columns: 1fr; }
       .privacy-link { justify-self: start; }
     }
@@ -161,8 +156,6 @@
       .hero { padding: 30px 22px; border-radius: 20px; }
       .hero-actions { align-items: flex-start; flex-direction: column; }
       .demo-card { width: min(100%, 330px); }
-      .benefit { grid-template-columns: 30px 1fr; padding: 14px; }
-      .benefit-number { width: 30px; height: 30px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
@@ -171,7 +164,6 @@
       main { width: 100%; margin: 0; }
       .hero, .privacy-band { display: block; padding: 0; border: 0; background: white; color: black; box-shadow: none; }
       .hero::after { display: none; }
-      .benefit-list { margin-top: 24px; }
       .privacy-band { margin-top: 36px; }
       .privacy-band h2, .privacy-band p { color: black; }
     }
@@ -184,10 +176,9 @@
     <a class="brand" href="about.html"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</a>
     <nav class="site-nav" aria-label="Website">
       <a href="about.html" aria-current="page">About</a>
-      <a href="baseball-softball.html">Baseball + Softball</a>
-      <a href="soccer.html">Soccer</a>
+      <a href="recommended-gimbals.html">Equipment</a>
       <a href="support.html">Support</a>
-      <details class="nav-menu"><summary aria-label="More pages"></summary><div class="nav-menu-panel"><a href="blog/">Blog</a><a href="recommended-gimbals.html">Equipment</a><a href="privacy-policy.html">Privacy</a></div></details>
+      <details class="nav-menu"><summary aria-label="More pages"></summary><div class="nav-menu-panel"><a href="blog/">Blog</a><a href="privacy-policy.html">Privacy</a></div></details>
     </nav>
   </header>
 
@@ -220,30 +211,11 @@
         <p class="demo-note" id="demo-description">Voiceover and captions included. Sound optional.</p>
       </aside>
 
-      <ol class="benefit-list" aria-label="Why parents use Sideline Save">
-        <li class="benefit">
-          <span class="benefit-number">1</span>
-          <div><h3>Keep the camera where the play is.</h3><p>Use a <a href="recommended-gimbals.html#simple-setups-title">five dollar bungee cord</a> to mount your iPhone to a fence, or hand-hold it from an approved spot. Mounting keeps your hands free; hand-holding gives you flexibility when mounting is not allowed.</p></div>
-        </li>
-        <li class="benefit">
-          <span class="benefit-number">2</span>
-          <div>
-            <h3>Skip the storage and editing marathon.</h3>
-            <p>A two-hour 4K/60 recording can use <span class="estimate">about 53 GB<button class="estimate-marker" type="button" aria-describedby="storage-estimate">*</button><span class="estimate-tooltip" id="storage-estimate" role="tooltip">Estimate: 440 MB per minute for 4K/60 HEVC × 120 minutes = 52,800 MB, or about 53 GB.</span></span> and take <span class="estimate">about 15 minutes<button class="estimate-marker" type="button" aria-describedby="editing-estimate">*</button><span class="estimate-tooltip" id="editing-estimate" role="tooltip">Estimate for a focused highlight pass: about 10 minutes to skim at high speed, plus 5 minutes to select, trim, and export a few clips.</span></span> to review and trim. Sideline Save saves you <span class="estimate">98% of that storage and time.<button class="estimate-marker" type="button" aria-describedby="savings-estimate">*</button><span class="estimate-tooltip" id="savings-estimate" role="tooltip">Illustrative estimate: about two minutes of highlights instead of 120 minutes of footage, and roughly 18 seconds of total tap-to-save interaction instead of a 15-minute editing pass. Actual savings vary.</span></span></p>
-          </div>
-        </li>
-        <li class="benefit">
-          <span class="benefit-number">3</span>
-          <div><h3>Decide after it happens.</h3><p>Sideline Save keeps a rolling window ready. Once you know the moment was special, tap Record to keep the lead-in, then tap again when the play is over.</p></div>
-        </li>
-      </ol>
     </section>
 
     <section class="showcase" id="try-the-button" aria-labelledby="showcase-title">
       <div class="showcase-heading">
-        <p class="eyebrow">Three simple steps</p>
         <h2 id="showcase-title">How to use Sideline Save</h2>
-        <p>Keep the camera ready, tap after the play, and keep recording.</p>
       </div>
       <div class="screenshot-grid">
         <figure class="screenshot-card">
@@ -251,21 +223,21 @@
             <img src="screenshots/tutorial-01-always-be-shooting.jpg" width="612" height="262" loading="lazy" alt="Camera view of a batter at the plate before the play">
             <div class="capture-indicator" aria-hidden="true"></div>
           </div>
-          <figcaption><h3>Step 1: Always be shooting</h3><p>Sideline Save is always keeping the recent action ready. Keep the camera pointed at the player and the play on the field.</p></figcaption>
+          <figcaption><h3>Step 1: Keep the camera where the play is.</h3><p>Hold your iPhone and shoot video as you normally would. Sideline Save is always ready to save what already happened.</p></figcaption>
         </figure>
         <figure class="screenshot-card">
           <div class="step-image">
             <img src="screenshots/tutorial-02-record-after-the-play.jpg" width="612" height="262" loading="lazy" alt="Camera view of the batter running after a hit">
             <div class="capture-indicator" aria-hidden="true"></div>
           </div>
-          <figcaption><h3>Step 2: Record after the play</h3><p>When the play is over, tap the button once to record the moment.</p></figcaption>
+          <figcaption><h3>Step 2: Record <em>AFTER</em> the Play</h3><p>Once you know the moment is special, tap Record to keep the lead-in, then tap again when the play is over.</p></figcaption>
         </figure>
         <figure class="screenshot-card">
           <div class="step-image">
             <img src="screenshots/tutorial-03-continue-recording.jpg" width="612" height="262" loading="lazy" alt="Camera view following the players as the action continues">
             <div class="capture-indicator is-recording" aria-hidden="true"></div>
           </div>
-          <figcaption><h3>Step 3: Continue recording as normal</h3><p>Continue recording as normal. When the play is over, tap the same button again to stop and save the finished clip.</p></figcaption>
+          <figcaption><h3>Step 3: Continue recording as normal.</h3><p>Tap again to stop recording. Your clip just has the highlight of the actual action. No editing needed.</p></figcaption>
         </figure>
       </div>
     </section>
@@ -277,8 +249,16 @@
       </div>
       <div class="faq-list">
         <details open>
+          <summary>How much storage can I save?</summary>
+          <p>A two-hour 4K/60 recording can use <span class="estimate">about 53 GB<button class="estimate-marker" type="button" aria-describedby="storage-estimate">*</button><span class="estimate-tooltip" id="storage-estimate" role="tooltip">Estimate: 440 MB per minute for 4K/60 HEVC × 120 minutes = 52,800 MB, or about 53 GB.</span></span> and take <span class="estimate">about 15 minutes<button class="estimate-marker" type="button" aria-describedby="editing-estimate">*</button><span class="estimate-tooltip" id="editing-estimate" role="tooltip">Estimate for a focused highlight pass: about 10 minutes to skim at high speed, plus 5 minutes to select, trim, and export a few clips.</span></span> to review and trim. Sideline Save saves you <span class="estimate">98% of that storage and time.<button class="estimate-marker" type="button" aria-describedby="savings-estimate">*</button><span class="estimate-tooltip" id="savings-estimate" role="tooltip">Illustrative estimate: about two minutes of highlights instead of 120 minutes of footage, and roughly 18 seconds of total tap-to-save interaction instead of a 15-minute editing pass. Actual savings vary.</span></span> Your highlights are just 10–30 second clips, so no editing is required.</p>
+        </details>
+        <details>
           <summary>What sports does Sideline Save work with?</summary>
           <p>Every sport. Choose a built-in starting mode for Baseball, Basketball, Volleyball, Soccer, or Football, or use Custom for anything else. Baseball works well for softball.</p>
+        </details>
+        <details>
+          <summary>Do I need any special equipment?</summary>
+          <p>No special equipment is required. Hold your iPhone and film as you normally would. Optional phone mounts and Bluetooth shutter remotes can make a hands-free setup easier. Check venue rules before mounting your phone. <a href="recommended-gimbals.html">See optional equipment ideas.</a></p>
         </details>
         <details>
           <summary>How does retroactive recording work?</summary>
@@ -319,6 +299,7 @@
 
     <section class="developer" aria-labelledby="developer-title">
       <p class="eyebrow">Independent and personal</p>
+      <img class="founder-photo" src="images/baseball-softball-hero-photo.jpg" width="1800" height="1349" loading="lazy" alt="Chase filming a youth baseball game on his iPhone from behind a chain-link fence">
       <h2 id="developer-title">Built by a baseball dad with the same problem.</h2>
       <p>Sideline Save is a handcrafted app made by one person. I built it after getting tired of recording pitch after pitch at my son’s games, deleting nearly all of them, and still worrying that the next pitch would be the one I missed.</p>
       <a class="support-link" href="blog/why-i-built-a-camera-app-for-youth-sports-parents.html">Read why I built Sideline Save</a>

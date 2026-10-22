@@ -26,38 +26,16 @@ ads
 [Watch the 27-second app demo with voiceover and captions](https://sidelinesave.com/#how-it-works)
 
 [About](https://sidelinesave.com/) ·
-[Baseball + Softball](https://sidelinesave.com/baseball-softball.html) ·
-[Soccer](https://sidelinesave.com/soccer.html) ·
+[Equipment](https://sidelinesave.com/recommended-gimbals.html) ·
 [Support](https://sidelinesave.com/support.html) ·
 [Blog](https://sidelinesave.com/blog/) ·
-[Equipment](https://sidelinesave.com/recommended-gimbals.html) ·
 [Privacy](https://sidelinesave.com/privacy-policy.html)
-
-## Why parents use Sideline Save
-
-1. **Keep the camera where the play is.** Use a [five dollar bungee cord](https://sidelinesave.com/recommended-gimbals.html#simple-setups-title) to mount your iPhone to a fence, or hand-hold it from an approved spot. Mounting keeps your hands free; hand-holding gives you flexibility when mounting is not allowed.
-2. **Skip the storage and editing marathon.** A two-hour 4K/60 recording can use
-   about 53 GB[^storage] and take about 15 minutes[^editing] to review and
-   trim. Sideline Save saves you 98% of that storage and time.[^savings]
-3. **Decide after it happens.** Sideline Save keeps a rolling window ready.
-   Once you know the moment was special, tap Record to keep the lead-in, then
-   tap again when the play is over.
-
-[^storage]: Estimate: 440 MB per minute for 4K/60 HEVC × 120 minutes = 52,800
-    MB, or about 53 GB.
-[^editing]: Estimate for a focused highlight pass: about 10 minutes to skim at
-    high speed, plus 5 minutes to select, trim, and export a few clips.
-[^savings]: Illustrative estimate: about two minutes of highlights instead of
-    120 minutes of footage, and roughly 18 seconds of total tap-to-save
-    interaction instead of a 15-minute editing pass. Actual savings vary.
 
 ## How to use Sideline Save
 
-Keep the camera ready, tap after the play, and keep recording.
-
-1. **Always be shooting.** Sideline Save is always keeping the recent action ready. Keep the camera pointed at the player and the play on the field.
-2. **Record after the play.** When the play is over, tap the button once to record the moment.
-3. **Continue recording as normal.** Continue recording as normal. When the play is over, tap the same button again to stop and save the finished clip.
+1. **Keep the camera where the play is.** Hold your iPhone and shoot video as you normally would. Sideline Save is always ready to save what already happened.
+2. **Record AFTER the Play.** Once you know the moment is special, tap Record to keep the lead-in, then tap again when the play is over.
+3. **Continue recording as normal.** Tap again to stop recording. Your clip just has the highlight of the actual action. No editing needed.
 
 <p align="center">
   <img src="screenshots/tutorial-01-always-be-shooting.jpg" alt="Tutorial step 1: Always be shooting" width="31%">
@@ -67,11 +45,33 @@ Keep the camera ready, tap after the play, and keep recording.
 
 ## Quick answers
 
+### How much storage can I save?
+
+A two-hour 4K/60 recording can use about 53 GB[^storage] and take about 15
+minutes[^editing] to review and trim. Sideline Save saves you 98% of that
+storage and time.[^savings] Your highlights are just 10–30 second clips, so no
+editing is required.
+
+[^storage]: Estimate: 440 MB per minute for 4K/60 HEVC × 120 minutes = 52,800
+    MB, or about 53 GB.
+[^editing]: Estimate for a focused highlight pass: about 10 minutes to skim at
+    high speed, plus 5 minutes to select, trim, and export a few clips.
+[^savings]: Illustrative estimate: about two minutes of highlights instead of
+    120 minutes of footage, and roughly 18 seconds of total tap-to-save
+    interaction instead of a 15-minute editing pass. Actual savings vary.
+
 ### What sports does Sideline Save work with?
 
 Every sport. Choose a built-in starting mode for Baseball, Basketball,
 Volleyball, Soccer, or Football, or use Custom for anything else. Baseball
 works well for softball.
+
+### Do I need any special equipment?
+
+No special equipment is required. Hold your iPhone and film as you normally
+would. Optional phone mounts and Bluetooth shutter remotes can make a
+hands-free setup easier. Check venue rules before mounting your phone. See
+[optional equipment ideas](https://sidelinesave.com/recommended-gimbals.html).
 
 ### How does retroactive recording work?
 
