@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="sideline-save-page-type" content="landing">
+  <meta name="description" content="Save youth basketball highlights after the play starts. Sideline Save keeps recent action ready so your clip can include the drive, shot, and reaction without recording the whole game.">
+  <link rel="canonical" href="https://sidelinesave.com/basketball.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="app-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Basketball Highlights for Parents — Sideline Save">
+  <meta property="og:description" content="Keep the camera ready, then save the drive, shot, and reaction when the play develops.">
+  <meta property="og:url" content="https://sidelinesave.com/basketball.html">
+  <meta property="og:image" content="https://sidelinesave.com/images/basketball-game-demo-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Basketball Highlights for Parents — Sideline Save">
+  <meta name="twitter:description" content="Save the basketball play after it starts, with the action leading up to it still in the clip.">
+  <meta name="twitter:image" content="https://sidelinesave.com/images/basketball-game-demo-poster.jpg">
+  <meta name="theme-color" content="#123d2d">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' https://www.google-analytics.com; media-src 'self'; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KPLTQGLSL"></script>
+  <script defer src="scripts/site.js"></script>
+  <title>Basketball Highlights for Parents — Sideline Save</title>
+  <style>
+    .editorial-page { max-width: 1040px; margin-inline: auto; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(260px, .65fr);
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+      padding: clamp(30px, 6vw, 68px);
+      border: 1px solid rgba(18, 61, 45, .12);
+      border-radius: 28px;
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(9, 40, 29, .11);
+    }
+    .hero .eyebrow { color: #a45d1e; }
+    .hero .lede { max-width: 680px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-flex; min-height: 48px; padding: 12px 20px; align-items: center; justify-content: center; border-radius: 999px; font-weight: 800; text-decoration: none; }
+    .button-primary { background: var(--red); color: white; box-shadow: 0 8px 20px rgba(165, 30, 40, .2); }
+    .button-primary:hover { background: #eb3a44; color: white; }
+    .hero-note { margin: 14px 0 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .hero-video { width: 100%; max-height: 650px; aspect-ratio: 9 / 16; border-radius: 22px; background: #101713; object-fit: contain; box-shadow: 0 18px 42px rgba(9, 40, 29, .18); }
+    figure { margin: 0; }
+    .video-caption { margin: 10px 0 0; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
+    .section { padding: 64px 0 0; }
+    .article-copy { max-width: 820px; margin-inline: auto; }
+    .article-copy p { margin: 0; color: #35433c; }
+    .article-copy p + p { margin-top: 18px; }
+    .article-copy h2 { margin: 0 0 18px; }
+    .article-copy .eyebrow { margin-bottom: 16px; }
+    .steps { display: grid; gap: 14px; margin: 26px 0 0; padding: 0; list-style: none; counter-reset: steps; }
+    .steps li { display: grid; grid-template-columns: 42px 1fr; gap: 16px; align-items: start; padding: 20px 22px; border: 1px solid rgba(18, 61, 45, .12); border-radius: 18px; background: var(--paper); counter-increment: steps; }
+    .steps li::before { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 50%; background: var(--forest); color: white; content: counter(steps); font-weight: 850; }
+    .steps strong { display: block; margin-bottom: 3px; color: var(--forest-dark); }
+    .steps span { color: var(--muted); }
+    .faq-list { display: grid; gap: 12px; max-width: 900px; margin-inline: auto; }
+    .faq-list details { border: 1px solid rgba(18, 61, 45, .12); border-radius: 16px; background: var(--paper); }
+    .faq-list summary { padding: 20px 22px; color: var(--forest-dark); cursor: pointer; font-weight: 800; }
+    .faq-list details p { margin: 0; padding: 0 22px 22px; color: var(--muted); }
+    .waitlist-band { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; margin-top: 64px; padding: clamp(30px, 5vw, 52px); border-radius: 24px; background: var(--forest-dark); color: white; }
+    .waitlist-band h2 { color: white; }
+    .waitlist-band p { max-width: 720px; margin: 0; color: rgba(255, 255, 255, .76); }
+    footer { padding: 0 0 38px; color: var(--muted); font-size: .82rem; text-align: center; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-video { width: min(100%, 430px); max-height: none; justify-self: center; }
+      .waitlist-band { grid-template-columns: 1fr; }
+      .waitlist-band .button { justify-self: start; }
+    }
+    @media (max-width: 520px) {
+      .hero { padding: 30px 22px; border-radius: 20px; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .steps li { grid-template-columns: 38px 1fr; padding: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to basketball video details</a>
+  <header class="site-header" aria-label="Sideline Save">
+    <a class="brand" href="about.html"><img class="brand-mark" src="app-icon.png" alt="">Sideline Save</a>
+    <nav class="site-nav" aria-label="Website">
+      <a href="about.html">About</a>
+      <a href="recommended-gimbals.html">Equipment</a>
+      <a href="support.html">Support</a>
+      <details class="nav-menu"><summary aria-label="More pages"></summary><div class="nav-menu-panel"><a href="blog/">Blog</a><a href="privacy-policy.html">Privacy</a></div></details>
+    </nav>
+  </header>
+
+  <main id="main-content" class="editorial-page">
+    <section class="hero" aria-labelledby="basketball-title">
+      <div>
+        <p class="eyebrow">Basketball highlights for parents</p>
+        <h1 id="basketball-title">Save the basketball play after it starts.</h1>
+        <p class="lede">Keep your iPhone pointed at the court with Sideline Save open. When the drive develops or the shot goes up, tap Record. The saved clip can still include the action that led to the moment, so you can watch more and keep fewer full-game videos.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" data-download-placement="basketball_hero" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+          <a class="button button-secondary" href="#basketball-flow">See how it works</a>
+        </div>
+        <p class="hero-note">15 saved videos included · No account · No ads</p>
+      </div>
+      <figure>
+        <video class="hero-video" controls playsinline preload="none" poster="images/basketball-game-demo-poster.jpg" aria-label="Basketball sequence filmed from near the baseline">
+          <source src="videos/basketball-game-demo.mp4" type="video/mp4">
+          Your browser does not support this basketball video.
+        </video>
+        <figcaption class="video-caption">A real basketball sequence, recorded from the baseline.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="basketball-flow" aria-labelledby="flow-title">
+      <div class="article-copy">
+        <p class="eyebrow">A simpler way to capture the game</p>
+        <h2 id="flow-title">Stay ready for the possession. Save when it becomes a highlight.</h2>
+        <p>With the Camera app, you have to start recording before you know whether a possession will become the moment you want to keep. Sideline Save holds only the recent action on your iPhone while it is open and ready. The rolling buffer is temporary; it does not become a saved video unless you choose to record.</p>
+        <ol class="steps">
+          <li><div><strong>Keep the court in view.</strong><span>Open Sideline Save and aim at the play while the recent action stays ready.</span></div></li>
+          <li><div><strong>Tap Record when the play develops.</strong><span>The saved video can include the lead-up, such as the pass or drive before the shot.</span></div></li>
+          <li><div><strong>Tap again when the moment is over.</strong><span>Stop after the rebound, reaction, or celebration you want to remember.</span></div></li>
+        </ol>
+        <p class="pull-quote">Press Record when the play gets good. Your clip can still include what happened just before you tapped.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="context-title">
+      <div class="article-copy">
+        <p class="eyebrow">Basketball, without the extra footage</p>
+        <h2 id="context-title">Keep the drive, the shot, and the reaction.</h2>
+        <p>A basketball moment often takes shape in the seconds before the basket: a pass finds an opening, a player drives to the hoop, and teammates react to the shot. Sideline Save's Basketball preset starts with 10 seconds of recent action. You can choose a 5-, 10-, or 20-second buffer in Settings, then press Record after the action begins.</p>
+        <p>Sideline Save does not record the whole game. The camera needs to stay aimed at the action with the app open, and the finished videos stay in your Photos library and Sideline Save's on-device Saved Videos view.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="article-copy section-heading">
+        <p class="eyebrow">Common questions</p>
+        <h2 id="faq-title">How basketball recording works.</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Does Sideline Save record the whole basketball game?</summary><p>No. While the app is open with the camera ready, it keeps only the recent 5, 10, or 20 seconds temporarily available. A video is saved when you tap Record and then stop after the play.</p></details>
+        <details><summary>Can I tap Record after the shot starts?</summary><p>Yes. If Sideline Save was already open and aimed at the play, the selected recent-action buffer can include the moments before you tapped Record.</p></details>
+        <details><summary>Where do the finished videos go?</summary><p>Finished videos are saved locally to your Photos library and appear in Sideline Save's Saved Videos view. Sideline Save does not upload your sports footage to an account.</p></details>
+        <details><summary>How much does Sideline Save cost?</summary><p>Sideline Save is free to download and try with up to 15 successfully saved videos. Sideline Save Pro unlocks unlimited saves through an annual subscription; the current price is shown in the App Store and in the app before purchase.</p></details>
+      </div>
+    </section>
+
+    <section class="waitlist-band" aria-labelledby="download-title">
+      <div>
+        <h2 id="download-title">Watch the game. Keep the play.</h2>
+        <p>Free to try with 15 saved videos on iPhone. Sideline Save Pro unlocks unlimited saves.</p>
+      </div>
+      <a class="button button-primary" data-download-placement="basketball_footer" href="https://apps.apple.com/us/app/sideline-save/id6790879656" target="_blank" rel="noopener noreferrer">Download free for iPhone</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Chase Seibert. Sideline Save.</p>
+    <nav class="social-links" aria-label="Follow Sideline Save">
+      <a href="https://www.instagram.com/sidelinesave" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/p/Sideline-Save-61592244427347" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.tiktok.com/@sidelinesave" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </nav>
+  </footer>
+</body>
+</html>
